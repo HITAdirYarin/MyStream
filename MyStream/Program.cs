@@ -14,7 +14,10 @@ namespace MyStream
         [STAThread]
         static void Main()
         {
+
 			Console.writeline("try to do conflict!");
+
+
             UserHendler.getUserCount();
             UserHendler.loadUser();
             ContentHendler.loadContents();
