@@ -1,0 +1,111 @@
+[0511/182807.481:WARNING:chrome_browser_cloud_management_controller.cc(87)] Could not create policy manager as CBCM is not enabled.
+[0511/182912.021:WARNING:chrome_browser_cloud_management_controller.cc(87)] Could not create policy manager as CBCM is not enabled.
+[0511/183143.972:WARNING:chrome_browser_cloud_management_controller.cc(87)] Could not create policy manager as CBCM is not enabled.
+[0511/184355.304:WARNING:chrome_browser_cloud_management_controller.cc(87)] Could not create policy manager as CBCM is not enabled.
+[0511/184357.668:WARNING:browser_info.cc(309)] Returning a speculative frame for 21474836485 [5,5]
+[0511/184358.273:WARNING:browser_info.cc(309)] Returning a speculative frame for 21474836485 [5,5]
+[0511/184358.275:WARNING:browser_info.cc(309)] Returning a speculative frame for 21474836485 [5,5]
+[0511/184358.276:WARNING:browser_info.cc(309)] Returning a speculative frame for 21474836485 [5,5]
+[0511/184358.276:WARNING:browser_info.cc(309)] Returning a speculative frame for 21474836485 [5,5]
+[0511/184358.300:INFO:CONSOLE(4105)] "LegacyDataMixin will be applied to all legacy elements.
+Set `_legacyUndefinedCheck: true` on element class to enable.", source: https://www.youtube.com/s/desktop/cbc86408/jsbin/desktop_polymer.vflset/desktop_polymer.js (4105)
+[0511/184401.420:INFO:CONSOLE(4105)] "LegacyDataMixin will be applied to all legacy elements.
+Set `_legacyUndefinedCheck: true` on element class to enable.", source: https://www.youtube.com/s/desktop/cbc86408/jsbin/desktop_polymer.vflset/desktop_polymer.js (4105)
+[0511/184402.491:WARNING:obfuscated_file_util.cc(1402)] Failed to get origin+type directory: { uri: filesystem:https://www.youtube.com/temporary/, storage key: { origin: https://www.youtube.com, top-level site: https://youtube.com, nonce: <null>, ancestor chain bit: Same-Site }, bucket id: 1 } error:-4
+[0511/184403.885:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 17179869195 [4,11] will be ignored
+[0511/184403.885:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 17179869195 [4,11] will be ignored
+[0511/184405.095:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 17179869196 [4,12] will be ignored
+[0511/184405.095:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 17179869196 [4,12] will be ignored
+[0511/184408.960:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 17179869192 [4,8] will be ignored
+[0511/184408.989:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 17179869185 [4,1] will be ignored
+[0511/184446.852:WARNING:chrome_browser_cloud_management_controller.cc(87)] Could not create policy manager as CBCM is not enabled.
+[0511/184448.227:ERROR:interface_endpoint_client.cc(695)] Message 0 rejected by interface blink.mojom.WidgetHost
+[0511/184449.356:WARNING:browser_info.cc(309)] Returning a speculative frame for 25769803781 [6,5]
+[0511/184449.981:WARNING:browser_info.cc(309)] Returning a speculative frame for 25769803781 [6,5]
+[0511/184449.982:WARNING:browser_info.cc(309)] Returning a speculative frame for 25769803781 [6,5]
+[0511/184449.982:WARNING:browser_info.cc(309)] Returning a speculative frame for 25769803781 [6,5]
+[0511/184449.983:WARNING:browser_info.cc(309)] Returning a speculative frame for 25769803781 [6,5]
+[0511/184450.124:INFO:CONSOLE(4105)] "LegacyDataMixin will be applied to all legacy elements.
+Set `_legacyUndefinedCheck: true` on element class to enable.", source: https://www.youtube.com/s/desktop/cbc86408/jsbin/desktop_polymer_enable_wil_icons.vflset/desktop_polymer_enable_wil_icons.js (4105)
+[0511/184450.974:WARNING:obfuscated_file_util.cc(1402)] Failed to get origin+type directory: { uri: filesystem:https://www.youtube.com/temporary/, storage key: { origin: https://www.youtube.com, top-level site: https://youtube.com, nonce: <null>, ancestor chain bit: Same-Site }, bucket id: 1 } error:-4
+[0511/184451.167:WARNING:spdy_session.cc(3484)] Received HEADERS for invalid stream 3
+[0511/184451.185:WARNING:spdy_session.cc(3484)] Received HEADERS for invalid stream 1
+[0511/184452.726:INFO:CONSOLE(4105)] "LegacyDataMixin will be applied to all legacy elements.
+Set `_legacyUndefinedCheck: true` on element class to enable.", source: https://www.youtube.com/s/desktop/cbc86408/jsbin/desktop_polymer_enable_wil_icons.vflset/desktop_polymer_enable_wil_icons.js (4105)
+[0511/184455.238:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 21474836492 [5,12] will be ignored
+[0511/184455.238:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 21474836492 [5,12] will be ignored
+[0511/184456.696:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 21474836493 [5,13] will be ignored
+[0511/184456.696:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 21474836493 [5,13] will be ignored
+[0511/184456.750:INFO:CONSOLE(0)] "Access to XMLHttpRequest at 'https://googleads.g.doubleclick.net/pagead/viewthroughconversion/962985656/?backend=innertube&cname=1&cver=2_20230509&data=backend%3Dinnertube%3Bcname%3D1%3Bcver%3D2_20230509%3Bptype%3Df_view%3Btype%3Dview%3Butuid%3DygYHNdgpa2U3Sh2MYAq6CA%3Butvid%3D8iDt45kWUdI&foc_id=ygYHNdgpa2U3Sh2MYAq6CA&label=followon_view&ptype=f_view&random=165724962&utuid=ygYHNdgpa2U3Sh2MYAq6CA&cv_attributed=0' (redirected from 'https://www.youtube.com/pagead/viewthroughconversion/962985656/?backend=innertube&cname=1&cver=2_20230509&data=backend%3Dinnertube%3Bcname%3D1%3Bcver%3D2_20230509%3Bptype%3Df_view%3Btype%3Dview%3Butuid%3DygYHNdgpa2U3Sh2MYAq6CA%3Butvid%3D8iDt45kWUdI&foc_id=ygYHNdgpa2U3Sh2MYAq6CA&label=followon_view&ptype=f_view&random=165724962&utuid=ygYHNdgpa2U3Sh2MYAq6CA') from origin 'https://www.youtube.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.", source: https://www.youtube.com/watch?v=8iDt45kWUdI (0)
+[0511/184501.753:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 21474836489 [5,9] will be ignored
+[0511/184501.787:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 21474836484 [5,4] will be ignored
+[0511/184549.930:WARNING:chrome_browser_cloud_management_controller.cc(87)] Could not create policy manager as CBCM is not enabled.
+[0511/184750.328:WARNING:chrome_browser_cloud_management_controller.cc(87)] Could not create policy manager as CBCM is not enabled.
+[0511/184751.635:ERROR:interface_endpoint_client.cc(695)] Message 0 rejected by interface blink.mojom.WidgetHost
+[0511/184752.714:WARNING:browser_info.cc(309)] Returning a speculative frame for 25769803781 [6,5]
+[0511/184753.365:WARNING:browser_info.cc(309)] Returning a speculative frame for 25769803781 [6,5]
+[0511/184753.365:WARNING:browser_info.cc(309)] Returning a speculative frame for 25769803781 [6,5]
+[0511/184753.366:WARNING:browser_info.cc(309)] Returning a speculative frame for 25769803781 [6,5]
+[0511/184753.366:WARNING:browser_info.cc(309)] Returning a speculative frame for 25769803781 [6,5]
+[0511/184753.424:INFO:CONSOLE(4105)] "LegacyDataMixin will be applied to all legacy elements.
+Set `_legacyUndefinedCheck: true` on element class to enable.", source: https://www.youtube.com/s/desktop/cbc86408/jsbin/desktop_polymer.vflset/desktop_polymer.js (4105)
+[0511/184754.674:WARNING:spdy_session.cc(3484)] Received HEADERS for invalid stream 1
+[0511/184756.268:INFO:CONSOLE(4105)] "LegacyDataMixin will be applied to all legacy elements.
+Set `_legacyUndefinedCheck: true` on element class to enable.", source: https://www.youtube.com/s/desktop/cbc86408/jsbin/desktop_polymer.vflset/desktop_polymer.js (4105)
+[0511/184757.403:WARNING:obfuscated_file_util.cc(1402)] Failed to get origin+type directory: { uri: filesystem:https://www.youtube.com/temporary/, storage key: { origin: https://www.youtube.com, top-level site: https://youtube.com, nonce: <null>, ancestor chain bit: Same-Site }, bucket id: 1 } error:-4
+[0511/184758.855:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 21474836493 [5,13] will be ignored
+[0511/184758.855:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 21474836493 [5,13] will be ignored
+[0511/184759.480:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 21474836494 [5,14] will be ignored
+[0511/184759.480:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 21474836494 [5,14] will be ignored
+[0511/184800.798:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 21474836491 [5,11] will be ignored
+[0511/184800.846:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 21474836484 [5,4] will be ignored
+[0511/185026.095:WARNING:chrome_browser_cloud_management_controller.cc(87)] Could not create policy manager as CBCM is not enabled.
+[0511/192128.524:WARNING:chrome_browser_cloud_management_controller.cc(87)] Could not create policy manager as CBCM is not enabled.
+[0511/200458.703:WARNING:chrome_browser_cloud_management_controller.cc(87)] Could not create policy manager as CBCM is not enabled.
+[0511/200703.327:WARNING:chrome_browser_cloud_management_controller.cc(87)] Could not create policy manager as CBCM is not enabled.
+[0511/200821.309:WARNING:chrome_browser_cloud_management_controller.cc(87)] Could not create policy manager as CBCM is not enabled.
+[0511/200954.243:WARNING:chrome_browser_cloud_management_controller.cc(87)] Could not create policy manager as CBCM is not enabled.
+[0511/210227.941:WARNING:chrome_browser_cloud_management_controller.cc(87)] Could not create policy manager as CBCM is not enabled.
+[0511/210407.866:WARNING:chrome_browser_cloud_management_controller.cc(87)] Could not create policy manager as CBCM is not enabled.
+[0511/210412.354:WARNING:obfuscated_file_util.cc(1402)] Failed to get origin+type directory: { uri: filesystem:https://www.youtube.com/temporary/, storage key: { origin: https://www.youtube.com, top-level site: https://youtube.com, nonce: <null>, ancestor chain bit: Same-Site }, bucket id: 1 } error:-4
+[0511/210412.538:WARNING:browser_info.cc(309)] Returning a speculative frame for 25769803781 [6,5]
+[0511/210412.805:INFO:CONSOLE(4105)] "LegacyDataMixin will be applied to all legacy elements.
+Set `_legacyUndefinedCheck: true` on element class to enable.", source: https://www.youtube.com/s/desktop/cbc86408/jsbin/desktop_polymer.vflset/desktop_polymer.js (4105)
+[0511/210413.104:WARNING:browser_info.cc(309)] Returning a speculative frame for 34359738374 [8,6]
+[0511/210413.164:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 21474836487 [5,7] will be ignored
+[0511/210413.164:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 21474836487 [5,7] will be ignored
+[0511/210413.186:WARNING:browser_info.cc(309)] Returning a speculative frame for 34359738374 [8,6]
+[0511/210413.186:WARNING:browser_info.cc(309)] Returning a speculative frame for 34359738374 [8,6]
+[0511/210413.186:WARNING:browser_info.cc(309)] Returning a speculative frame for 34359738374 [8,6]
+[0511/210413.186:WARNING:browser_info.cc(309)] Returning a speculative frame for 34359738374 [8,6]
+[0511/210413.214:WARNING:browser_info.cc(309)] Returning a speculative frame for 25769803781 [6,5]
+[0511/210413.215:WARNING:browser_info.cc(309)] Returning a speculative frame for 25769803781 [6,5]
+[0511/210413.215:WARNING:browser_info.cc(309)] Returning a speculative frame for 25769803781 [6,5]
+[0511/210413.215:WARNING:browser_info.cc(309)] Returning a speculative frame for 25769803781 [6,5]
+[0511/210413.508:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 34359738374 [8,6] will be ignored
+[0511/210413.554:WARNING:spdy_session.cc(3484)] Received HEADERS for invalid stream 1
+[0511/210414.433:INFO:CONSOLE(4105)] "LegacyDataMixin will be applied to all legacy elements.
+Set `_legacyUndefinedCheck: true` on element class to enable.", source: https://www.youtube.com/s/desktop/cbc86408/jsbin/desktop_polymer.vflset/desktop_polymer.js (4105)
+[0511/210414.957:WARNING:browser_info.cc(309)] Returning a speculative frame for 34359738383 [8,15]
+[0511/210414.958:WARNING:browser_info.cc(309)] Returning a speculative frame for 34359738383 [8,15]
+[0511/210414.958:WARNING:browser_info.cc(309)] Returning a speculative frame for 34359738383 [8,15]
+[0511/210414.959:WARNING:browser_info.cc(309)] Returning a speculative frame for 34359738383 [8,15]
+[0511/210414.959:WARNING:browser_info.cc(309)] Returning a speculative frame for 34359738383 [8,15]
+[0511/210416.846:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 21474836497 [5,17] will be ignored
+[0511/210416.846:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 21474836497 [5,17] will be ignored
+[0511/210417.806:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 21474836498 [5,18] will be ignored
+[0511/210417.806:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 21474836498 [5,18] will be ignored
+[0511/210420.885:INFO:CONSOLE(0)] "The resource https://rr3---sn-ivuoxu-ua86.googlevideo.com/generate_204?conn2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.", source: https://www.youtube.com/watch?v=LFKS5ISQ0ms (0)
+[0511/210420.885:INFO:CONSOLE(0)] "The resource https://i.ytimg.com/generate_204 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.", source: https://www.youtube.com/watch?v=LFKS5ISQ0ms (0)
+[0511/210420.885:INFO:CONSOLE(0)] "The resource https://rr3---sn-ivuoxu-ua86.googlevideo.com/generate_204 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.", source: https://www.youtube.com/watch?v=LFKS5ISQ0ms (0)
+[0511/210424.016:WARNING:browser_info.cc(309)] Returning a speculative frame for 34359738389 [8,21]
+[0511/210424.016:WARNING:browser_info.cc(309)] Returning a speculative frame for 34359738389 [8,21]
+[0511/210424.016:WARNING:browser_info.cc(309)] Returning a speculative frame for 34359738389 [8,21]
+[0511/210424.016:WARNING:browser_info.cc(309)] Returning a speculative frame for 34359738389 [8,21]
+[0511/210427.596:INFO:CONSOLE(0)] "The resource https://rr3---sn-ivuoxu-ua86.googlevideo.com/generate_204?conn2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.", source: https://www.youtube.com/watch?v=LFKS5ISQ0ms (0)
+[0511/210427.597:INFO:CONSOLE(0)] "The resource https://i.ytimg.com/generate_204 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.", source: https://www.youtube.com/watch?v=LFKS5ISQ0ms (0)
+[0511/210427.598:INFO:CONSOLE(0)] "The resource https://rr3---sn-ivuoxu-ua86.googlevideo.com/generate_204 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.", source: https://www.youtube.com/watch?v=LFKS5ISQ0ms (0)
+[0511/210429.657:WARNING:frame_impl.cc(420)] SendProcessMessage sent to detached frame 21474836481 [5,1] will be ignored
+[0511/210508.088:WARNING:spdy_session.cc(3484)] Received HEADERS for invalid stream 9
+[0511/210650.890:WARNING:chrome_browser_cloud_management_controller.cc(87)] Could not create policy manager as CBCM is not enabled.
+[0511/210655.093:ERROR:interface_endpoint_client.cc(695)] Message 0 rejected by interface blink.mojom.WidgetHost
