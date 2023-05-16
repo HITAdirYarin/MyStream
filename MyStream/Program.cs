@@ -14,7 +14,7 @@ namespace MyStream
         [STAThread]
         static void Main()
         {
-			Console.writeline("this is a try for pull request");
+			Console.writeline("the first change is me!!!");
             UserHendler.getUserCount();
             UserHendler.loadUser();
             ContentHendler.loadContents();
