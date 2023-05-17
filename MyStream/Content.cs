@@ -19,10 +19,9 @@ namespace MyStream
         public string _genre { get; set; }
         public string _type { get; set; }
         public string _director { get; set; }
-        protected string _summary;
-        public double _rateAvg;
-        public int _rateCount;
-        protected List<String> _review;
+        public double _rateAvg { get; set; }
+        public int _rateCount { get; set; }
+        public List<String> _review;
 
         //Static
         public static Dictionary<string, Content> _contents = new Dictionary<string, Content>();
@@ -38,6 +37,7 @@ namespace MyStream
             _type = "no type";
             _rateCount = 0;
             _rateAvg = 0;
+            _review = new List<string>();
         }
         public Content( string name,string path,string director, string date,string genre,string type,int rateCount,double rate)
         {
@@ -49,22 +49,13 @@ namespace MyStream
             _type = type;
             _rateCount = rateCount;
             _rateAvg = rate;
-            _review = new List <String>();
         }
 
-        public void writeOpinion()
+        public void writeOpinion(string review)
         {
-            string input = Console.ReadLine();
-            _review.Add(input);
-           
+            _review.Add(review);          
         }
-        public void printOpinion()
-        {
-            foreach (String item in _review)
-            {
-                Console.WriteLine(item);
-            }
-        }
+      
         public static void addRate(int rate,string name)
         {
             double sum;
@@ -76,7 +67,7 @@ namespace MyStream
                     sum += rate;
                     content.Value._rateCount++;
                     content.Value._rateAvg = getAvgRate(sum, content.Value._rateCount);
-                    ContentHendler.updateRateMovie(content.Value._name, content.Value);
+                    ContentHendler.updateMovie(content.Value._name, content.Value);
                     break;
                 }
             }

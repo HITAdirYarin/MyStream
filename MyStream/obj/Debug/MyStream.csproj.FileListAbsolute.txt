@@ -309,3 +309,4 @@ C:\Users\kanda\OneDrive\Desktop\ComputerSaince\SemesterB\Project\MyStream\MyStre
 C:\Users\kanda\OneDrive\Desktop\ComputerSaince\SemesterB\Project\MyStream\MyStream\bin\Debug\Interop.WMPLib.dll
 C:\Users\kanda\OneDrive\Desktop\ComputerSaince\SemesterB\Project\MyStream\MyStream\bin\Debug\AxInterop.WMPLib.dll
 C:\Users\kanda\OneDrive\Desktop\ComputerSaince\SemesterB\Project\MyStream\MyStream\obj\Debug\MyStream.csproj.CopyComplete
+C:\Users\kanda\OneDrive\Desktop\ComputerSaince\SemesterB\Project\MyStream\MyStream\bin\Debug\libcef.dll
