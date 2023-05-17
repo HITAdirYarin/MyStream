@@ -32,7 +32,7 @@ namespace MyStream
                 return false;
             }
             return true;
-        } //save this us   er via json to file
+        } //save this user via json to file
         public static bool updateUser(int userId,User newUser)
         {
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "users.txt");

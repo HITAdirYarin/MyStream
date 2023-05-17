@@ -28,7 +28,7 @@ namespace MyStream
             }  
             return true;
         } // save this content via json to file"
-        public static void updateRateMovie(string name,Content movie)
+        public static void updateMovie(string name,Content movie)
         {
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "movies.txt");
             string[] lines = File.ReadAllLines(filePath);

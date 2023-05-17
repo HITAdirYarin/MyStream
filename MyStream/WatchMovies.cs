@@ -66,12 +66,13 @@ namespace MyStream
             player_fast.Visible = true;
             panel_display_movie.Visible = false;
             player_fast.URL = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "YouTubeContents", fast9._path);
-            labelName.Text += fast9._name;
-            labelRelease.Text += fast9._date;
-            labelDirector.Text += fast9._director;
-            labelGanre.Text += fast9._genre;
-            labelRate.Text += fast9._rateAvg +"/5";
-            labelDescription.Text += " a good movie!";
+            labelName.Text += " "+fast9._name;
+            labelRelease.Text += " " + fast9._date;
+            labelDirector.Text += " " + fast9._director;
+            labelGanre.Text += " " + fast9._genre;
+            string rate = fast9._rateAvg.ToString("0.0");
+            labelRate.Text += " " + rate +"/5";
+            labelDescription.Text += " Dominic and his team are working againts the time to foil a plot, which threatens the entire civilization.";
             player_fast.Show();
         }
 
@@ -82,7 +83,7 @@ namespace MyStream
 
         private void buttonRateMe_Click(object sender, EventArgs e)
         {
-            ContentController.addRate(3, "Fast and Furious 9");
+            ContentController.addRate(5, "Fast and Furious 9");
 
         }
     }
