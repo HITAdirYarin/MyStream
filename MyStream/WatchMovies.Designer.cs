@@ -97,7 +97,7 @@
             this.labelRelease.BackColor = System.Drawing.Color.Transparent;
             this.labelRelease.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelRelease.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelRelease.Location = new System.Drawing.Point(1563, 135);
+            this.labelRelease.Location = new System.Drawing.Point(1563, 184);
             this.labelRelease.Name = "labelRelease";
             this.labelRelease.Size = new System.Drawing.Size(339, 56);
             this.labelRelease.TabIndex = 5;
@@ -109,7 +109,7 @@
             this.labelDirector.BackColor = System.Drawing.Color.Transparent;
             this.labelDirector.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelDirector.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelDirector.Location = new System.Drawing.Point(1569, 213);
+            this.labelDirector.Location = new System.Drawing.Point(1569, 240);
             this.labelDirector.Name = "labelDirector";
             this.labelDirector.Size = new System.Drawing.Size(333, 56);
             this.labelDirector.TabIndex = 6;
@@ -165,6 +165,7 @@
             this.buttonRateMe.TabIndex = 10;
             this.buttonRateMe.Text = "Rate me!";
             this.buttonRateMe.UseVisualStyleBackColor = false;
+            this.buttonRateMe.Click += new System.EventHandler(this.buttonRateMe_Click);
             // 
             // buttonViewopinion
             // 
@@ -184,7 +185,7 @@
             this.labelGanre.BackColor = System.Drawing.Color.Transparent;
             this.labelGanre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelGanre.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelGanre.Location = new System.Drawing.Point(1569, 297);
+            this.labelGanre.Location = new System.Drawing.Point(1569, 309);
             this.labelGanre.Name = "labelGanre";
             this.labelGanre.Size = new System.Drawing.Size(333, 56);
             this.labelGanre.TabIndex = 12;
@@ -208,12 +209,13 @@
             this.labelName.BackColor = System.Drawing.Color.Transparent;
             this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelName.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelName.Location = new System.Drawing.Point(1563, 62);
+            this.labelName.Location = new System.Drawing.Point(1563, 78);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(333, 56);
+            this.labelName.Size = new System.Drawing.Size(339, 113);
             this.labelName.TabIndex = 14;
             this.labelName.Text = "Name:";
             this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelName.Click += new System.EventHandler(this.labelName_Click);
             // 
             // buttonClosePlayer
             // 

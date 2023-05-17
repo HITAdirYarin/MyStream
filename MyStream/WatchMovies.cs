@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -59,18 +60,30 @@ namespace MyStream
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Content fast9 = Content._contents["Fast and Furious 9"];
             panel_display_movie.SendToBack();
             player_fast.Size = new Size(1045, 645);
             player_fast.Visible = true;
             panel_display_movie.Visible = false;
-            player_fast.URL = "C:\\Users\\HP\\OneDrive\\Desktop\\photos_project\\YouTubeContents\\Fast&Furious9.mp4";
-            labelName.Text += " Fast9";
-            labelRelease.Text += " 25/09/22";
-            labelDirector.Text += " yarin";
-            labelGanre.Text += " action";
-            labelRate.Text += " 87";
+            player_fast.URL = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "YouTubeContents", fast9._path);
+            labelName.Text += fast9._name;
+            labelRelease.Text += fast9._date;
+            labelDirector.Text += fast9._director;
+            labelGanre.Text += fast9._genre;
+            labelRate.Text += fast9._rateAvg +"/5";
             labelDescription.Text += " a good movie!";
             player_fast.Show();
+        }
+
+        private void labelName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonRateMe_Click(object sender, EventArgs e)
+        {
+            ContentController.addRate(3, "Fast and Furious 9");
+
         }
     }
 }

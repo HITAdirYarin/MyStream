@@ -26,15 +26,6 @@ namespace MyStream
             _partNum = partNum;
         }
 
-        public Content surpriseMe()
-        {
-            Random random = new Random();
-            int index = random.Next(_contents.Count);
-            while (_contents[index]._type=="podcast")
-            {
-                index = random.Next(_contents.Count);
-            }
-            return _contents[index];
-        }
+    
     }
 }

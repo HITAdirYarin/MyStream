@@ -1,4 +1,5 @@
 ﻿
+using CefSharp.DevTools.CSS;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,61 +13,77 @@ namespace MyStream
     public  class Content
     {
         // Data members
-        public int _contentID { get; set; }
         public string _name { get; set; }
+        public string _path { get; set; }
         public string _date { get; set; }
         public string _genre { get; set; }
         public string _type { get; set; }
+        public string _director { get; set; }
         protected string _summary;
-        protected int _rateSum;
-        protected int _rateCount;
-        protected List<String> _opinion;
+        public double _rateAvg;
+        public int _rateCount;
+        protected List<String> _review;
 
         //Static
-        public static Dictionary<int, Content> _contents = new Dictionary<int, Content>();
+        public static Dictionary<string, Content> _contents = new Dictionary<string, Content>();
 
      // Methods
        public Content()
         {
-            _contentID = 0;
             _name = "no name";
+            _path = "no path";
+            _director = "no director";
             _date = "no date";
             _genre = "no genre";
             _type = "no type";
+            _rateCount = 0;
+            _rateAvg = 0;
         }
-        public Content(int contentID, string name, string date,string genre,string type)
+        public Content( string name,string path,string director, string date,string genre,string type,int rateCount,double rate)
         {
-            _contentID = contentID;
             _name = name;
+            _path = path;
+            _director = director;
             _date = date;
             _genre = genre;
             _type = type;
-            _rateCount = 0;
-            _rateSum = 0;
-            _opinion = new List <String>();
+            _rateCount = rateCount;
+            _rateAvg = rate;
+            _review = new List <String>();
         }
 
         public void writeOpinion()
         {
             string input = Console.ReadLine();
-            _opinion.Add(input);
+            _review.Add(input);
            
         }
         public void printOpinion()
         {
-            foreach (String item in _opinion)
+            foreach (String item in _review)
             {
                 Console.WriteLine(item);
             }
         }
-        public void addRate(int rate)
+        public static void addRate(int rate,string name)
         {
-            _rateSum += rate;
-            _rateCount++;
+            double sum;
+            foreach (KeyValuePair<string, Content> content in Content._contents)
+            {
+                if (content.Value._name == name)
+                {
+                    sum = content.Value._rateAvg * content.Value._rateCount;
+                    sum += rate;
+                    content.Value._rateCount++;
+                    content.Value._rateAvg = getAvgRate(sum, content.Value._rateCount);
+                    ContentHendler.updateRateMovie(content.Value._name, content.Value);
+                    break;
+                }
+            }
         }
-        public double getAvgRate()
+        public static double getAvgRate(double rate_sum,int amount)
         {
-            return (double)_rateSum / _rateCount;
+            return rate_sum / amount;
         }
     }
 }

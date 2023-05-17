@@ -9,10 +9,10 @@ namespace MyStream
    
     public abstract class ContentHendler
     {
-        public static bool saveContent(Content content)
+        public static bool saveMovie(Content content)
         {
             string json = JsonSerializer.Serialize(content);
-            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "contents.txt");
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "movies.txt");
             try
             {
                 using (StreamWriter writer = new StreamWriter(filePath,append: true))
@@ -27,19 +27,33 @@ namespace MyStream
                 return false;
             }  
             return true;
-        } // save this content via json to file
-        public static  bool loadContents()
+        } // save this content via json to file"
+        public static void updateRateMovie(string name,Content movie)
+        {
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "movies.txt");
+            string[] lines = File.ReadAllLines(filePath);
+            for(int i = 0; i < lines.Length; i++)
+            {         
+                if (movie._name == name)
+                {
+                    lines[i] = JsonSerializer.Serialize(movie);
+                    File.WriteAllLines(filePath, lines);
+                    break;
+                }
+            }         
+        }
+        public static  bool loadMovies()
         {
             string dataFile;
-            Content a = new Content();
+            Content a = new Movies();
             try
             {
-                StreamReader reader = new StreamReader(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "contents.txt"));
+                StreamReader reader = new StreamReader(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "movies.txt"));
                 dataFile = reader.ReadLine();
                 while (dataFile != null)
                 {
                     a = JsonSerializer.Deserialize<Content>(dataFile);
-                    Content._contents.Add(a._contentID, a);
+                    Content._contents.Add(a._name, a);
                     dataFile = reader.ReadLine();
                 }
                 reader.Close();
@@ -49,14 +63,6 @@ namespace MyStream
                 Console.WriteLine("ERROR : " + e.Message);
                 return false;
 
-            }
-            foreach(KeyValuePair<int, Content> item in Content._contents)
-            {
-                Console.WriteLine("*******************");
-                Console.WriteLine("Name: " + item.Value._name);
-                Console.WriteLine("Released on: " + item.Value._date);
-                Console.WriteLine("Genre: " + item.Value._genre);
-                Console.WriteLine("*******************");
             }
             return true;
         } // load all contents using json from fils to RAM

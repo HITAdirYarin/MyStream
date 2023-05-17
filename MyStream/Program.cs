@@ -14,14 +14,14 @@ namespace MyStream
         [STAThread]
         static void Main()
         {
-			Console.writeline("this is a try for pull request");
+         //   ContentController.addMovies();
+            ContentHendler.loadMovies();
             UserHendler.getUserCount();
             UserHendler.loadUser();
-            ContentHendler.loadContents();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
-            
+
         }
     }
 }

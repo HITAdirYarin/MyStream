@@ -10,14 +10,28 @@ namespace MyStream
     {
         private Dictionary<int,MoviesParts > _part;
 
-        public Movies() 
+        public Movies()
         {
-            _part = new Dictionary<int, MoviesParts>();
+            _name = "no name";
+            _path = "no path";
+            _director = "no director";
+            _date = "no date";
+            _genre = "no genre";
+            _type = "no type";
+            _rateCount = 0;
+            _rateAvg = 0;
         }
-
-        public MoviesParts GetMovie(int numOfPart)
+       public Movies(string name, string path,string director, string date, string genre, string type,int rateCount,double rate)
         {
-            return _part[numOfPart];
+            _name = name;
+            _path = path;
+            _director = director;
+            _date = date;
+            _genre = genre;
+            _type = type;
+            _rateCount = rateCount;
+            _rateAvg = rate;
+            _review = new List<String>();
         }
     }
 }

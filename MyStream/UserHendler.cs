@@ -42,7 +42,6 @@ namespace MyStream
                 string[] lines = File.ReadAllLines(filePath);
                 for (int i = 0; i < lines.Length; i++)
                 {
-                   // User user = JsonSerializer.Deserialize<User>(lines[i]);
                     if (newUser._userId == userId)
                     {                     
                         lines[i]= JsonSerializer.Serialize(newUser);
