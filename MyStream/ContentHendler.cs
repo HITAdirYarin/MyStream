@@ -3,12 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
+using System.Windows.Forms;
 
 namespace MyStream
 {
    
     public abstract class ContentHendler
     {
+        //****************//
+        //Movies:
         public static bool saveMovie(Content content)
         {
             string json = JsonSerializer.Serialize(content);
@@ -66,5 +69,23 @@ namespace MyStream
             }
             return true;
         } // load all contents using json from fils to RAM
+        public static void addReview(ContentReviews item)
+        {
+            string json = JsonSerializer.Serialize(item);
+            string filePath= Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "contentsReviews.txt");
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(filePath))
+                {
+                    writer.WriteLine(json);
+                    writer.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("ERROR :" + e.Message);
+            }
+        }
+        //***************************
     }
 }

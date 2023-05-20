@@ -62,28 +62,35 @@ namespace MyStream
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Content fast9 = Content._contents["Fast and Furious 9"];
-            panel_display_movie.SendToBack();
-            player_fast.Size = new Size(1045, 645);
-            player_fast.Visible = true;
-            panel_display_movie.Visible = false;
-            string fullPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "YouTubeMovies", fast9._path));
-            if (File.Exists(fullPath))
+            Content fast9 = Content._contents["Fast and Furious 9"] ;
+            if (fast9 == null)
             {
-                player_fast.URL = fullPath;
+                MessageBox.Show("ERROR");
             }
             else
             {
-                MessageBox.Show("There is an error with playing the movie");
+                panel_display_movie.SendToBack();
+                player_fast.Size = new Size(1045, 645);
+                player_fast.Visible = true;
+                panel_display_movie.Visible = false;
+                string fullPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "YouTubeMovies", fast9._path));
+                if (File.Exists(fullPath))
+                {
+                    player_fast.URL = fullPath;
+                }
+                else
+                {
+                    MessageBox.Show("There is an error with playing the movie");
+                }
+                labelName.Text += " " + fast9._name;
+                labelRelease.Text += " " + fast9._date;
+                labelDirector.Text += " " + fast9._director;
+                labelGanre.Text += " " + fast9._genre;
+                string rate = fast9._rateAvg.ToString("0.0");
+                labelRate.Text += " " + rate + "/5";
+                labelDescription.Text += " Dominic and his team are working againts the time to foil a plot, which threatens the entire civilization.";
+                player_fast.Show();
             }
-            labelName.Text += " "+fast9._name;
-            labelRelease.Text += " " + fast9._date;
-            labelDirector.Text += " " + fast9._director;
-            labelGanre.Text += " " + fast9._genre;
-            string rate = fast9._rateAvg.ToString("0.0");
-            labelRate.Text += " " + rate +"/5";
-            labelDescription.Text += " Dominic and his team are working againts the time to foil a plot, which threatens the entire civilization.";
-            player_fast.Show();
         }
 
         private void labelName_Click(object sender, EventArgs e)

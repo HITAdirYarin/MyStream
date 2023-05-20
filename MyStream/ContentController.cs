@@ -37,5 +37,16 @@ namespace MyStream
         {
             Content.addRate(choose, name);
         }
+        public static void addReviews(string name,string review)
+        {
+            Content a = Content._contents[name];
+            a.addReview(review);
+            ContentReviews temp = new ContentReviews(name);
+            foreach(string item in a._review)
+            {
+                temp._review.Add(item);
+            }
+            ContentHendler.addReview(temp);
+        }
     }
 }

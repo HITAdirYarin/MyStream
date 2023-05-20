@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyStream
 {
-    public class Movies : Stream
+    public class Movies : Stream 
     {
         private Dictionary<int,MoviesParts > _part;
 
@@ -31,7 +31,6 @@ namespace MyStream
             _type = type;
             _rateCount = rateCount;
             _rateAvg = rate;
-            _review = new List<String>();
         }
     }
 }

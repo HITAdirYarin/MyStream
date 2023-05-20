@@ -3,6 +3,7 @@ using CefSharp.DevTools.CSS;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,16 +19,16 @@ namespace MyStream
         public string _date { get; set; }
         public string _genre { get; set; }
         public string _type { get; set; }
-      
+      public string _director { get; set; }
         public double _rateAvg { get; set; }
         public int _rateCount { get; set; }
-        public List<String> _review;
+        public List<String> _review; 
 
         //Static
         public static Dictionary<string, Content> _contents = new Dictionary<string, Content>();
 
-     // Methods
-       public Content()
+        // Methods
+        public Content()
         {
             _name = "no name";
             _path = "no path";
@@ -51,7 +52,7 @@ namespace MyStream
             _rateAvg = rate;
         }
 
-        public void writeOpinion(string review)
+        public void addReview(string review)
         {
             _review.Add(review);          
         }
