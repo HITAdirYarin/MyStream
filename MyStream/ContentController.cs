@@ -12,7 +12,7 @@ namespace MyStream
     {
         public static void addMovies()
         {
-            Content a = new Movies("Fast and Furious 9", "Fast&Furious9.mp4","Rob Cohen", "25/06/2021", "Action", "movie",0,0);
+            Content a = new Movies("Fast and Furious 9", "FastFurious9.mp4","Rob Cohen", "25/06/2021", "Action", "movie",0,0);
             ContentHendler.saveMovie(a);
             Content b = new Movies("Ted", "Ted.mp4", "Seth MacFarlane", "09/08/2012", "Comedy", "movie",0, 0);
             ContentHendler.saveMovie(b);

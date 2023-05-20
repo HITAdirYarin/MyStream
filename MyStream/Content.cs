@@ -18,7 +18,7 @@ namespace MyStream
         public string _date { get; set; }
         public string _genre { get; set; }
         public string _type { get; set; }
-        public string _director { get; set; }
+      
         public double _rateAvg { get; set; }
         public int _rateCount { get; set; }
         public List<String> _review;

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -10,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace MyStream
 {
@@ -45,7 +47,7 @@ namespace MyStream
             panel_display_movie.Visible = true;
             labelName.Text = "Name:";
             labelRelease.Text = "Release date:";
-            labelDirector.Text = "Director(s):";
+            labelDirector.Text = "Director:";
             labelGanre.Text = "Ganere:";
             labelRate.Text = "Rate:";
             labelDescription.Text = "Description:";
@@ -65,7 +67,15 @@ namespace MyStream
             player_fast.Size = new Size(1045, 645);
             player_fast.Visible = true;
             panel_display_movie.Visible = false;
-            player_fast.URL = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "YouTubeContents", fast9._path);
+            string fullPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "YouTubeMovies", fast9._path));
+            if (File.Exists(fullPath))
+            {
+                player_fast.URL = fullPath;
+            }
+            else
+            {
+                MessageBox.Show("There is an error with playing the movie");
+            }
             labelName.Text += " "+fast9._name;
             labelRelease.Text += " " + fast9._date;
             labelDirector.Text += " " + fast9._director;

@@ -1,4 +1,4 @@
-{"_name":"Fast and Furious 9","_path":"Fast\u0026Furious9.mp4","_date":"25/06/2021","_genre":"Action","_type":"movie","_director":"Rob Cohen","_rateAvg":4.8666660000000004,"_rateCount":5}
+{"_name":"Fast and Furious 9","_path":"FastFurious9.mp4","_date":"25/06/2021","_genre":"Action","_type":"movie","_director":"Rob Cohen","_rateAvg":4.8666660000000004,"_rateCount":5}
 {"_name":"Ted","_path":"Ted.mp4","_date":"09/08/2012","_genre":"Comedy","_type":"movie","_director":"Seth MacFarlane","_rateAvg":0,"_rateCount":0}
 {"_name":"300","_path":"300.mp4","_date":"09/03/2007","_genre":"Action","_type":"movie","_director":"Zack Snyder","_rateAvg":0,"_rateCount":0}
 {"_name":"Frozen","_path":"Frozen.mp4","_date":"28/11/2013","_genre":"Family","_type":"movie","_director":"Jennifer Lee","_rateAvg":0,"_rateCount":0}
