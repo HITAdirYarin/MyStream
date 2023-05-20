@@ -10,20 +10,17 @@ namespace MyStream
     public abstract class Stream : Content
     {
         //data members
-        public string _creator { get; set; }
-        public int _partNum { get; set; }
+        public string _director { get; set; }
 
         //methods
         public Stream() 
         { 
-            _creator = "no name";
-            _partNum = 0;
+            _director = "no name";
         }
 
-        public Stream(string creator, int partNum)
+        public Stream(string director)
         {
-            _creator = creator;
-            _partNum = partNum;
+            _director = director;
         }
 
     
