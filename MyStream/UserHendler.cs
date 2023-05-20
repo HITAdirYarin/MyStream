@@ -14,7 +14,7 @@ namespace MyStream
 {
     public abstract class UserHendler
     {
-        public static bool saveUser(User user)
+        public static bool saveUser(User user) // The function recieve a new user and serialize it
         {
             string json = JsonSerializer.Serialize(user);
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "users.txt");
@@ -32,8 +32,8 @@ namespace MyStream
                 return false;
             }
             return true;
-        } //save this user via json to file
-        public static bool updateUser(int userId,User newUser)
+        } 
+        public static bool updateUser(int userId,User newUser) //The function update a user's details and serialize it
         {
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "users.txt");
             bool userUpdated = false;
@@ -58,7 +58,7 @@ namespace MyStream
             }
             return userUpdated;
         }
-        public static bool loadUser()
+        public static bool loadUser() // The function loads all users from file to RAM
         {
             string dataFile;
             User a = new User();
@@ -81,9 +81,9 @@ namespace MyStream
 
             }
             return true;
-        } // load all users using json from file to RAM
+        } 
 
-        public static bool saveUsersCount()
+        public static bool saveUsersCount() // The function saves the number of users that exist (useful to give a new user an appropriate id number)
         {
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "numOfUsers.txt");
             try
@@ -100,7 +100,7 @@ namespace MyStream
             }
             return true;
         }
-        public static bool getUserCount()
+        public static bool getUserCount() // The function returns the number of users that exist
         {
             try
             {
@@ -115,7 +115,7 @@ namespace MyStream
                 return false;
             }
         }
-        public static User LoadOneUser(string username)
+        public static User LoadOneUser(string username) // The function recieves a username and return the appropriate User
         {
             string dataFile;
             User a = new User();

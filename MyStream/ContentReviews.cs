@@ -11,8 +11,6 @@ namespace MyStream
         public string _name { get; set; }
         public List<String> _review { get; set; }
 
-
-
         public ContentReviews(string name) 
         {
             _name = name;

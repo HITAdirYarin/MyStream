@@ -11,19 +11,16 @@ namespace MyStream
     {
         //data members
         public string _director { get; set; }
-        public int _partNum { get; set; }
 
         //methods
         public Stream() 
         { 
             _director = "no name";
-            _partNum = 0;
         }
 
-        public Stream(string director, int partNum)
+        public Stream(string director)
         {
             _director = director;
-            _partNum = partNum;
         }
 
     
