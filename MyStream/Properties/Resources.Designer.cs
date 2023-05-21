@@ -74,6 +74,16 @@ namespace MyStream.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap grey_star {
+            get {
+                object obj = ResourceManager.GetObject("grey_star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2023_05_08_at_12_30_38 {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2023-05-08 at 12.30.38", resourceCulture);
@@ -97,6 +107,16 @@ namespace MyStream.Properties {
         internal static System.Drawing.Bitmap WhatsApp_new {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp new", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yellow_star {
+            get {
+                object obj = ResourceManager.GetObject("yellow_star", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

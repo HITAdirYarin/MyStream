@@ -1,4 +1,5 @@
 ﻿using AxWMPLib;
+using MyStream.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -82,8 +83,77 @@ namespace MyStream
 
         private void buttonRateMe_Click(object sender, EventArgs e)
         {
-            ContentController.addRate(3, "Fast and Furious 9");
+            panel_rate_me.Visible = true;
+            //ContentController.addRate(3, "Fast and Furious 9");
 
+        }
+
+        private void pb_star_5_Click(object sender, EventArgs e)
+        {
+            pb_star_1.Image = Resources.yellow_star;
+            pb_star_2.Image = Resources.yellow_star;
+            pb_star_3.Image = Resources.yellow_star;
+            pb_star_4.Image = Resources.yellow_star;
+            pb_star_5.Image = Resources.yellow_star;
+            label_rating_input.Text = "5";
+            labelrating1.Text = "/5";
+        }
+
+        private void button_close_rate_win_Click(object sender, EventArgs e)
+        {
+            panel_rate_me.Visible=false;
+        }
+
+        private void pb_star_4_Click(object sender, EventArgs e)
+        {
+            pb_star_1.Image = Resources.yellow_star;
+            pb_star_2.Image = Resources.yellow_star;
+            pb_star_3.Image = Resources.yellow_star;
+            pb_star_4.Image = Resources.yellow_star;
+            pb_star_5.Image = Resources.grey_star;
+            label_rating_input.Text = "4";
+            labelrating1.Text = "/5";
+        }
+
+        private void pb_star_3_Click(object sender, EventArgs e)
+        {
+            pb_star_1.Image = Resources.yellow_star;
+            pb_star_2.Image = Resources.yellow_star;
+            pb_star_3.Image = Resources.yellow_star;
+            pb_star_4.Image = Resources.grey_star;
+            pb_star_5.Image = Resources.grey_star;
+            label_rating_input.Text = "3";
+            labelrating1.Text = "/5";
+        }
+
+        private void pb_star_2_Click(object sender, EventArgs e)
+        {
+            pb_star_1.Image = Resources.yellow_star;
+            pb_star_2.Image = Resources.yellow_star;
+            pb_star_3.Image = Resources.grey_star;
+            pb_star_4.Image = Resources.grey_star;
+            pb_star_5.Image = Resources.grey_star;
+            label_rating_input.Text = "2";
+            labelrating1.Text = "/5";
+        }
+
+        private void pb_star_1_Click(object sender, EventArgs e)
+        {
+            pb_star_1.Image = Resources.yellow_star;
+            pb_star_2.Image = Resources.grey_star;
+            pb_star_3.Image = Resources.grey_star;
+            pb_star_4.Image = Resources.grey_star;
+            pb_star_5.Image = Resources.grey_star;
+            label_rating_input.Text = "1";
+            labelrating1.Text = "/5";
+        }
+
+        private void button_confirm_rate_Click(object sender, EventArgs e)
+        {
+            panel_rate_me.Visible = false;
+            int rate = int.Parse(label_rating_input.Text);
+            string movie_name = comboBoxChooseMovie.Text;
+            ContentController.addRate(rate, movie_name);
         }
     }
 }
