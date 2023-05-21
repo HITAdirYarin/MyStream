@@ -62,7 +62,7 @@ namespace MyStream
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Content fast9 = Content._contents["Fast and Furious 9"] ;
+            Movies fast9 =Content._contents["Fast and Furious 9"] as Movies ;
             if (fast9 == null)
             {
                 MessageBox.Show("ERROR");

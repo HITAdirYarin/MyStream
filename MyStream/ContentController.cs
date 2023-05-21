@@ -40,13 +40,15 @@ namespace MyStream
         public static void addReviews(string name,string review)
         {
             Content a = Content._contents[name];
-            a.addReview(review);
-            ContentReviews temp = new ContentReviews(name);
-            foreach(string item in a._review)
+            if (a._review[0] == "no reviews")
             {
-                temp._review.Add(item);
+                a._review[0] = review;
             }
-            ContentHendler.addReview(temp);
+            else
+            {
+                a.addReview(review);
+            }
+            ContentHendler.updateMovie( a);
         }
     }
 }

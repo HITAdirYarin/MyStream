@@ -14,8 +14,15 @@ namespace MyStream
 
         //methods
         public Stream() 
-        { 
-            _director = "no name";
+        {
+            _name = "no name";
+            _path = "no path";
+            _director = "no director";
+            _date = "no date";
+            _genre = "no genre";
+            _type = "no type";
+            _rateCount = 0;
+            _rateAvg = 0;
         }
 
         public Stream(string director)

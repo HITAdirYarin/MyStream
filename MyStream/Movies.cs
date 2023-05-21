@@ -8,7 +8,7 @@ namespace MyStream
 {
     public class Movies : Stream 
     {
-        private Dictionary<int,MoviesParts > _part;
+
 
         public Movies()
         {
@@ -20,6 +20,8 @@ namespace MyStream
             _type = "no type";
             _rateCount = 0;
             _rateAvg = 0;
+            _review = new List<string>();
+            _review.Add("no reviews");
         }
        public Movies(string name, string path,string director, string date, string genre, string type,int rateCount,double rate)
         {
@@ -31,6 +33,8 @@ namespace MyStream
             _type = type;
             _rateCount = rateCount;
             _rateAvg = rate;
+            _review = new List<string>();
+            _review.Add("no reviews");
         }
     }
 }
