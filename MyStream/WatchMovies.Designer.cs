@@ -33,6 +33,15 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel_display_movie = new System.Windows.Forms.Panel();
             this.panel_rate_me = new System.Windows.Forms.Panel();
+            this.labelrating1 = new System.Windows.Forms.Label();
+            this.comboBoxChooseMovie = new System.Windows.Forms.ComboBox();
+            this.choose_movie = new System.Windows.Forms.Label();
+            this.label_rating_input = new System.Windows.Forms.Label();
+            this.lbl_ratings = new System.Windows.Forms.Label();
+            this.pb_star_5 = new System.Windows.Forms.PictureBox();
+            this.pb_star_4 = new System.Windows.Forms.PictureBox();
+            this.pb_star_3 = new System.Windows.Forms.PictureBox();
+            this.pb_star_2 = new System.Windows.Forms.PictureBox();
             this.pb_star_1 = new System.Windows.Forms.PictureBox();
             this.button_leave_review = new System.Windows.Forms.Button();
             this.button_confirm_rate = new System.Windows.Forms.Button();
@@ -51,23 +60,14 @@
             this.labelName = new System.Windows.Forms.Label();
             this.buttonClosePlayer = new System.Windows.Forms.Button();
             this.buttonAddToFav = new System.Windows.Forms.Button();
-            this.pb_star_2 = new System.Windows.Forms.PictureBox();
-            this.pb_star_4 = new System.Windows.Forms.PictureBox();
-            this.pb_star_3 = new System.Windows.Forms.PictureBox();
-            this.pb_star_5 = new System.Windows.Forms.PictureBox();
-            this.lbl_ratings = new System.Windows.Forms.Label();
             this.player_fast = new AxWMPLib.AxWindowsMediaPlayer();
-            this.choose_movie = new System.Windows.Forms.Label();
-            this.comboBoxChooseMovie = new System.Windows.Forms.ComboBox();
-            this.label_rating_input = new System.Windows.Forms.Label();
-            this.labelrating1 = new System.Windows.Forms.Label();
             this.panel_display_movie.SuspendLayout();
             this.panel_rate_me.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_star_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_star_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_star_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_star_4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_star_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_star_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_star_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_star_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_fast)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,6 +122,120 @@
             this.panel_rate_me.Size = new System.Drawing.Size(674, 453);
             this.panel_rate_me.TabIndex = 1;
             this.panel_rate_me.Visible = false;
+            // 
+            // labelrating1
+            // 
+            this.labelrating1.BackColor = System.Drawing.Color.Transparent;
+            this.labelrating1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.labelrating1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.labelrating1.Location = new System.Drawing.Point(388, 290);
+            this.labelrating1.Name = "labelrating1";
+            this.labelrating1.Size = new System.Drawing.Size(65, 60);
+            this.labelrating1.TabIndex = 28;
+            this.labelrating1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // comboBoxChooseMovie
+            // 
+            this.comboBoxChooseMovie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.comboBoxChooseMovie.FormattingEnabled = true;
+            this.comboBoxChooseMovie.Items.AddRange(new object[] {
+            "Fast and Furious 9",
+            "Ted",
+            "300",
+            "Frozen",
+            "Friends with Benefits",
+            "Titanic",
+            "SpongeBob",
+            "Shrek",
+            "21 Jump street",
+            "The godfather"});
+            this.comboBoxChooseMovie.Location = new System.Drawing.Point(294, 126);
+            this.comboBoxChooseMovie.Name = "comboBoxChooseMovie";
+            this.comboBoxChooseMovie.Size = new System.Drawing.Size(291, 33);
+            this.comboBoxChooseMovie.TabIndex = 27;
+            // 
+            // choose_movie
+            // 
+            this.choose_movie.BackColor = System.Drawing.Color.Transparent;
+            this.choose_movie.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.choose_movie.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.choose_movie.Location = new System.Drawing.Point(37, 104);
+            this.choose_movie.Name = "choose_movie";
+            this.choose_movie.Size = new System.Drawing.Size(280, 60);
+            this.choose_movie.TabIndex = 26;
+            this.choose_movie.Text = "Choose Movie:";
+            this.choose_movie.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label_rating_input
+            // 
+            this.label_rating_input.BackColor = System.Drawing.Color.Transparent;
+            this.label_rating_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label_rating_input.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label_rating_input.Location = new System.Drawing.Point(348, 290);
+            this.label_rating_input.Name = "label_rating_input";
+            this.label_rating_input.Size = new System.Drawing.Size(71, 60);
+            this.label_rating_input.TabIndex = 25;
+            this.label_rating_input.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_ratings
+            // 
+            this.lbl_ratings.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_ratings.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lbl_ratings.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.lbl_ratings.Location = new System.Drawing.Point(187, 290);
+            this.lbl_ratings.Name = "lbl_ratings";
+            this.lbl_ratings.Size = new System.Drawing.Size(166, 60);
+            this.lbl_ratings.TabIndex = 24;
+            this.lbl_ratings.Text = "Ratings:";
+            this.lbl_ratings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pb_star_5
+            // 
+            this.pb_star_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_star_5.Image = global::MyStream.Properties.Resources.grey_star;
+            this.pb_star_5.Location = new System.Drawing.Point(527, 209);
+            this.pb_star_5.Name = "pb_star_5";
+            this.pb_star_5.Size = new System.Drawing.Size(58, 57);
+            this.pb_star_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_star_5.TabIndex = 23;
+            this.pb_star_5.TabStop = false;
+            this.pb_star_5.Click += new System.EventHandler(this.pb_star_5_Click);
+            // 
+            // pb_star_4
+            // 
+            this.pb_star_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_star_4.Image = global::MyStream.Properties.Resources.grey_star;
+            this.pb_star_4.Location = new System.Drawing.Point(420, 209);
+            this.pb_star_4.Name = "pb_star_4";
+            this.pb_star_4.Size = new System.Drawing.Size(58, 57);
+            this.pb_star_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_star_4.TabIndex = 22;
+            this.pb_star_4.TabStop = false;
+            this.pb_star_4.Click += new System.EventHandler(this.pb_star_4_Click);
+            // 
+            // pb_star_3
+            // 
+            this.pb_star_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_star_3.Image = global::MyStream.Properties.Resources.grey_star;
+            this.pb_star_3.Location = new System.Drawing.Point(311, 209);
+            this.pb_star_3.Name = "pb_star_3";
+            this.pb_star_3.Size = new System.Drawing.Size(58, 57);
+            this.pb_star_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_star_3.TabIndex = 21;
+            this.pb_star_3.TabStop = false;
+            this.pb_star_3.Click += new System.EventHandler(this.pb_star_3_Click);
+            // 
+            // pb_star_2
+            // 
+            this.pb_star_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_star_2.Image = global::MyStream.Properties.Resources.grey_star;
+            this.pb_star_2.Location = new System.Drawing.Point(214, 209);
+            this.pb_star_2.Name = "pb_star_2";
+            this.pb_star_2.Size = new System.Drawing.Size(58, 57);
+            this.pb_star_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_star_2.TabIndex = 20;
+            this.pb_star_2.TabStop = false;
+            this.pb_star_2.Click += new System.EventHandler(this.pb_star_2_Click);
             // 
             // pb_star_1
             // 
@@ -207,7 +321,7 @@
             this.labelRelease.BackColor = System.Drawing.Color.Transparent;
             this.labelRelease.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelRelease.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelRelease.Location = new System.Drawing.Point(1563, 184);
+            this.labelRelease.Location = new System.Drawing.Point(1569, 184);
             this.labelRelease.Name = "labelRelease";
             this.labelRelease.Size = new System.Drawing.Size(339, 56);
             this.labelRelease.TabIndex = 5;
@@ -289,6 +403,7 @@
             this.buttonViewReviews.TabIndex = 11;
             this.buttonViewReviews.Text = "View Reviews";
             this.buttonViewReviews.UseVisualStyleBackColor = false;
+            this.buttonViewReviews.Click += new System.EventHandler(this.buttonViewReviews_Click);
             // 
             // labelGanre
             // 
@@ -319,7 +434,7 @@
             this.labelName.BackColor = System.Drawing.Color.Transparent;
             this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelName.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelName.Location = new System.Drawing.Point(1563, 78);
+            this.labelName.Location = new System.Drawing.Point(1572, 78);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(339, 113);
             this.labelName.TabIndex = 14;
@@ -354,66 +469,6 @@
             this.buttonAddToFav.Text = "Add to favorits";
             this.buttonAddToFav.UseVisualStyleBackColor = false;
             // 
-            // pb_star_2
-            // 
-            this.pb_star_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb_star_2.Image = global::MyStream.Properties.Resources.grey_star;
-            this.pb_star_2.Location = new System.Drawing.Point(214, 209);
-            this.pb_star_2.Name = "pb_star_2";
-            this.pb_star_2.Size = new System.Drawing.Size(58, 57);
-            this.pb_star_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_star_2.TabIndex = 20;
-            this.pb_star_2.TabStop = false;
-            this.pb_star_2.Click += new System.EventHandler(this.pb_star_2_Click);
-            // 
-            // pb_star_4
-            // 
-            this.pb_star_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb_star_4.Image = global::MyStream.Properties.Resources.grey_star;
-            this.pb_star_4.Location = new System.Drawing.Point(420, 209);
-            this.pb_star_4.Name = "pb_star_4";
-            this.pb_star_4.Size = new System.Drawing.Size(58, 57);
-            this.pb_star_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_star_4.TabIndex = 22;
-            this.pb_star_4.TabStop = false;
-            this.pb_star_4.Click += new System.EventHandler(this.pb_star_4_Click);
-            // 
-            // pb_star_3
-            // 
-            this.pb_star_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb_star_3.Image = global::MyStream.Properties.Resources.grey_star;
-            this.pb_star_3.Location = new System.Drawing.Point(311, 209);
-            this.pb_star_3.Name = "pb_star_3";
-            this.pb_star_3.Size = new System.Drawing.Size(58, 57);
-            this.pb_star_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_star_3.TabIndex = 21;
-            this.pb_star_3.TabStop = false;
-            this.pb_star_3.Click += new System.EventHandler(this.pb_star_3_Click);
-            // 
-            // pb_star_5
-            // 
-            this.pb_star_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb_star_5.Image = global::MyStream.Properties.Resources.grey_star;
-            this.pb_star_5.Location = new System.Drawing.Point(527, 209);
-            this.pb_star_5.Name = "pb_star_5";
-            this.pb_star_5.Size = new System.Drawing.Size(58, 57);
-            this.pb_star_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_star_5.TabIndex = 23;
-            this.pb_star_5.TabStop = false;
-            this.pb_star_5.Click += new System.EventHandler(this.pb_star_5_Click);
-            // 
-            // lbl_ratings
-            // 
-            this.lbl_ratings.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_ratings.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lbl_ratings.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbl_ratings.Location = new System.Drawing.Point(187, 290);
-            this.lbl_ratings.Name = "lbl_ratings";
-            this.lbl_ratings.Size = new System.Drawing.Size(166, 60);
-            this.lbl_ratings.TabIndex = 24;
-            this.lbl_ratings.Text = "Ratings:";
-            this.lbl_ratings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // player_fast
             // 
             this.player_fast.Enabled = true;
@@ -423,60 +478,6 @@
             this.player_fast.Size = new System.Drawing.Size(1562, 991);
             this.player_fast.TabIndex = 17;
             this.player_fast.Visible = false;
-            // 
-            // choose_movie
-            // 
-            this.choose_movie.BackColor = System.Drawing.Color.Transparent;
-            this.choose_movie.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.choose_movie.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.choose_movie.Location = new System.Drawing.Point(37, 104);
-            this.choose_movie.Name = "choose_movie";
-            this.choose_movie.Size = new System.Drawing.Size(280, 60);
-            this.choose_movie.TabIndex = 26;
-            this.choose_movie.Text = "Choose Movie:";
-            this.choose_movie.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // comboBoxChooseMovie
-            // 
-            this.comboBoxChooseMovie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.comboBoxChooseMovie.FormattingEnabled = true;
-            this.comboBoxChooseMovie.Items.AddRange(new object[] {
-            "Fast and Furious 9",
-            "Ted",
-            "300",
-            "Frozen",
-            "Friends with Benefits",
-            "Titanic",
-            "SpongeBob",
-            "Shrek",
-            "21 Jump street",
-            "The godfather"});
-            this.comboBoxChooseMovie.Location = new System.Drawing.Point(294, 126);
-            this.comboBoxChooseMovie.Name = "comboBoxChooseMovie";
-            this.comboBoxChooseMovie.Size = new System.Drawing.Size(291, 33);
-            this.comboBoxChooseMovie.TabIndex = 27;
-            // 
-            // label_rating_input
-            // 
-            this.label_rating_input.BackColor = System.Drawing.Color.Transparent;
-            this.label_rating_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label_rating_input.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label_rating_input.Location = new System.Drawing.Point(348, 290);
-            this.label_rating_input.Name = "label_rating_input";
-            this.label_rating_input.Size = new System.Drawing.Size(71, 60);
-            this.label_rating_input.TabIndex = 25;
-            this.label_rating_input.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelrating1
-            // 
-            this.labelrating1.BackColor = System.Drawing.Color.Transparent;
-            this.labelrating1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.labelrating1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelrating1.Location = new System.Drawing.Point(388, 290);
-            this.labelrating1.Name = "labelrating1";
-            this.labelrating1.Size = new System.Drawing.Size(65, 60);
-            this.labelrating1.TabIndex = 28;
-            this.labelrating1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // WatchMovies
             // 
@@ -506,11 +507,11 @@
             this.Text = "WatchMovies";
             this.panel_display_movie.ResumeLayout(false);
             this.panel_rate_me.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_star_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_star_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_star_5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_star_4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_star_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_star_5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_star_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_star_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player_fast)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

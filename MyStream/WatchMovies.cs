@@ -178,5 +178,15 @@ namespace MyStream
             string movie_name = comboBoxChooseMovie.Text;
             ContentController.addRate(rate, movie_name);
         }
+
+        private void buttonViewReviews_Click(object sender, EventArgs e)
+        {
+            string review = Content._contents["Fast and Furious 9"]._review[0];
+            MessageBox.Show(review);
+            review = Content._contents["Fast and Furious 9"]._review[1];
+            MessageBox.Show(review);
+            review = Content._contents["Fast and Furious 9"]._review[2];
+            MessageBox.Show(review);
+        }
     }
 }
