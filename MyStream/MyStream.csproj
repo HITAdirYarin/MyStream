@@ -91,6 +91,7 @@
     <Compile Include="Content.cs" />
     <Compile Include="ContentController.cs" />
     <Compile Include="ContentHendler.cs" />
+    <Compile Include="ContentReviews.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

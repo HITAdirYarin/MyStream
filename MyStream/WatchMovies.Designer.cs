@@ -221,7 +221,7 @@
             this.labelDirector.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.labelDirector.Location = new System.Drawing.Point(1569, 240);
             this.labelDirector.Name = "labelDirector";
-            this.labelDirector.Size = new System.Drawing.Size(333, 56);
+            this.labelDirector.Size = new System.Drawing.Size(333, 86);
             this.labelDirector.TabIndex = 6;
             this.labelDirector.Text = "Director(s):";
             this.labelDirector.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
