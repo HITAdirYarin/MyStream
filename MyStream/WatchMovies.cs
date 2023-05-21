@@ -101,12 +101,13 @@ namespace MyStream
 
         private void buttonRateMe_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+//<<<<<<< HEAD
+            panel_display_movie.SendToBack();
             panel_rate_me.Visible = true;
             //ContentController.addRate(3, "Fast and Furious 9");
-=======
+//=======
             ContentController.addRate(5, "Fast and Furious 9");
->>>>>>> main
+//>>>>>>> main
 
         }
 
