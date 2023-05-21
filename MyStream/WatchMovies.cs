@@ -77,7 +77,7 @@ namespace MyStream
                 string fullPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "YouTubeMovies", fast9._path));
                 if (File.Exists(fullPath))
                 {
-                    player_fast.URL = fullPath;
+                    player_fast.URL = "Fast and Furious 9.mp4";//fullPath;
                 }
                 else
                 {
