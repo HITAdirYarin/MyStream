@@ -188,5 +188,20 @@ namespace MyStream
             review = Content._contents["Fast and Furious 9"]._review[2];
             MessageBox.Show(review);
         }
+
+        private void panel_rate_me_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void comboBoxChooseMovie_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_display_movie_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

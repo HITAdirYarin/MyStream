@@ -99,6 +99,7 @@
             this.panel_display_movie.Name = "panel_display_movie";
             this.panel_display_movie.Size = new System.Drawing.Size(1568, 1003);
             this.panel_display_movie.TabIndex = 1;
+            this.panel_display_movie.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_display_movie_Paint);
             // 
             // panel_rate_me
             // 
@@ -122,6 +123,7 @@
             this.panel_rate_me.Size = new System.Drawing.Size(674, 453);
             this.panel_rate_me.TabIndex = 1;
             this.panel_rate_me.Visible = false;
+            this.panel_rate_me.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_rate_me_Paint);
             // 
             // labelrating1
             // 
@@ -153,6 +155,7 @@
             this.comboBoxChooseMovie.Name = "comboBoxChooseMovie";
             this.comboBoxChooseMovie.Size = new System.Drawing.Size(291, 33);
             this.comboBoxChooseMovie.TabIndex = 27;
+            this.comboBoxChooseMovie.SelectedIndexChanged += new System.EventHandler(this.comboBoxChooseMovie_SelectedIndexChanged);
             // 
             // choose_movie
             // 
