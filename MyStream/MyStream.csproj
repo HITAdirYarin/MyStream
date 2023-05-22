@@ -91,7 +91,6 @@
     <Compile Include="Content.cs" />
     <Compile Include="ContentController.cs" />
     <Compile Include="ContentHendler.cs" />
-    <Compile Include="ContentReviews.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,7 +104,6 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Movies.cs" />
-    <Compile Include="MoviesParts.cs" />
     <Compile Include="Podcast.cs" />
     <Compile Include="PodcastsEpisode.cs" />
     <Compile Include="Program.cs" />
@@ -203,6 +201,36 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grey_star1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow_star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\300.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ted.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jumpstreet21.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frozen.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\friendwithbenfits.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\titanic.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thegodfather.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shrek.jfif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

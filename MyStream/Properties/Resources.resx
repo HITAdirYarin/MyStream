@@ -118,34 +118,64 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="תמונה2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\תמונה2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WhatsApp Image 2023-05-08 at 12.30.38" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WhatsApp Image 2023-05-08 at 12.30.38.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="WhatsApp new" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WhatsApp new.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WhatsApp Image 2023-05-08 at 15.31.09" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WhatsApp Image 2023-05-08 at 15.31.09.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="תמונה5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\תמונה5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="תמונה31" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\תמונה31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="תמונה4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\תמונה4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="300" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\300.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="תמונה1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\תמונה1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="frozen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frozen.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhatsApp Image 2023-05-08 at 12.30.38" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WhatsApp Image 2023-05-08 at 12.30.38.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jumpstreet21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jumpstreet21.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ted" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ted.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhatsApp Image 2023-05-08 at 15.31.09" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WhatsApp Image 2023-05-08 at 15.31.09.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grey_star" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grey_star1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thegodfather" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thegodfather.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="תמונה5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\תמונה5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AAAABXRSEaLCgZ5HZ_BKX3Z3goNtosUM5ketFwiXPHrDo0iloQZX_dqX-ZahPfTmRo9FbZzj4_x_UyXnFF4JJD-iZXxEhjMiLFdVsyw5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AAAABXRSEaLCgZ5HZ_BKX3Z3goNtosUM5ketFwiXPHrDo0iloQZX_dqX-ZahPfTmRo9FbZzj4_x_UyXnFF4JJD-iZXxEhjMiLFdVsyw5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="titanic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\titanic.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="תמונה3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\תמונה3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AAAABXRSEaLCgZ5HZ_BKX3Z3goNtosUM5ketFwiXPHrDo0iloQZX_dqX-ZahPfTmRo9FbZzj4_x_UyXnFF4JJD-iZXxEhjMiLFdVsyw5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AAAABXRSEaLCgZ5HZ_BKX3Z3goNtosUM5ketFwiXPHrDo0iloQZX_dqX-ZahPfTmRo9FbZzj4_x_UyXnFF4JJD-iZXxEhjMiLFdVsyw5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="תמונה1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\תמונה1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yellow_star" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yellow_star.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="תמונה2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\תמונה2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="תמונה4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\תמונה4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="friendwithbenfits" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\friendwithbenfits.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shrek" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shrek.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

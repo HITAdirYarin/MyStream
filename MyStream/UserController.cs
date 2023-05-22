@@ -27,7 +27,7 @@ namespace MyStream
         public static bool logout()
         {
             return true;
-        } // not sure if needed (?)
+        } 
 
         public static bool ChangePassword(string password , string username) 
         {
@@ -49,9 +49,6 @@ namespace MyStream
                 return false;
             }
             return User.ChangeEmail(email, userName);
-
-            //UserHendler.saveUser(temp);
-            //temp.ChangeEmail(email); // need to fix problem - not saving properly & nod deleting/editing old one
 
         }
     }

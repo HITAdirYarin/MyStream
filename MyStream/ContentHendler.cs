@@ -70,37 +70,7 @@ namespace MyStream
             }
             return true;
         } // load all contents using json from fils to RAM
-        public static void addReview(ContentReviews item) // The function updates the list of the reviews and serialize it
-        {
-            string json = JsonSerializer.Serialize(item);
-            string filePath= Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "contentsReviews.txt");
-            try
-            {
-                using (StreamWriter writer = new StreamWriter(filePath, append: true))
-                {
-                    writer.WriteLine(json);
-                    writer.Close();
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("ERROR :" + e.Message);
-            }
-        }
-        public static List<string> loadReview(string name) // The function recieves the name of the movie, and returns list of its reviews
-        {
-            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "contentsReviews.txt");
-            string[] lines = File.ReadAllLines(filePath);
-            for (int i = 0; i < lines.Length; i++)
-            {
-                ContentReviews content = JsonSerializer.Deserialize<ContentReviews>(lines[i]);
-                if (content._name == name)
-                {
-                    return content._review;
-                }
-            }
-            return null;
-        }
+        
         //***************************
     }
 }
