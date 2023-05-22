@@ -14,17 +14,12 @@ namespace MyStream
         [STAThread]
         static void Main()
         {
-           // ContentController.addMovies();
             ContentHendler.loadMovies();
             UserHendler.getUserCount();
             UserHendler.loadUser();
-            //ContentController.addReviews("Fast and Furious 9", "Amazing!");
-            //ContentController.addReviews("Fast and Furious 9", "wow!");
-            //ContentController.addReviews("Fast and Furious 9", "like it!");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
-
         }
     }
 }

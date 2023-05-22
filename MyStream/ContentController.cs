@@ -20,17 +20,15 @@ namespace MyStream
             ContentHendler.saveMovie(c);
             Movies d = new Movies("Frozen", "Frozen.mp4","Jennifer Lee", "28/11/2013", "Family", "movie", 0, 0);
             ContentHendler.saveMovie(d);
-            Movies e = new Movies("Friends with Benefits", "Will Gluck", "friendswithbenefits.mp4", "10/06/2012", "Comedy", "movie", 0, 0);
+            Movies e = new Movies("Friends with Benefits", "Friends with Benefits.mp4", "Will Gluck","10/06/2012", "Comedy", "movie", 0, 0);
             ContentHendler.saveMovie(e);
             Movies f = new Movies("Titanic", "Titanic.mp4", "James Cameron", "09/01/1997", "Drama", "movie", 0, 0);
             ContentHendler.saveMovie(f);
-            Movies g = new Movies("SpongeBob", "SpongeBob.mp4", "Stephen Hillenburg", "30/08/2011", "Family", "movie", 0, 0);
-            ContentHendler.saveMovie(g);
             Movies h = new Movies("Shrek", "Shrek.mp4","Vicky Jenson", "09/11/2012", "Family", "movie", 0, 0);
             ContentHendler.saveMovie(h);
-            Movies i = new Movies("21 Jump street", "JumpStreet.mp4","Phil Lord", "19/03/2010", "Comedy", "movie", 0, 0);
+            Movies i = new Movies("21 Jump street", "Jump Street.mp4","Phil Lord", "19/03/2010", "Comedy", "movie", 0, 0);
             ContentHendler.saveMovie(i);
-            Movies j= new Movies("The godfather", "TheGodfather.mp4", "Francis Ford Coppola", "14/02/2000", "Action", "movie", 0, 0);
+            Movies j= new Movies("The Godfather", "The Godfather.mp4", "Francis Ford Coppola", "14/02/2000", "Action", "movie", 0, 0);
             ContentHendler.saveMovie(j);
         }
         public static void addRate(int choose,string name)
