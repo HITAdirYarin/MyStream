@@ -120,6 +120,12 @@
     <Compile Include="WatchMovies.Designer.cs">
       <DependentUpon>WatchMovies.cs</DependentUpon>
     </Compile>
+    <Compile Include="WatchSeries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WatchSeries.Designer.cs">
+      <DependentUpon>WatchSeries.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +144,9 @@
     </Compile>
     <EmbeddedResource Include="WatchMovies.resx">
       <DependentUpon>WatchMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WatchSeries.resx">
+      <DependentUpon>WatchSeries.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -231,6 +240,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\shrek.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bridgerton.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brooklyn99.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thewalkingdead.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vikings.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatarEp1.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatarEp2.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avataerEp3.jfif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

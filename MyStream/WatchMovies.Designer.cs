@@ -873,10 +873,10 @@
             this.Controls.Add(this.buttonBeckToMain);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelReviewList);
-            this.Controls.Add(this.panel_display_movie);
-            this.Controls.Add(this.player_fast);
             this.Controls.Add(this.panelLeaveReview);
             this.Controls.Add(this.panel_rate_me);
+            this.Controls.Add(this.panel_display_movie);
+            this.Controls.Add(this.player_fast);
             this.DoubleBuffered = true;
             this.Name = "WatchMovies";
             this.Text = "WatchMovies";
