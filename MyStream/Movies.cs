@@ -8,8 +8,6 @@ namespace MyStream
 {
     public class Movies : Stream 
     {
-
-
         public Movies()
         {
             _name = "no name";

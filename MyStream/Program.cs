@@ -15,6 +15,7 @@ namespace MyStream
         static void Main()
         {
             ContentHendler.loadMovies();
+            ContentHendler.loadSeries();
             UserHendler.getUserCount();
             UserHendler.loadUser();
             Application.EnableVisualStyles();

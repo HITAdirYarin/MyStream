@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design.Serialization;
 using System.Data;
 using System.Drawing;
 using System.IO;
@@ -312,26 +313,36 @@ namespace MyStream
 
         private void play_Series(Series series) //need to build an appropriate constructor for the series objects
         {
-            //panel_display_Series.SendToBack();
-            //player_fast.Size = new Size(1045, 645);
-            //player_fast.Visible = true;
-            //panel_display_Series.Visible = false;
-            //string fullPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "YouTubeSeries", series._path));
-            //if (File.Exists(fullPath))
-            //{
-            //    player_fast.URL = fullPath;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("There is an error with playing the movie");
-            //}
-            //labelName.Text += " " + series._name;
-            //labelRelease.Text += " " + series._date;
-            //labelDirector.Text += " " + series._director;
-            //labelGanre.Text += " " + series._genre;
-            //string rate = series._rateAvg.ToString("0.0");
-            //labelRate.Text += " " + rate + "/5";
-            //player_fast.Show();
+            panel_display_Series.SendToBack();
+            player_fast.Size = new Size(1045, 645);
+            player_fast.Visible = true;
+            panel_display_Series.Visible = false;
+            string fullPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, series._name, series._path));
+            if (File.Exists(fullPath))
+            {
+                player_fast.URL = fullPath;
+            }
+            else
+            {
+                MessageBox.Show("There is an error with playing the movie");
+            }
+            labelName.Text += " " + series._name;
+            labelRelease.Text += " " + series._date;
+            labelDirector.Text += " " + series._director;
+            labelGanre.Text += " " + series._genre;
+            string rate = series._rateAvg.ToString("0.0");
+            labelRate.Text += " " + rate + "/5";
+            player_fast.Show();
+        }
+
+        private void labelName_Click(object sender, EventArgs e)
+        {
+            //h
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
         }
     }
     

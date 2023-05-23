@@ -1,8 +1,8 @@
 {"_name":"Fast and Furious 9","_path":"Fast and Furious 9.mp4","_date":"25/06/2021","_genre":"Action","_type":"movie","_rateAvg":4.8499999999999996,"_rateCount":20,"_review":["Amazing!","wow!","like it!","best movie ever!"]}
 {"_name":"Ted","_path":"Ted.mp4","_director":"Seth MacFarlane","_date":"09/08/2012","_genre":"Comedy","_type":"movie","_rateAvg":0,"_rateCount":0,"_review":["no reviews"]}
-{"_name":"300","_path":"300.mp4","_director":"Zack Snyder","_date":"09/03/2007","_genre":"Action","_type":"movie","_rateAvg":0,"_rateCount":0,"_review":["no reviews"]}
+{"_name":"300","_path":"300.mp4","_date":"09/03/2007","_genre":"Action","_type":"movie","_rateAvg":5,"_rateCount":1,"_review":["no reviews"]}
 {"_name":"Frozen","_path":"Frozen.mp4","_director":"Jennifer Lee","_date":"28/11/2013","_genre":"Family","_type":"movie","_rateAvg":0,"_rateCount":0,"_review":["no reviews"]}
-{"_name":"Friends with Benefits","_path":"Friends with Benefits.mp4","_director":"Will Gluck","_date":"10/06/2012","_genre":"Comedy","_type":"movie","_rateAvg":0,"_rateCount":0,"_review":["no reviews"]}
+{"_name":"Friends with Benefits","_path":"Friends with Benefits.mp4","_date":"10/06/2012","_genre":"Comedy","_type":"movie","_rateAvg":0,"_rateCount":0,"_review":["very good"]}
 {"_name":"Titanic","_path":"Titanic.mp4","_date":"09/01/1997","_genre":"Drama","_type":"movie","_rateAvg":5,"_rateCount":1,"_review":["wow made me cry at the end"]}
 {"_name":"Shrek","_path":"Shrek.mp4","_date":"09/11/2012","_genre":"Family","_type":"movie","_rateAvg":0,"_rateCount":0,"_review":["best movie "]}
 {"_name":"21 Jump street","_path":"Jump Street.mp4","_director":"Phil Lord","_date":"19/03/2010","_genre":"Comedy","_type":"movie","_rateAvg":0,"_rateCount":0,"_review":["no reviews"]}

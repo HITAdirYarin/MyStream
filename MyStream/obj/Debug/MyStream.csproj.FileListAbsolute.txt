@@ -435,3 +435,4 @@ C:\Users\HP\OneDrive\Desktop\clone_final_best\MyStream\MyStream\obj\Debug\MyStre
 C:\Users\kanda\OneDrive\Desktop\ComputerSaince\SemesterB\Project\MyStream\MyStream\bin\Debug\libcef.dll
 C:\Users\HP\OneDrive\Desktop\clone_final_best\MyStream\MyStream\obj\Debug\MyStream.pdb
 C:\Users\HP\OneDrive\Desktop\clone_final_best\MyStream\MyStream\obj\Debug\MyStream.WatchSeries.resources
+C:\Users\kanda\OneDrive\Desktop\ComputerSaince\SemesterB\Project\MyStream\MyStream\obj\Debug\MyStream.WatchSeries.resources
