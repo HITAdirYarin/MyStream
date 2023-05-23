@@ -310,6 +310,15 @@
   <ItemGroup>
     <None Include="Resources\WalkingDeadEp3.jfif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bob_The_Constuctor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rob_The_Constuctor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\תמונה1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

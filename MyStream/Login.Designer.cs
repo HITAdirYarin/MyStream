@@ -56,7 +56,10 @@
             this.button_clear = new System.Windows.Forms.Button();
             this.button_register = new System.Windows.Forms.Button();
             this.label = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LblDragMe = new System.Windows.Forms.Label();
             this.panelRegister.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // headline
@@ -428,6 +431,35 @@
             this.label.TabIndex = 6;
             this.label.Text = "Get Started";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::MyStream.Properties.Resources.תמונה11;
+            this.pictureBox1.Location = new System.Drawing.Point(644, 661);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(211, 311);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown_1);
+            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove_1);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp_1);
+            // 
+            // LblDragMe
+            // 
+            this.LblDragMe.AutoSize = true;
+            this.LblDragMe.BackColor = System.Drawing.Color.Transparent;
+            this.LblDragMe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.LblDragMe.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.LblDragMe.Location = new System.Drawing.Point(644, 661);
+            this.LblDragMe.Name = "LblDragMe";
+            this.LblDragMe.Size = new System.Drawing.Size(119, 29);
+            this.LblDragMe.TabIndex = 12;
+            this.LblDragMe.Text = "Drag Me!";
+            this.LblDragMe.Visible = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -436,6 +468,8 @@
             this.BackgroundImage = global::MyStream.Properties.Resources.תמונה4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1909, 984);
+            this.Controls.Add(this.LblDragMe);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelRegister);
             this.Controls.Add(this.checkBoxShowPassword);
             this.Controls.Add(this.label1);
@@ -458,6 +492,7 @@
             this.Load += new System.EventHandler(this.forms_Load);
             this.panelRegister.ResumeLayout(false);
             this.panelRegister.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -494,6 +529,8 @@
         private System.Windows.Forms.Button button_clear;
         private System.Windows.Forms.Button button_register;
         private System.Windows.Forms.Label label;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label LblDragMe;
     }
 }
 
