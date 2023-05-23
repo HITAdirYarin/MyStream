@@ -61,14 +61,6 @@
             this.buttonClearEmail = new System.Windows.Forms.Button();
             this.buttonConfirmEmail = new System.Windows.Forms.Button();
             this.labelChangeEmail = new System.Windows.Forms.Label();
-            this.panelPodcast = new System.Windows.Forms.Panel();
-            this.labelWatchPodcast = new System.Windows.Forms.Label();
-            this.buttonBack = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panelWatchSeries = new System.Windows.Forms.Panel();
-            this.labelWatchSeries = new System.Windows.Forms.Label();
-            this.buttonBackFromSeries = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.panelFavList = new System.Windows.Forms.Panel();
             this.labelMyFavoritesList = new System.Windows.Forms.Label();
             this.buttonBackFromFav = new System.Windows.Forms.Button();
@@ -85,8 +77,6 @@
             this.labelChangeUsername = new System.Windows.Forms.Label();
             this.panelPassword.SuspendLayout();
             this.panelEmail.SuspendLayout();
-            this.panelPodcast.SuspendLayout();
-            this.panelWatchSeries.SuspendLayout();
             this.panelFavList.SuspendLayout();
             this.panelUsername.SuspendLayout();
             this.SuspendLayout();
@@ -563,109 +553,6 @@
             this.labelChangeEmail.TabIndex = 5;
             this.labelChangeEmail.Text = "Change Email";
             // 
-            // panelPodcast
-            // 
-            this.panelPodcast.BackColor = System.Drawing.SystemColors.Desktop;
-            this.panelPodcast.Controls.Add(this.labelWatchPodcast);
-            this.panelPodcast.Controls.Add(this.buttonBack);
-            this.panelPodcast.Controls.Add(this.label2);
-            this.panelPodcast.Location = new System.Drawing.Point(-11, 136);
-            this.panelPodcast.Name = "panelPodcast";
-            this.panelPodcast.Size = new System.Drawing.Size(1569, 852);
-            this.panelPodcast.TabIndex = 20;
-            this.panelPodcast.Visible = false;
-            this.panelPodcast.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPodcast_Paint);
-            // 
-            // labelWatchPodcast
-            // 
-            this.labelWatchPodcast.AutoSize = true;
-            this.labelWatchPodcast.Font = new System.Drawing.Font("Microsoft Tai Le", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWatchPodcast.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.labelWatchPodcast.Location = new System.Drawing.Point(602, 31);
-            this.labelWatchPodcast.Name = "labelWatchPodcast";
-            this.labelWatchPodcast.Size = new System.Drawing.Size(362, 61);
-            this.labelWatchPodcast.TabIndex = 20;
-            this.labelWatchPodcast.Text = "Watch Podcast";
-            // 
-            // buttonBack
-            // 
-            this.buttonBack.BackColor = System.Drawing.Color.Black;
-            this.buttonBack.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.buttonBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.buttonBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.buttonBack.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.buttonBack.Location = new System.Drawing.Point(1394, 786);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(172, 50);
-            this.buttonBack.TabIndex = 19;
-            this.buttonBack.Text = "Back";
-            this.buttonBack.UseVisualStyleBackColor = false;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(57, -212);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(423, 61);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Change Password";
-            // 
-            // panelWatchSeries
-            // 
-            this.panelWatchSeries.BackColor = System.Drawing.SystemColors.Desktop;
-            this.panelWatchSeries.Controls.Add(this.labelWatchSeries);
-            this.panelWatchSeries.Controls.Add(this.buttonBackFromSeries);
-            this.panelWatchSeries.Controls.Add(this.label5);
-            this.panelWatchSeries.Location = new System.Drawing.Point(-12, 138);
-            this.panelWatchSeries.Name = "panelWatchSeries";
-            this.panelWatchSeries.Size = new System.Drawing.Size(1569, 852);
-            this.panelWatchSeries.TabIndex = 22;
-            this.panelWatchSeries.Visible = false;
-            // 
-            // labelWatchSeries
-            // 
-            this.labelWatchSeries.AutoSize = true;
-            this.labelWatchSeries.Font = new System.Drawing.Font("Microsoft Tai Le", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWatchSeries.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.labelWatchSeries.Location = new System.Drawing.Point(602, 31);
-            this.labelWatchSeries.Name = "labelWatchSeries";
-            this.labelWatchSeries.Size = new System.Drawing.Size(318, 61);
-            this.labelWatchSeries.TabIndex = 20;
-            this.labelWatchSeries.Text = "Watch Series";
-            // 
-            // buttonBackFromSeries
-            // 
-            this.buttonBackFromSeries.BackColor = System.Drawing.Color.Black;
-            this.buttonBackFromSeries.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.buttonBackFromSeries.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.buttonBackFromSeries.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.buttonBackFromSeries.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonBackFromSeries.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.buttonBackFromSeries.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.buttonBackFromSeries.Location = new System.Drawing.Point(1394, 786);
-            this.buttonBackFromSeries.Name = "buttonBackFromSeries";
-            this.buttonBackFromSeries.Size = new System.Drawing.Size(172, 50);
-            this.buttonBackFromSeries.TabIndex = 19;
-            this.buttonBackFromSeries.Text = "Back";
-            this.buttonBackFromSeries.UseVisualStyleBackColor = false;
-            this.buttonBackFromSeries.Click += new System.EventHandler(this.buttonBackFromSeries_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label5.Location = new System.Drawing.Point(57, -212);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(423, 61);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Change Password";
-            // 
             // panelFavList
             // 
             this.panelFavList.BackColor = System.Drawing.SystemColors.Desktop;
@@ -863,8 +750,6 @@
             this.BackgroundImage = global::MyStream.Properties.Resources.תמונה5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1909, 991);
-            this.Controls.Add(this.buttonChangeUserName);
-            this.Controls.Add(this.buttonChangePassword);
             this.Controls.Add(this.labelheadline);
             this.Controls.Add(this.buttonBackToMainGenral);
             this.Controls.Add(this.button_backToMain_content);
@@ -878,12 +763,12 @@
             this.Controls.Add(this.buttonSetting);
             this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.buttonChangeEmail);
-            this.Controls.Add(this.panelFavList);
-            this.Controls.Add(this.panelPodcast);
-            this.Controls.Add(this.panelWatchSeries);
             this.Controls.Add(this.panelUsername);
             this.Controls.Add(this.panelEmail);
             this.Controls.Add(this.panelPassword);
+            this.Controls.Add(this.buttonChangeUserName);
+            this.Controls.Add(this.buttonChangePassword);
+            this.Controls.Add(this.panelFavList);
             this.DoubleBuffered = true;
             this.Name = "Main";
             this.Text = "Main";
@@ -892,10 +777,6 @@
             this.panelPassword.PerformLayout();
             this.panelEmail.ResumeLayout(false);
             this.panelEmail.PerformLayout();
-            this.panelPodcast.ResumeLayout(false);
-            this.panelPodcast.PerformLayout();
-            this.panelWatchSeries.ResumeLayout(false);
-            this.panelWatchSeries.PerformLayout();
             this.panelFavList.ResumeLayout(false);
             this.panelFavList.PerformLayout();
             this.panelUsername.ResumeLayout(false);
@@ -938,14 +819,6 @@
         private System.Windows.Forms.Button buttonClearEmail;
         private System.Windows.Forms.Button buttonConfirmEmail;
         private System.Windows.Forms.Label labelChangeEmail;
-        private System.Windows.Forms.Panel panelPodcast;
-        private System.Windows.Forms.Label labelWatchPodcast;
-        private System.Windows.Forms.Button buttonBack;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panelWatchSeries;
-        private System.Windows.Forms.Label labelWatchSeries;
-        private System.Windows.Forms.Button buttonBackFromSeries;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panelFavList;
         private System.Windows.Forms.Label labelMyFavoritesList;
         private System.Windows.Forms.Button buttonBackFromFav;

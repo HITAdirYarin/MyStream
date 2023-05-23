@@ -238,13 +238,14 @@ namespace MyStream
 
         private void buttonBack_Click(object sender, EventArgs e) // back from podcast
         {
-            panelPodcast.Visible = false;
+            
         }
 
         private void button_series_Click(object sender, EventArgs e)
         {
-            panelWatchSeries.Visible = true;
-            panelPodcast.Visible = false;
+            WatchSeries series = new WatchSeries(Username);
+            series.Show();
+            this.Hide();
         }
 
         private void button_movie_Click(object sender, EventArgs e)
@@ -252,14 +253,12 @@ namespace MyStream
             WatchMovies movies = new WatchMovies(Username);
             movies.Show();
             this.Hide();
-            panelWatchSeries.Visible =false;
-            panelPodcast.Visible = false;
+           
         }
 
         private void buttonPodcast_Click(object sender, EventArgs e)
         {
-            panelPodcast.Visible = true;
-            panelWatchSeries.Visible = false;
+            
         }
 
         private void buttonBackFromMovies_Click(object sender, EventArgs e)
@@ -290,8 +289,7 @@ namespace MyStream
             panelFavList.Visible = true;
             panelEmail.Visible = false;
             panelPassword.Visible = false;
-            panelPodcast.Visible = false;
-            panelWatchSeries.Visible = false;
+            
         }
 
         private void panelPassword_Paint(object sender, PaintEventArgs e)
