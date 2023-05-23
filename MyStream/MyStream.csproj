@@ -265,6 +265,51 @@
   <ItemGroup>
     <None Include="Resources\avataerEp3.jfif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bridgertonEp1.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bridgertonEp2.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bridgertonEp3.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brooklynEp1.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brooklynEp2.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brooklynEp3.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brooklynEp4.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brooklynEp5.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vikingsEp1.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vikingsEp2.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vikingsEp3.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vikingsEp4.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WalkingDeadEp1.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WalkingDeadEp2.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WalkingDeadEp3.jfif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

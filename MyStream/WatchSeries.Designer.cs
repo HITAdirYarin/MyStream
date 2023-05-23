@@ -43,19 +43,34 @@
             this.labelRelease = new System.Windows.Forms.Label();
             this.buttonBeckToMain = new System.Windows.Forms.Button();
             this.panel_display_Series = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelVikings = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panelWalkingDead = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.panelBrooklyn = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.panelBridgerton = new System.Windows.Forms.Panel();
+            this.buttonBridgertonEp3 = new System.Windows.Forms.Button();
+            this.buttonBridgertonEp2 = new System.Windows.Forms.Button();
+            this.buttonBridgertonEp1 = new System.Windows.Forms.Button();
+            this.panelAvatar = new System.Windows.Forms.Panel();
             this.buttonEP3Avatar = new System.Windows.Forms.Button();
             this.buttonEP2Avatar = new System.Windows.Forms.Button();
             this.buttonEP1Avatar = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonVikings = new System.Windows.Forms.Button();
+            this.buttonWalkingDead = new System.Windows.Forms.Button();
+            this.buttonBrooklyn = new System.Windows.Forms.Button();
+            this.buttonBridgerton = new System.Windows.Forms.Button();
+            this.buttonAvatar = new System.Windows.Forms.Button();
             this.panelReviewList = new System.Windows.Forms.Panel();
             this.listViewReview = new System.Windows.Forms.ListView();
             this.buttonViewReview = new System.Windows.Forms.Button();
@@ -90,7 +105,11 @@
             this.label_rate = new System.Windows.Forms.Label();
             this.player_fast = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel_display_Series.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelVikings.SuspendLayout();
+            this.panelWalkingDead.SuspendLayout();
+            this.panelBrooklyn.SuspendLayout();
+            this.panelBridgerton.SuspendLayout();
+            this.panelAvatar.SuspendLayout();
             this.panelReviewList.SuspendLayout();
             this.panelLeaveReview.SuspendLayout();
             this.panel_rate_me.SuspendLayout();
@@ -272,72 +291,252 @@
             // panel_display_Series
             // 
             this.panel_display_Series.BackColor = System.Drawing.Color.Black;
-            this.panel_display_Series.Controls.Add(this.panel5);
-            this.panel_display_Series.Controls.Add(this.panel4);
-            this.panel_display_Series.Controls.Add(this.panel3);
-            this.panel_display_Series.Controls.Add(this.panel2);
-            this.panel_display_Series.Controls.Add(this.panel1);
-            this.panel_display_Series.Controls.Add(this.button5);
-            this.panel_display_Series.Controls.Add(this.button4);
-            this.panel_display_Series.Controls.Add(this.button3);
-            this.panel_display_Series.Controls.Add(this.button2);
-            this.panel_display_Series.Controls.Add(this.button1);
+            this.panel_display_Series.Controls.Add(this.panelVikings);
+            this.panel_display_Series.Controls.Add(this.panelWalkingDead);
+            this.panel_display_Series.Controls.Add(this.panelBrooklyn);
+            this.panel_display_Series.Controls.Add(this.panelBridgerton);
+            this.panel_display_Series.Controls.Add(this.panelAvatar);
+            this.panel_display_Series.Controls.Add(this.buttonVikings);
+            this.panel_display_Series.Controls.Add(this.buttonWalkingDead);
+            this.panel_display_Series.Controls.Add(this.buttonBrooklyn);
+            this.panel_display_Series.Controls.Add(this.buttonBridgerton);
+            this.panel_display_Series.Controls.Add(this.buttonAvatar);
             this.panel_display_Series.Location = new System.Drawing.Point(-7, -6);
             this.panel_display_Series.Name = "panel_display_Series";
             this.panel_display_Series.Size = new System.Drawing.Size(1568, 1003);
             this.panel_display_Series.TabIndex = 33;
             // 
-            // panel5
+            // panelVikings
             // 
-            this.panel5.Location = new System.Drawing.Point(1299, 215);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(231, 652);
-            this.panel5.TabIndex = 8;
-            this.panel5.Visible = false;
+            this.panelVikings.Controls.Add(this.button4);
+            this.panelVikings.Controls.Add(this.button1);
+            this.panelVikings.Controls.Add(this.button2);
+            this.panelVikings.Controls.Add(this.button3);
+            this.panelVikings.Location = new System.Drawing.Point(1299, 215);
+            this.panelVikings.Name = "panelVikings";
+            this.panelVikings.Size = new System.Drawing.Size(231, 591);
+            this.panelVikings.TabIndex = 8;
+            this.panelVikings.Visible = false;
             // 
-            // panel4
+            // button4
             // 
-            this.panel4.Location = new System.Drawing.Point(1000, 215);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(231, 652);
-            this.panel4.TabIndex = 8;
-            this.panel4.Visible = false;
+            this.button4.BackgroundImage = global::MyStream.Properties.Resources.vikingsEp4;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Location = new System.Drawing.Point(25, 447);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(187, 127);
+            this.button4.TabIndex = 13;
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // panel3
+            // button1
             // 
-            this.panel3.Location = new System.Drawing.Point(697, 215);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(231, 652);
-            this.panel3.TabIndex = 7;
-            this.panel3.Visible = false;
+            this.button1.BackgroundImage = global::MyStream.Properties.Resources.vikingsEp3;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(25, 302);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(187, 127);
+            this.button1.TabIndex = 12;
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // button2
             // 
-            this.panel2.Location = new System.Drawing.Point(389, 215);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(229, 652);
-            this.panel2.TabIndex = 6;
-            this.panel2.Visible = false;
+            this.button2.BackgroundImage = global::MyStream.Properties.Resources.vikingsEp2;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Location = new System.Drawing.Point(25, 164);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(187, 118);
+            this.button2.TabIndex = 11;
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // button3
             // 
-            this.panel1.Controls.Add(this.buttonEP3Avatar);
-            this.panel1.Controls.Add(this.buttonEP2Avatar);
-            this.panel1.Controls.Add(this.buttonEP1Avatar);
-            this.panel1.Location = new System.Drawing.Point(77, 215);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(231, 652);
-            this.panel1.TabIndex = 5;
-            this.panel1.Visible = false;
+            this.button3.BackgroundImage = global::MyStream.Properties.Resources.vikingsEp1;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Location = new System.Drawing.Point(25, 19);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(187, 122);
+            this.button3.TabIndex = 10;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // panelWalkingDead
+            // 
+            this.panelWalkingDead.Controls.Add(this.button11);
+            this.panelWalkingDead.Controls.Add(this.button12);
+            this.panelWalkingDead.Controls.Add(this.button13);
+            this.panelWalkingDead.Location = new System.Drawing.Point(1000, 215);
+            this.panelWalkingDead.Name = "panelWalkingDead";
+            this.panelWalkingDead.Size = new System.Drawing.Size(231, 455);
+            this.panelWalkingDead.TabIndex = 8;
+            this.panelWalkingDead.Visible = false;
+            // 
+            // button11
+            // 
+            this.button11.BackgroundImage = global::MyStream.Properties.Resources.WalkingDeadEp3;
+            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button11.Location = new System.Drawing.Point(27, 302);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(187, 127);
+            this.button11.TabIndex = 9;
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.BackgroundImage = global::MyStream.Properties.Resources.WalkingDeadEp2;
+            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button12.Location = new System.Drawing.Point(27, 164);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(187, 118);
+            this.button12.TabIndex = 8;
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.BackgroundImage = global::MyStream.Properties.Resources.WalkingDeadEp1;
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button13.Location = new System.Drawing.Point(27, 19);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(187, 122);
+            this.button13.TabIndex = 7;
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // panelBrooklyn
+            // 
+            this.panelBrooklyn.Controls.Add(this.button10);
+            this.panelBrooklyn.Controls.Add(this.button9);
+            this.panelBrooklyn.Controls.Add(this.button6);
+            this.panelBrooklyn.Controls.Add(this.button7);
+            this.panelBrooklyn.Controls.Add(this.button8);
+            this.panelBrooklyn.Location = new System.Drawing.Point(697, 215);
+            this.panelBrooklyn.Name = "panelBrooklyn";
+            this.panelBrooklyn.Size = new System.Drawing.Size(231, 770);
+            this.panelBrooklyn.TabIndex = 7;
+            this.panelBrooklyn.Visible = false;
+            // 
+            // button10
+            // 
+            this.button10.BackgroundImage = global::MyStream.Properties.Resources.brooklynEp5;
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button10.Location = new System.Drawing.Point(20, 597);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(187, 127);
+            this.button10.TabIndex = 11;
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.BackgroundImage = global::MyStream.Properties.Resources.brooklynEp4;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button9.Location = new System.Drawing.Point(20, 447);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(187, 127);
+            this.button9.TabIndex = 10;
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = global::MyStream.Properties.Resources.brooklynEp3;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.Location = new System.Drawing.Point(20, 302);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(187, 127);
+            this.button6.TabIndex = 9;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.BackgroundImage = global::MyStream.Properties.Resources.brooklynEp2;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.Location = new System.Drawing.Point(20, 164);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(187, 118);
+            this.button7.TabIndex = 8;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.BackgroundImage = global::MyStream.Properties.Resources.brooklynEp1;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button8.Location = new System.Drawing.Point(20, 19);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(187, 122);
+            this.button8.TabIndex = 7;
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // panelBridgerton
+            // 
+            this.panelBridgerton.Controls.Add(this.buttonBridgertonEp3);
+            this.panelBridgerton.Controls.Add(this.buttonBridgertonEp2);
+            this.panelBridgerton.Controls.Add(this.buttonBridgertonEp1);
+            this.panelBridgerton.Location = new System.Drawing.Point(389, 215);
+            this.panelBridgerton.Name = "panelBridgerton";
+            this.panelBridgerton.Size = new System.Drawing.Size(229, 455);
+            this.panelBridgerton.TabIndex = 6;
+            this.panelBridgerton.Visible = false;
+            // 
+            // buttonBridgertonEp3
+            // 
+            this.buttonBridgertonEp3.BackgroundImage = global::MyStream.Properties.Resources.bridgertonEp3;
+            this.buttonBridgertonEp3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonBridgertonEp3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBridgertonEp3.Location = new System.Drawing.Point(26, 302);
+            this.buttonBridgertonEp3.Name = "buttonBridgertonEp3";
+            this.buttonBridgertonEp3.Size = new System.Drawing.Size(187, 127);
+            this.buttonBridgertonEp3.TabIndex = 6;
+            this.buttonBridgertonEp3.UseVisualStyleBackColor = true;
+            // 
+            // buttonBridgertonEp2
+            // 
+            this.buttonBridgertonEp2.BackgroundImage = global::MyStream.Properties.Resources.bridgertonEp2;
+            this.buttonBridgertonEp2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonBridgertonEp2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBridgertonEp2.Location = new System.Drawing.Point(26, 164);
+            this.buttonBridgertonEp2.Name = "buttonBridgertonEp2";
+            this.buttonBridgertonEp2.Size = new System.Drawing.Size(187, 118);
+            this.buttonBridgertonEp2.TabIndex = 5;
+            this.buttonBridgertonEp2.UseVisualStyleBackColor = true;
+            // 
+            // buttonBridgertonEp1
+            // 
+            this.buttonBridgertonEp1.BackgroundImage = global::MyStream.Properties.Resources.bridgertonEp1;
+            this.buttonBridgertonEp1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonBridgertonEp1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBridgertonEp1.Location = new System.Drawing.Point(26, 19);
+            this.buttonBridgertonEp1.Name = "buttonBridgertonEp1";
+            this.buttonBridgertonEp1.Size = new System.Drawing.Size(187, 122);
+            this.buttonBridgertonEp1.TabIndex = 4;
+            this.buttonBridgertonEp1.UseVisualStyleBackColor = true;
+            // 
+            // panelAvatar
+            // 
+            this.panelAvatar.Controls.Add(this.buttonEP3Avatar);
+            this.panelAvatar.Controls.Add(this.buttonEP2Avatar);
+            this.panelAvatar.Controls.Add(this.buttonEP1Avatar);
+            this.panelAvatar.Location = new System.Drawing.Point(77, 215);
+            this.panelAvatar.Name = "panelAvatar";
+            this.panelAvatar.Size = new System.Drawing.Size(231, 455);
+            this.panelAvatar.TabIndex = 5;
+            this.panelAvatar.Visible = false;
             // 
             // buttonEP3Avatar
             // 
             this.buttonEP3Avatar.BackgroundImage = global::MyStream.Properties.Resources.avataerEp3;
             this.buttonEP3Avatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonEP3Avatar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEP3Avatar.Location = new System.Drawing.Point(3, 328);
+            this.buttonEP3Avatar.Location = new System.Drawing.Point(23, 302);
             this.buttonEP3Avatar.Name = "buttonEP3Avatar";
-            this.buttonEP3Avatar.Size = new System.Drawing.Size(231, 127);
+            this.buttonEP3Avatar.Size = new System.Drawing.Size(187, 127);
             this.buttonEP3Avatar.TabIndex = 3;
             this.buttonEP3Avatar.UseVisualStyleBackColor = true;
             // 
@@ -346,9 +545,9 @@
             this.buttonEP2Avatar.BackgroundImage = global::MyStream.Properties.Resources.avatarEp2;
             this.buttonEP2Avatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonEP2Avatar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEP2Avatar.Location = new System.Drawing.Point(3, 164);
+            this.buttonEP2Avatar.Location = new System.Drawing.Point(23, 164);
             this.buttonEP2Avatar.Name = "buttonEP2Avatar";
-            this.buttonEP2Avatar.Size = new System.Drawing.Size(231, 118);
+            this.buttonEP2Avatar.Size = new System.Drawing.Size(187, 118);
             this.buttonEP2Avatar.TabIndex = 2;
             this.buttonEP2Avatar.UseVisualStyleBackColor = true;
             // 
@@ -357,67 +556,71 @@
             this.buttonEP1Avatar.BackgroundImage = global::MyStream.Properties.Resources.avatarEp1;
             this.buttonEP1Avatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonEP1Avatar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEP1Avatar.Location = new System.Drawing.Point(3, 0);
+            this.buttonEP1Avatar.Location = new System.Drawing.Point(23, 19);
             this.buttonEP1Avatar.Name = "buttonEP1Avatar";
-            this.buttonEP1Avatar.Size = new System.Drawing.Size(231, 122);
+            this.buttonEP1Avatar.Size = new System.Drawing.Size(187, 122);
             this.buttonEP1Avatar.TabIndex = 1;
             this.buttonEP1Avatar.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // buttonVikings
             // 
-            this.button5.BackgroundImage = global::MyStream.Properties.Resources.vikings;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Location = new System.Drawing.Point(1299, 20);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(231, 154);
-            this.button5.TabIndex = 4;
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonVikings.BackgroundImage = global::MyStream.Properties.Resources.vikings;
+            this.buttonVikings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonVikings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonVikings.Location = new System.Drawing.Point(1299, 20);
+            this.buttonVikings.Name = "buttonVikings";
+            this.buttonVikings.Size = new System.Drawing.Size(231, 154);
+            this.buttonVikings.TabIndex = 4;
+            this.buttonVikings.UseVisualStyleBackColor = true;
+            this.buttonVikings.Click += new System.EventHandler(this.buttonVikings_Click);
             // 
-            // button4
+            // buttonWalkingDead
             // 
-            this.button4.BackgroundImage = global::MyStream.Properties.Resources.thewalkingdead;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Location = new System.Drawing.Point(1000, 20);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(231, 154);
-            this.button4.TabIndex = 3;
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonWalkingDead.BackgroundImage = global::MyStream.Properties.Resources.thewalkingdead;
+            this.buttonWalkingDead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonWalkingDead.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonWalkingDead.Location = new System.Drawing.Point(1000, 20);
+            this.buttonWalkingDead.Name = "buttonWalkingDead";
+            this.buttonWalkingDead.Size = new System.Drawing.Size(231, 154);
+            this.buttonWalkingDead.TabIndex = 3;
+            this.buttonWalkingDead.UseVisualStyleBackColor = true;
+            this.buttonWalkingDead.Click += new System.EventHandler(this.buttonWalkingDead_Click);
             // 
-            // button3
+            // buttonBrooklyn
             // 
-            this.button3.BackgroundImage = global::MyStream.Properties.Resources.brooklyn99;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Location = new System.Drawing.Point(697, 18);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(231, 154);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonBrooklyn.BackgroundImage = global::MyStream.Properties.Resources.brooklyn99;
+            this.buttonBrooklyn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonBrooklyn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBrooklyn.Location = new System.Drawing.Point(697, 18);
+            this.buttonBrooklyn.Name = "buttonBrooklyn";
+            this.buttonBrooklyn.Size = new System.Drawing.Size(231, 154);
+            this.buttonBrooklyn.TabIndex = 2;
+            this.buttonBrooklyn.UseVisualStyleBackColor = true;
+            this.buttonBrooklyn.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // buttonBridgerton
             // 
-            this.button2.BackgroundImage = global::MyStream.Properties.Resources.bridgerton;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(389, 20);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(231, 154);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonBridgerton.BackgroundImage = global::MyStream.Properties.Resources.bridgerton;
+            this.buttonBridgerton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonBridgerton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBridgerton.Location = new System.Drawing.Point(389, 20);
+            this.buttonBridgerton.Name = "buttonBridgerton";
+            this.buttonBridgerton.Size = new System.Drawing.Size(231, 154);
+            this.buttonBridgerton.TabIndex = 1;
+            this.buttonBridgerton.UseVisualStyleBackColor = true;
+            this.buttonBridgerton.Click += new System.EventHandler(this.buttonBridgerton_Click);
             // 
-            // button1
+            // buttonAvatar
             // 
-            this.button1.BackgroundImage = global::MyStream.Properties.Resources.avatar;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(77, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(231, 154);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAvatar.BackgroundImage = global::MyStream.Properties.Resources.avatar;
+            this.buttonAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAvatar.Location = new System.Drawing.Point(77, 20);
+            this.buttonAvatar.Name = "buttonAvatar";
+            this.buttonAvatar.Size = new System.Drawing.Size(231, 154);
+            this.buttonAvatar.TabIndex = 0;
+            this.buttonAvatar.UseVisualStyleBackColor = true;
+            this.buttonAvatar.Click += new System.EventHandler(this.buttonAvatar_Click);
             // 
             // panelReviewList
             // 
@@ -460,6 +663,7 @@
             this.buttonViewReview.TabIndex = 32;
             this.buttonViewReview.Text = "View";
             this.buttonViewReview.UseVisualStyleBackColor = false;
+            this.buttonViewReview.Click += new System.EventHandler(this.buttonViewReview_Click);
             // 
             // buttonCloseReviewList
             // 
@@ -885,7 +1089,11 @@
             this.Name = "WatchSeries";
             this.Text = "WatchSeries";
             this.panel_display_Series.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.panelVikings.ResumeLayout(false);
+            this.panelWalkingDead.ResumeLayout(false);
+            this.panelBrooklyn.ResumeLayout(false);
+            this.panelBridgerton.ResumeLayout(false);
+            this.panelAvatar.ResumeLayout(false);
             this.panelReviewList.ResumeLayout(false);
             this.panelLeaveReview.ResumeLayout(false);
             this.panelLeaveReview.PerformLayout();
@@ -918,7 +1126,7 @@
         private System.Windows.Forms.Button buttonBeckToMain;
         private AxWMPLib.AxWindowsMediaPlayer player_fast;
         private System.Windows.Forms.Panel panel_display_Series;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAvatar;
         private System.Windows.Forms.Panel panelReviewList;
         private System.Windows.Forms.ListView listViewReview;
         private System.Windows.Forms.Button buttonViewReview;
@@ -951,17 +1159,32 @@
         private System.Windows.Forms.Button button_confirm_rate;
         private System.Windows.Forms.Button button_close_rate_win;
         private System.Windows.Forms.Label label_rate;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button buttonVikings;
+        private System.Windows.Forms.Button buttonWalkingDead;
+        private System.Windows.Forms.Button buttonBrooklyn;
+        private System.Windows.Forms.Button buttonBridgerton;
+        private System.Windows.Forms.Panel panelVikings;
+        private System.Windows.Forms.Panel panelWalkingDead;
+        private System.Windows.Forms.Panel panelBrooklyn;
+        private System.Windows.Forms.Panel panelBridgerton;
+        private System.Windows.Forms.Panel panelAvatar;
         private System.Windows.Forms.Button buttonEP3Avatar;
         private System.Windows.Forms.Button buttonEP2Avatar;
         private System.Windows.Forms.Button buttonEP1Avatar;
+        private System.Windows.Forms.Button buttonBridgertonEp3;
+        private System.Windows.Forms.Button buttonBridgertonEp2;
+        private System.Windows.Forms.Button buttonBridgertonEp1;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

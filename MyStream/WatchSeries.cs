@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,12 @@ namespace MyStream
 {
     public partial class WatchSeries : Form
     {
+        static int count = 0;
+        static int countAvatar = 0;
+        static int countBridgerton = 0;
+        static int countBrooklyn = 0;
+        static int countWalkingDead = 0;
+        static int countVikings = 0;
         public string _username { get; set; }
         public WatchSeries()
         {
@@ -206,7 +213,7 @@ namespace MyStream
             comboBoxChooseSeriesToReviewList.SelectedIndex = -1;
         }
 
-        static int count = 0;
+        
         private void comboBoxChooseSeriesToReviewList_SelectedIndexChanged(object sender, EventArgs e)
         {
             count++;
@@ -216,9 +223,115 @@ namespace MyStream
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) //Broklyn99 open panel activator
         {
+            countBrooklyn++;
+            if (countBrooklyn % 2 == 1)
+            {
+                panelBrooklyn.Visible = true;
+                panelBridgerton.Visible = false;
+                panelAvatar.Visible = false;
+                panelWalkingDead.Visible = false;
+                panelVikings.Visible = false;
+            }
+            else { panelBrooklyn.Visible = false; }
+        }
 
+        private void buttonAvatar_Click(object sender, EventArgs e)
+        {
+            countAvatar++;
+            if (countAvatar % 2 == 1) 
+            { 
+                panelAvatar.Visible = true;
+                panelBridgerton.Visible = false;
+                panelBrooklyn.Visible = false;
+                panelWalkingDead.Visible= false;
+                panelVikings.Visible = false;
+            }
+            else { panelAvatar.Visible = false; }
+        }
+
+        private void buttonBridgerton_Click(object sender, EventArgs e)
+        {
+            countBridgerton++;
+            if (countBridgerton % 2 == 1) 
+            { 
+                panelBridgerton.Visible = true;
+                panelAvatar.Visible = false;
+                panelBrooklyn.Visible = false;
+                panelWalkingDead.Visible = false;
+                panelVikings.Visible = false;
+            }
+            else { panelBridgerton.Visible = false; }
+        }
+
+        private void buttonWalkingDead_Click(object sender, EventArgs e)
+        {
+            countWalkingDead++;
+            if(countWalkingDead%2 == 1) 
+            { 
+                panelWalkingDead.Visible = true;
+                panelBridgerton.Visible = false;
+                panelAvatar.Visible = false;
+                panelBrooklyn.Visible = false;
+                panelVikings.Visible = false;
+            }
+            else { panelWalkingDead.Visible=false; }
+        }
+
+        private void buttonVikings_Click(object sender, EventArgs e)
+        {
+            countVikings++;
+            if(countVikings%2== 1) 
+            { 
+                panelVikings.Visible = true;
+                panelBridgerton.Visible = false;
+                panelAvatar.Visible = false;
+                panelBrooklyn.Visible = false;
+                panelWalkingDead.Visible = false;
+            }
+            else { panelVikings.Visible = false; }
+        }
+
+        private void buttonViewReview_Click(object sender, EventArgs e) // need to build file for this!
+        {
+            string series = comboBoxChooseSeriesToReviewList.Text;
+            foreach (KeyValuePair<string, Content> content in Content._contents)
+            {
+                if (content.Value._name == series)
+                {
+                    foreach (string review in content.Value._review)
+                    {
+                        listViewReview.Items.Add(review);
+                    }
+                    break;
+                }
+            }
+            listViewReview.Show();
+        }
+
+        private void play_Series(Series series) //need to build an appropriate constructor for the series objects
+        {
+            //panel_display_Series.SendToBack();
+            //player_fast.Size = new Size(1045, 645);
+            //player_fast.Visible = true;
+            //panel_display_Series.Visible = false;
+            //string fullPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "YouTubeSeries", series._path));
+            //if (File.Exists(fullPath))
+            //{
+            //    player_fast.URL = fullPath;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("There is an error with playing the movie");
+            //}
+            //labelName.Text += " " + series._name;
+            //labelRelease.Text += " " + series._date;
+            //labelDirector.Text += " " + series._director;
+            //labelGanre.Text += " " + series._genre;
+            //string rate = series._rateAvg.ToString("0.0");
+            //labelRate.Text += " " + rate + "/5";
+            //player_fast.Show();
         }
     }
     
