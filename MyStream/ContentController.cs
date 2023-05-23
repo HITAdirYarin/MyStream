@@ -31,6 +31,37 @@ namespace MyStream
             Movies j= new Movies("The Godfather", "The Godfather.mp4", "Francis Ford Coppola", "14/02/2000", "Action", "movie", 0, 0);
             ContentHendler.saveMovie(j);
         }
+        public static void addSeries()
+        {
+            Series a = new Series("Avatar", 3, "20/06/2007", "family", "series", 0, 0);
+            a._episodes.Add("Episode 1.mp4");
+            a._episodes.Add("Episode 2.mp4");
+            a._episodes.Add("Episode 3.mp4");
+            ContentHendler.saveSeries(a);
+            a = new Series("Bridgerton", 3, "30/3/2010", "drama", "series", 0, 0);
+            a._episodes.Add("Episode 1.mp4");
+            a._episodes.Add("Episode 2.mp4");
+            a._episodes.Add("Episode 3.mp4");
+            ContentHendler.saveSeries(a);
+            a = new Series("Brooklyn 99", 5, "12/05/2013", "comedy", "series", 0, 0);
+            a._episodes.Add("Episode 1.mp4");
+            a._episodes.Add("Episode 2.mp4");
+            a._episodes.Add("Episode 3.mp4");
+            a._episodes.Add("Episode 4.mp4");
+            a._episodes.Add("Episode 5.mp4");
+            ContentHendler.saveSeries(a);
+            a = new Series("The Walking Dead", 3, "1/07/2015", "horror", "series", 0, 0);
+            a._episodes.Add("Episode 1.mp4");
+            a._episodes.Add("Episode 2.mp4");
+            a._episodes.Add("Episode 3.mp4");
+            ContentHendler.saveSeries(a);
+            a = new Series("Vikings", 4, "4/04/2012", "action", "series", 0, 0);
+            a._episodes.Add("Episode 1.mp4");
+            a._episodes.Add("Episode 2.mp4");
+            a._episodes.Add("Episode 3.mp4");
+            a._episodes.Add("Episode 4.mp4");
+            ContentHendler.saveSeries(a);
+        }
         public static void addRate(int choose,string name)
         {
             Content.addRate(choose, name);

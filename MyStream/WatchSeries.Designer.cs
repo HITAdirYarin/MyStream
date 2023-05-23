@@ -172,6 +172,7 @@
             this.labelName.TabIndex = 29;
             this.labelName.Text = "Name:";
             this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelName.Click += new System.EventHandler(this.labelName_Click);
             // 
             // labelRate
             // 
@@ -473,6 +474,7 @@
             this.button8.Size = new System.Drawing.Size(187, 122);
             this.button8.TabIndex = 7;
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // panelBridgerton
             // 
