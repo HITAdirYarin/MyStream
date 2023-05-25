@@ -39,15 +39,15 @@
             this.buttonLeaveReview = new System.Windows.Forms.Button();
             this.buttonRateMe = new System.Windows.Forms.Button();
             this.labelDescription = new System.Windows.Forms.Label();
-            this.labelDirector = new System.Windows.Forms.Label();
+            this.labelEpNum = new System.Windows.Forms.Label();
             this.labelRelease = new System.Windows.Forms.Label();
             this.buttonBeckToMain = new System.Windows.Forms.Button();
             this.panel_display_Series = new System.Windows.Forms.Panel();
             this.panelVikings = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonEP4Vikings = new System.Windows.Forms.Button();
+            this.buttonEP3Vikings = new System.Windows.Forms.Button();
+            this.buttonEP2Vikings = new System.Windows.Forms.Button();
+            this.buttonEP1Vikings = new System.Windows.Forms.Button();
             this.panelWalkingDead = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -179,7 +179,7 @@
             this.labelRate.BackColor = System.Drawing.Color.Transparent;
             this.labelRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelRate.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelRate.Location = new System.Drawing.Point(1561, 392);
+            this.labelRate.Location = new System.Drawing.Point(1561, 391);
             this.labelRate.Name = "labelRate";
             this.labelRate.Size = new System.Drawing.Size(333, 56);
             this.labelRate.TabIndex = 28;
@@ -191,7 +191,7 @@
             this.labelGanre.BackColor = System.Drawing.Color.Transparent;
             this.labelGanre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelGanre.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelGanre.Location = new System.Drawing.Point(1561, 336);
+            this.labelGanre.Location = new System.Drawing.Point(1561, 335);
             this.labelGanre.Name = "labelGanre";
             this.labelGanre.Size = new System.Drawing.Size(333, 56);
             this.labelGanre.TabIndex = 27;
@@ -251,24 +251,24 @@
             this.labelDescription.TabIndex = 22;
             this.labelDescription.Text = "Description:";
             // 
-            // labelDirector
+            // labelEpNum
             // 
-            this.labelDirector.BackColor = System.Drawing.Color.Transparent;
-            this.labelDirector.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.labelDirector.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelDirector.Location = new System.Drawing.Point(1561, 250);
-            this.labelDirector.Name = "labelDirector";
-            this.labelDirector.Size = new System.Drawing.Size(333, 100);
-            this.labelDirector.TabIndex = 21;
-            this.labelDirector.Text = "Director(s):";
-            this.labelDirector.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelEpNum.BackColor = System.Drawing.Color.Transparent;
+            this.labelEpNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.labelEpNum.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.labelEpNum.Location = new System.Drawing.Point(1564, 249);
+            this.labelEpNum.Name = "labelEpNum";
+            this.labelEpNum.Size = new System.Drawing.Size(333, 100);
+            this.labelEpNum.TabIndex = 21;
+            this.labelEpNum.Text = "Episode number:";
+            this.labelEpNum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelRelease
             // 
             this.labelRelease.BackColor = System.Drawing.Color.Transparent;
             this.labelRelease.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelRelease.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelRelease.Location = new System.Drawing.Point(1561, 164);
+            this.labelRelease.Location = new System.Drawing.Point(1564, 163);
             this.labelRelease.Name = "labelRelease";
             this.labelRelease.Size = new System.Drawing.Size(339, 86);
             this.labelRelease.TabIndex = 20;
@@ -309,59 +309,63 @@
             // 
             // panelVikings
             // 
-            this.panelVikings.Controls.Add(this.button4);
-            this.panelVikings.Controls.Add(this.button1);
-            this.panelVikings.Controls.Add(this.button2);
-            this.panelVikings.Controls.Add(this.button3);
+            this.panelVikings.Controls.Add(this.buttonEP4Vikings);
+            this.panelVikings.Controls.Add(this.buttonEP3Vikings);
+            this.panelVikings.Controls.Add(this.buttonEP2Vikings);
+            this.panelVikings.Controls.Add(this.buttonEP1Vikings);
             this.panelVikings.Location = new System.Drawing.Point(1299, 215);
             this.panelVikings.Name = "panelVikings";
             this.panelVikings.Size = new System.Drawing.Size(231, 591);
             this.panelVikings.TabIndex = 8;
             this.panelVikings.Visible = false;
             // 
-            // button4
+            // buttonEP4Vikings
             // 
-            this.button4.BackgroundImage = global::MyStream.Properties.Resources.vikingsEp4;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Location = new System.Drawing.Point(25, 447);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(187, 127);
-            this.button4.TabIndex = 13;
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonEP4Vikings.BackgroundImage = global::MyStream.Properties.Resources.vikingsEp4;
+            this.buttonEP4Vikings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonEP4Vikings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEP4Vikings.Location = new System.Drawing.Point(25, 447);
+            this.buttonEP4Vikings.Name = "buttonEP4Vikings";
+            this.buttonEP4Vikings.Size = new System.Drawing.Size(187, 127);
+            this.buttonEP4Vikings.TabIndex = 13;
+            this.buttonEP4Vikings.UseVisualStyleBackColor = true;
+            this.buttonEP4Vikings.Click += new System.EventHandler(this.buttonEP4Vikings_Click);
             // 
-            // button1
+            // buttonEP3Vikings
             // 
-            this.button1.BackgroundImage = global::MyStream.Properties.Resources.vikingsEp3;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(25, 302);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 127);
-            this.button1.TabIndex = 12;
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonEP3Vikings.BackgroundImage = global::MyStream.Properties.Resources.vikingsEp3;
+            this.buttonEP3Vikings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonEP3Vikings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEP3Vikings.Location = new System.Drawing.Point(25, 302);
+            this.buttonEP3Vikings.Name = "buttonEP3Vikings";
+            this.buttonEP3Vikings.Size = new System.Drawing.Size(187, 127);
+            this.buttonEP3Vikings.TabIndex = 12;
+            this.buttonEP3Vikings.UseVisualStyleBackColor = true;
+            this.buttonEP3Vikings.Click += new System.EventHandler(this.buttonEP3Vikings_Click);
             // 
-            // button2
+            // buttonEP2Vikings
             // 
-            this.button2.BackgroundImage = global::MyStream.Properties.Resources.vikingsEp2;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(25, 164);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(187, 118);
-            this.button2.TabIndex = 11;
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonEP2Vikings.BackgroundImage = global::MyStream.Properties.Resources.vikingsEp2;
+            this.buttonEP2Vikings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonEP2Vikings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEP2Vikings.Location = new System.Drawing.Point(25, 164);
+            this.buttonEP2Vikings.Name = "buttonEP2Vikings";
+            this.buttonEP2Vikings.Size = new System.Drawing.Size(187, 118);
+            this.buttonEP2Vikings.TabIndex = 11;
+            this.buttonEP2Vikings.UseVisualStyleBackColor = true;
+            this.buttonEP2Vikings.Click += new System.EventHandler(this.buttonEP2Vikings_Click);
             // 
-            // button3
+            // buttonEP1Vikings
             // 
-            this.button3.BackgroundImage = global::MyStream.Properties.Resources.vikingsEp1;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Location = new System.Drawing.Point(25, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(187, 122);
-            this.button3.TabIndex = 10;
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonEP1Vikings.BackgroundImage = global::MyStream.Properties.Resources.vikingsEp1;
+            this.buttonEP1Vikings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonEP1Vikings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEP1Vikings.Location = new System.Drawing.Point(25, 19);
+            this.buttonEP1Vikings.Name = "buttonEP1Vikings";
+            this.buttonEP1Vikings.Size = new System.Drawing.Size(187, 122);
+            this.buttonEP1Vikings.TabIndex = 10;
+            this.buttonEP1Vikings.UseVisualStyleBackColor = true;
+            this.buttonEP1Vikings.Click += new System.EventHandler(this.buttonEP1Vikings_Click);
             // 
             // panelWalkingDead
             // 
@@ -384,6 +388,7 @@
             this.button11.Size = new System.Drawing.Size(187, 127);
             this.button11.TabIndex = 9;
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
@@ -395,6 +400,7 @@
             this.button12.Size = new System.Drawing.Size(187, 118);
             this.button12.TabIndex = 8;
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button13
             // 
@@ -406,6 +412,7 @@
             this.button13.Size = new System.Drawing.Size(187, 122);
             this.button13.TabIndex = 7;
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // panelBrooklyn
             // 
@@ -430,6 +437,7 @@
             this.button10.Size = new System.Drawing.Size(187, 127);
             this.button10.TabIndex = 11;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -441,6 +449,7 @@
             this.button9.Size = new System.Drawing.Size(187, 127);
             this.button9.TabIndex = 10;
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button6
             // 
@@ -452,6 +461,7 @@
             this.button6.Size = new System.Drawing.Size(187, 127);
             this.button6.TabIndex = 9;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -463,6 +473,7 @@
             this.button7.Size = new System.Drawing.Size(187, 118);
             this.button7.TabIndex = 8;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -497,6 +508,7 @@
             this.buttonBridgertonEp3.Size = new System.Drawing.Size(187, 127);
             this.buttonBridgertonEp3.TabIndex = 6;
             this.buttonBridgertonEp3.UseVisualStyleBackColor = true;
+            this.buttonBridgertonEp3.Click += new System.EventHandler(this.buttonBridgertonEp3_Click);
             // 
             // buttonBridgertonEp2
             // 
@@ -508,6 +520,7 @@
             this.buttonBridgertonEp2.Size = new System.Drawing.Size(187, 118);
             this.buttonBridgertonEp2.TabIndex = 5;
             this.buttonBridgertonEp2.UseVisualStyleBackColor = true;
+            this.buttonBridgertonEp2.Click += new System.EventHandler(this.buttonBridgertonEp2_Click);
             // 
             // buttonBridgertonEp1
             // 
@@ -519,6 +532,7 @@
             this.buttonBridgertonEp1.Size = new System.Drawing.Size(187, 122);
             this.buttonBridgertonEp1.TabIndex = 4;
             this.buttonBridgertonEp1.UseVisualStyleBackColor = true;
+            this.buttonBridgertonEp1.Click += new System.EventHandler(this.buttonBridgertonEp1_Click);
             // 
             // panelAvatar
             // 
@@ -541,6 +555,7 @@
             this.buttonEP3Avatar.Size = new System.Drawing.Size(187, 127);
             this.buttonEP3Avatar.TabIndex = 3;
             this.buttonEP3Avatar.UseVisualStyleBackColor = true;
+            this.buttonEP3Avatar.Click += new System.EventHandler(this.buttonEP3Avatar_Click);
             // 
             // buttonEP2Avatar
             // 
@@ -552,6 +567,7 @@
             this.buttonEP2Avatar.Size = new System.Drawing.Size(187, 118);
             this.buttonEP2Avatar.TabIndex = 2;
             this.buttonEP2Avatar.UseVisualStyleBackColor = true;
+            this.buttonEP2Avatar.Click += new System.EventHandler(this.buttonEP2Avatar_Click);
             // 
             // buttonEP1Avatar
             // 
@@ -563,6 +579,7 @@
             this.buttonEP1Avatar.Size = new System.Drawing.Size(187, 122);
             this.buttonEP1Avatar.TabIndex = 1;
             this.buttonEP1Avatar.UseVisualStyleBackColor = true;
+            this.buttonEP1Avatar.Click += new System.EventHandler(this.buttonEP1Avatar_Click);
             // 
             // buttonVikings
             // 
@@ -697,13 +714,14 @@
             // 
             // comboBoxChooseSeriesToReviewList
             // 
+            this.comboBoxChooseSeriesToReviewList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxChooseSeriesToReviewList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.comboBoxChooseSeriesToReviewList.FormattingEnabled = true;
             this.comboBoxChooseSeriesToReviewList.Items.AddRange(new object[] {
-            "Avatar the last airbender",
+            "Avatar",
             "Bridgerton",
-            "Brooklyn Nine Nine",
-            "The Walking Dead",
+            "Brooklyn_99",
+            "The _Walking_Dead",
             "Vikings"});
             this.comboBoxChooseSeriesToReviewList.Location = new System.Drawing.Point(442, 134);
             this.comboBoxChooseSeriesToReviewList.Name = "comboBoxChooseSeriesToReviewList";
@@ -775,13 +793,14 @@
             // 
             // comboBoxSeriesToReview
             // 
+            this.comboBoxSeriesToReview.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSeriesToReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.comboBoxSeriesToReview.FormattingEnabled = true;
             this.comboBoxSeriesToReview.Items.AddRange(new object[] {
-            "Avatar the last airbender",
+            "Avatar",
             "Bridgerton",
-            "Brooklyn Nine Nine",
-            "The Walking Dead",
+            "Brooklyn_99",
+            "The _Walking_Dead",
             "Vikings"});
             this.comboBoxSeriesToReview.Location = new System.Drawing.Point(294, 126);
             this.comboBoxSeriesToReview.Name = "comboBoxSeriesToReview";
@@ -890,13 +909,14 @@
             // 
             // comboBoxChooseSeries
             // 
+            this.comboBoxChooseSeries.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxChooseSeries.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.comboBoxChooseSeries.FormattingEnabled = true;
             this.comboBoxChooseSeries.Items.AddRange(new object[] {
-            "Avatar the last airbender",
+            "Avatar",
             "Bridgerton",
-            "Brooklyn Nine Nine",
-            "The Walking Dead",
+            "Brooklyn_99",
+            "The _Walking_Dead",
             "Vikings"});
             this.comboBoxChooseSeries.Location = new System.Drawing.Point(294, 126);
             this.comboBoxChooseSeries.Name = "comboBoxChooseSeries";
@@ -1055,10 +1075,10 @@
             // player_fast
             // 
             this.player_fast.Enabled = true;
-            this.player_fast.Location = new System.Drawing.Point(-326, -372);
+            this.player_fast.Location = new System.Drawing.Point(0, 0);
             this.player_fast.Name = "player_fast";
             this.player_fast.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("player_fast.OcxState")));
-            this.player_fast.Size = new System.Drawing.Size(3515, 2231);
+            this.player_fast.Size = new System.Drawing.Size(7910, 5021);
             this.player_fast.TabIndex = 32;
             this.player_fast.Visible = false;
             // 
@@ -1079,7 +1099,7 @@
             this.Controls.Add(this.buttonLeaveReview);
             this.Controls.Add(this.buttonRateMe);
             this.Controls.Add(this.labelDescription);
-            this.Controls.Add(this.labelDirector);
+            this.Controls.Add(this.labelEpNum);
             this.Controls.Add(this.labelRelease);
             this.Controls.Add(this.buttonBeckToMain);
             this.Controls.Add(this.panel_display_Series);
@@ -1123,7 +1143,7 @@
         private System.Windows.Forms.Button buttonLeaveReview;
         private System.Windows.Forms.Button buttonRateMe;
         private System.Windows.Forms.Label labelDescription;
-        private System.Windows.Forms.Label labelDirector;
+        private System.Windows.Forms.Label labelEpNum;
         private System.Windows.Forms.Label labelRelease;
         private System.Windows.Forms.Button buttonBeckToMain;
         private AxWMPLib.AxWindowsMediaPlayer player_fast;
@@ -1184,9 +1204,9 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonEP4Vikings;
+        private System.Windows.Forms.Button buttonEP3Vikings;
+        private System.Windows.Forms.Button buttonEP2Vikings;
+        private System.Windows.Forms.Button buttonEP1Vikings;
     }
 }

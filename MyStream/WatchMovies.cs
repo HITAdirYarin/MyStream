@@ -65,7 +65,7 @@ namespace MyStream
         private void play_movie(Movies movie)
         {
             panel_display_movie.SendToBack();
-            player_fast.Size = new Size(1045, 645);
+            player_fast.Size = new Size(1042, 650);
             player_fast.Visible = true;
             panel_display_movie.Visible = false;
             string fullPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "YouTubeMovies", movie._path));
@@ -106,9 +106,16 @@ namespace MyStream
 
         private void buttonRateMe_Click(object sender, EventArgs e)
         {
-            player_fast.SendToBack();
-            panel_display_movie.SendToBack();
-            panel_rate_me.Visible = true;
+            if (player_fast.Visible)
+            {
+                MessageBox.Show("please close the movie first");
+            }
+            else
+            {
+                player_fast.SendToBack();
+                panel_display_movie.SendToBack();
+                panel_rate_me.Visible = true;
+            } 
         }
 
         private void pb_star_5_Click(object sender, EventArgs e)
@@ -195,11 +202,18 @@ namespace MyStream
 
         private void buttonViewReviews_Click(object sender, EventArgs e)
         {
-            panelReviewList.Visible = true;
-            panelLeaveReview.Visible = false;
-            panel_rate_me.Visible=false;
-            player_fast.SendToBack();
-            panel_display_movie.SendToBack();
+            if(player_fast.Visible)
+            {
+                MessageBox.Show("please close the movie first");
+            }
+            else
+            {
+                panelReviewList.Visible = true;
+                panelLeaveReview.Visible = false;
+                panel_rate_me.Visible = false;
+                player_fast.SendToBack();
+                panel_display_movie.SendToBack();
+            } 
         }
 
         private void panel_rate_me_Paint(object sender, PaintEventArgs e)
@@ -247,9 +261,16 @@ namespace MyStream
 
         private void buttonLeaveReview_Click(object sender, EventArgs e)
         {
-            player_fast.SendToBack();
-            panel_display_movie.SendToBack();
-            panelLeaveReview.Visible = true;
+            if (player_fast.Visible)
+            {
+                MessageBox.Show("please close the movie first");
+            }
+            else
+            {
+                player_fast.SendToBack();
+                panel_display_movie.SendToBack();
+                panelLeaveReview.Visible = true;
+            }
         }
 
         private void buttonConfirmReview_Click(object sender, EventArgs e)
@@ -415,6 +436,16 @@ namespace MyStream
             {
                 listViewReview.Items.Clear();
             }
+        }
+
+        private void player_fast_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAddToFav_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -77,7 +77,6 @@
             this.buttonConfirmReview = new System.Windows.Forms.Button();
             this.buttonCloseReview = new System.Windows.Forms.Button();
             this.labelLeaveReview = new System.Windows.Forms.Label();
-            this.player_fast = new AxWMPLib.AxWindowsMediaPlayer();
             this.panelReviewList = new System.Windows.Forms.Panel();
             this.listViewReview = new System.Windows.Forms.ListView();
             this.buttonViewReview = new System.Windows.Forms.Button();
@@ -86,6 +85,7 @@
             this.comboBoxChooseMovieToReviewList = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.player_fast = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel_display_movie.SuspendLayout();
             this.panel_rate_me.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_star_5)).BeginInit();
@@ -94,8 +94,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_star_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_star_1)).BeginInit();
             this.panelLeaveReview.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.player_fast)).BeginInit();
             this.panelReviewList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.player_fast)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -268,6 +268,7 @@
             // 
             // comboBoxChooseMovie
             // 
+            this.comboBoxChooseMovie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxChooseMovie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.comboBoxChooseMovie.FormattingEnabled = true;
             this.comboBoxChooseMovie.Items.AddRange(new object[] {
@@ -602,6 +603,7 @@
             this.buttonAddToFav.TabIndex = 18;
             this.buttonAddToFav.Text = "Add to favorits";
             this.buttonAddToFav.UseVisualStyleBackColor = false;
+            this.buttonAddToFav.Click += new System.EventHandler(this.buttonAddToFav_Click);
             // 
             // panelLeaveReview
             // 
@@ -643,6 +645,7 @@
             // 
             // comboBoxMovieToReview
             // 
+            this.comboBoxMovieToReview.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMovieToReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.comboBoxMovieToReview.FormattingEnabled = true;
             this.comboBoxMovieToReview.Items.AddRange(new object[] {
@@ -726,16 +729,6 @@
             this.labelLeaveReview.Text = "Leave Review";
             this.labelLeaveReview.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // player_fast
-            // 
-            this.player_fast.Enabled = true;
-            this.player_fast.Location = new System.Drawing.Point(2, 0);
-            this.player_fast.Name = "player_fast";
-            this.player_fast.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("player_fast.OcxState")));
-            this.player_fast.Size = new System.Drawing.Size(2343, 1487);
-            this.player_fast.TabIndex = 17;
-            this.player_fast.Visible = false;
-            // 
             // panelReviewList
             // 
             this.panelReviewList.BackColor = System.Drawing.SystemColors.HotTrack;
@@ -809,6 +802,7 @@
             // 
             // comboBoxChooseMovieToReviewList
             // 
+            this.comboBoxChooseMovieToReviewList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxChooseMovieToReviewList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.comboBoxChooseMovieToReviewList.FormattingEnabled = true;
             this.comboBoxChooseMovieToReviewList.Items.AddRange(new object[] {
@@ -851,6 +845,17 @@
             this.label3.Text = "Review List";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // player_fast
+            // 
+            this.player_fast.Enabled = true;
+            this.player_fast.Location = new System.Drawing.Point(0, 0);
+            this.player_fast.Name = "player_fast";
+            this.player_fast.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("player_fast.OcxState")));
+            this.player_fast.Size = new System.Drawing.Size(5273, 3347);
+            this.player_fast.TabIndex = 17;
+            this.player_fast.Visible = false;
+            this.player_fast.Enter += new System.EventHandler(this.player_fast_Enter_1);
+            // 
             // WatchMovies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -872,11 +877,11 @@
             this.Controls.Add(this.labelRelease);
             this.Controls.Add(this.buttonBeckToMain);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.player_fast);
+            this.Controls.Add(this.panel_display_movie);
             this.Controls.Add(this.panelReviewList);
             this.Controls.Add(this.panelLeaveReview);
             this.Controls.Add(this.panel_rate_me);
-            this.Controls.Add(this.panel_display_movie);
-            this.Controls.Add(this.player_fast);
             this.DoubleBuffered = true;
             this.Name = "WatchMovies";
             this.Text = "WatchMovies";
@@ -889,8 +894,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_star_1)).EndInit();
             this.panelLeaveReview.ResumeLayout(false);
             this.panelLeaveReview.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.player_fast)).EndInit();
             this.panelReviewList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.player_fast)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
