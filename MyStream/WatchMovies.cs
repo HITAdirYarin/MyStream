@@ -280,7 +280,7 @@ namespace MyStream
             panelLeaveReview.Visible = false;
             comboBoxMovieToReview.SelectedIndex = -1;
             textBoxReview.Text = string.Empty;
-            ContentController.addReviews(movie, review);
+            ContentController.addMovieReviews(movie, review);
         }
 
         private void buttonCloseReviewList_Click(object sender, EventArgs e)

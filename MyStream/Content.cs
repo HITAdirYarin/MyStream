@@ -15,7 +15,6 @@ namespace MyStream
     {
         // Data members
         public string _name { get; set; }
-        public string _path { get; set; }
         public string _date { get; set; }
         public string _genre { get; set; }
         public string _type { get; set; }
@@ -30,7 +29,6 @@ namespace MyStream
         public Content()
         {
             _name = "no name";
-            _path = "no path";
             _date = "no date";
             _genre = "no genre";
             _type = "no type";
@@ -38,10 +36,9 @@ namespace MyStream
             _rateAvg = 0;
             _review = new List<string>();
         }
-        public Content( string name,string path, string date,string genre,string type,int rateCount,double rate)
+        public Content( string name,string date,string genre,string type,int rateCount,double rate)
         {
-            _name = name;
-            _path = path;         
+            _name = name;         
             _date = date;
             _genre = genre;
             _type = type;
@@ -65,7 +62,14 @@ namespace MyStream
                     sum += rate;
                     content.Value._rateCount++;
                     content.Value._rateAvg = getAvgRate(sum, content.Value._rateCount);
-                    ContentHendler.updateMovie( content.Value);
+                    if (content.Value._type == "movie")
+                    {
+                        ContentHendler.updateMovie(content.Value as Movies);
+                    }
+                    else if(content.Value._type == "series")
+                    {
+                        ContentHendler.updateSeries(content.Value as Series);
+                    }
                     break;
                 }
             }

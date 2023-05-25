@@ -8,6 +8,7 @@ namespace MyStream
 {
     public class Movies : Stream 
     {
+        public string _path { get; set; }
         public Movies()
         {
             _name = "no name";

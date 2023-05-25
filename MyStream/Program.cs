@@ -14,6 +14,7 @@ namespace MyStream
         [STAThread]
         static void Main()
         {
+         //   ContentController.addSeries();
             ContentHendler.loadMovies();
             ContentHendler.loadSeries();
             UserHendler.getUserCount();
@@ -21,6 +22,7 @@ namespace MyStream
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
+            
         }
     }
 }

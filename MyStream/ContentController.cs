@@ -12,23 +12,23 @@ namespace MyStream
     {
         public static void addMovies()
         {
-            Movies a = new Movies("Fast and Furious 9", "Fast and Furious 9.mp4", "Rob Cohen", "25/06/2021", "Action", "movie",0,0);
+            Movies a = new Movies("Fast and Furious 9", "Fast and Furious 9.mp4", "Rob Cohen", "25/06/2021", "Action", "movie", 0, 0);
             ContentHendler.saveMovie(a);
-            Movies b = new Movies("Ted", "Ted.mp4", "Seth MacFarlane", "09/08/2012", "Comedy", "movie",0, 0);
+            Movies b = new Movies("Ted", "Ted.mp4", "Seth MacFarlane", "09/08/2012", "Comedy", "movie", 0, 0);
             ContentHendler.saveMovie(b);
             Movies c = new Movies("300", "300.mp4", "Zack Snyder", "09/03/2007", "Action", "movie", 0, 0);
             ContentHendler.saveMovie(c);
-            Movies d = new Movies("Frozen", "Frozen.mp4","Jennifer Lee", "28/11/2013", "Family", "movie", 0, 0);
+            Movies d = new Movies("Frozen", "Frozen.mp4", "Jennifer Lee", "28/11/2013", "Family", "movie", 0, 0);
             ContentHendler.saveMovie(d);
-            Movies e = new Movies("Friends with Benefits", "Friends with Benefits.mp4", "Will Gluck","10/06/2012", "Comedy", "movie", 0, 0);
+            Movies e = new Movies("Friends with Benefits", "Friends with Benefits.mp4", "Will Gluck", "10/06/2012", "Comedy", "movie", 0, 0);
             ContentHendler.saveMovie(e);
             Movies f = new Movies("Titanic", "Titanic.mp4", "James Cameron", "09/01/1997", "Drama", "movie", 0, 0);
             ContentHendler.saveMovie(f);
-            Movies h = new Movies("Shrek", "Shrek.mp4","Vicky Jenson", "09/11/2012", "Family", "movie", 0, 0);
+            Movies h = new Movies("Shrek", "Shrek.mp4", "Vicky Jenson", "09/11/2012", "Family", "movie", 0, 0);
             ContentHendler.saveMovie(h);
-            Movies i = new Movies("21 Jump street", "Jump Street.mp4","Phil Lord", "19/03/2010", "Comedy", "movie", 0, 0);
+            Movies i = new Movies("21 Jump street", "Jump Street.mp4", "Phil Lord", "19/03/2010", "Comedy", "movie", 0, 0);
             ContentHendler.saveMovie(i);
-            Movies j= new Movies("The Godfather", "The Godfather.mp4", "Francis Ford Coppola", "14/02/2000", "Action", "movie", 0, 0);
+            Movies j = new Movies("The Godfather", "The Godfather.mp4", "Francis Ford Coppola", "14/02/2000", "Action", "movie", 0, 0);
             ContentHendler.saveMovie(j);
         }
         public static void addSeries()
@@ -62,13 +62,13 @@ namespace MyStream
             a._episodes.Add("Episode_4.mp4");
             ContentHendler.saveSeries(a);
         }
-        public static void addRate(int choose,string name)
+        public static void addRate(int choose, string name)
         {
             Content.addRate(choose, name);
         }
-        public static void addReviews(string name,string review)
+        public static void addMovieReviews(string name, string review)
         {
-            Content a = Content._contents[name];
+            Movies a = Content._contents[name] as Movies;
             if (a._review[0] == "no reviews")
             {
                 a._review[0] = review;
@@ -77,7 +77,20 @@ namespace MyStream
             {
                 a.addReview(review);
             }
-            ContentHendler.updateMovie( a);
+            ContentHendler.updateMovie(a);
+        }
+        public static void addSeriesReviews(string name, string review)
+        {
+            Series a = Content._contents[name] as Series;
+            if (a._review[0] == "no reviews")
+            {
+                a._review[0] = review;
+            }
+            else
+            {
+                a.addReview(review);
+            }
+            ContentHendler.updateSeries(a);
         }
     }
 }
