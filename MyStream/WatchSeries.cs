@@ -41,7 +41,6 @@ namespace MyStream
             this.Close();
             main.Show();
         }
-
         private void buttonClosePlayer_Click(object sender, EventArgs e)
         {
             player_fast.Visible = false;
@@ -205,12 +204,12 @@ namespace MyStream
 
         private void buttonConfirmReview_Click(object sender, EventArgs e)
         {
-            string movie = comboBoxSeriesToReview.Text;
+            string name = comboBoxSeriesToReview.Text;
             string review = textBoxReview.Text;
             panelLeaveReview.Visible = false;
             comboBoxSeriesToReview.SelectedIndex = -1;
             textBoxReview.Text = string.Empty;
-            //ContentController.addReviews(movie, review); // problem - need to build or update addReview function (build update series func)!
+            ContentController.addSeriesReviews(name, review); // problem - need to build or update addReview function (build update series func)!
         }
 
         private void buttonCloseReviewList_Click(object sender, EventArgs e)
@@ -384,8 +383,7 @@ namespace MyStream
 
         private void play_Episode(Series series , string path) //activate the episode that user selected
         {
-            series._path = path;
-            string fullPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, series._name, series._path));
+            string fullPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, series._name, path));
             if (File.Exists(fullPath))
             {
                 panel_display_Series.SendToBack();
@@ -397,7 +395,7 @@ namespace MyStream
             }
             else
             {
-                MessageBox.Show("There is an error with playing the movie");
+                MessageBox.Show("There is an error with playing the episode");
             }
         }
 

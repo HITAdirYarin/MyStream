@@ -81,7 +81,38 @@ namespace MyStream
 
             }
             return true;
-        } 
+        }
+        public static void deleteUser(string userName)
+        {
+            int userId;
+            foreach (KeyValuePair<int, User> user in User._users)
+            {
+                if (userName == user.Value._UserName)
+                {
+                    User._users.Remove(user.Value._userId);
+                    break;
+                }
+            }
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "users.txt");
+            string[] lines = File.ReadAllLines(filePath);
+            List<string> linesList = new List<string>();
+            for(int i = 0; i < lines.Length; i++)
+            {
+                linesList.Add(lines[i]);
+            }
+            User temp = new User();
+            for (int i = 0; i < linesList.Count; i++)
+            {
+                temp = JsonSerializer.Deserialize < User>(linesList[i]);
+                if (temp._UserName==userName)
+                {
+                    linesList.Remove(linesList[i]);
+                    File.WriteAllLines(filePath,linesList);
+                    break;
+                }
+            }
+        }
+            
 
         public static bool saveUsersCount() // The function saves the number of users that exist (useful to give a new user an appropriate id number)
         {
@@ -139,7 +170,7 @@ namespace MyStream
 
             }
             return a;
-        } //load only ONE USER by the givven username - need to check if work!
+        } 
 
     }
 }

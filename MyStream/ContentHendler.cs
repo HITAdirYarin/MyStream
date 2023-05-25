@@ -32,13 +32,13 @@ namespace MyStream
             return true;
         } 
       
-        public static void updateMovie(Content movie) // The function updates moviee's details(useful to update rates and reviews)
+        public static void updateMovie(Movies movie) // The function updates moviee's details(useful to update rates and reviews)
         {
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "movies.txt");
             string[] lines = File.ReadAllLines(filePath);
             for(int i = 0; i < lines.Length; i++)
             {
-                Content temp = JsonSerializer.Deserialize<Content>(lines[i]);
+                Movies temp = JsonSerializer.Deserialize<Movies>(lines[i]);
                 if (movie._name == temp._name)
                 {
                     lines[i] = JsonSerializer.Serialize(movie);
@@ -92,6 +92,21 @@ namespace MyStream
                 return false;
             }
             return true;
+        }
+        public static void updateSeries(Series series) // The function updates moviee's details(useful to update rates and reviews)
+        {
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "series.txt");
+            string[] lines = File.ReadAllLines(filePath);
+            for (int i = 0; i < lines.Length; i++)
+            {
+                Series temp = JsonSerializer.Deserialize<Series>(lines[i]);
+                if (series._name == temp._name)
+                {
+                    lines[i] = JsonSerializer.Serialize(series);
+                    File.WriteAllLines(filePath, lines);
+                    break;
+                }
+            }
         }
         public static bool loadSeries() // The function loads the series from the file to the program's RAM 
         {

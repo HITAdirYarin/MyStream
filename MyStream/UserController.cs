@@ -23,12 +23,10 @@ namespace MyStream
             User._users.Add(a._userId, a);
             return true;
         }
-
-        public static bool logout()
+        public static void deleteUser(string userName)
         {
-            return true;
-        } 
-
+            UserHendler.deleteUser(userName);
+        }
         public static bool ChangePassword(string password , string username) 
         {
             return User.ChangePassword(password, username);

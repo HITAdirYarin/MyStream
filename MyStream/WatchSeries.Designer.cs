@@ -644,13 +644,13 @@
             // panelReviewList
             // 
             this.panelReviewList.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panelReviewList.Controls.Add(this.listViewReview);
             this.panelReviewList.Controls.Add(this.buttonViewReview);
             this.panelReviewList.Controls.Add(this.buttonCloseReviewList);
             this.panelReviewList.Controls.Add(this.buttonLeaveReviewFromList);
             this.panelReviewList.Controls.Add(this.comboBoxChooseSeriesToReviewList);
             this.panelReviewList.Controls.Add(this.label4);
             this.panelReviewList.Controls.Add(this.label3);
+            this.panelReviewList.Controls.Add(this.listViewReview);
             this.panelReviewList.Location = new System.Drawing.Point(601, 149);
             this.panelReviewList.Name = "panelReviewList";
             this.panelReviewList.Size = new System.Drawing.Size(808, 692);
@@ -885,11 +885,11 @@
             this.panel_rate_me.Controls.Add(this.pb_star_4);
             this.panel_rate_me.Controls.Add(this.pb_star_3);
             this.panel_rate_me.Controls.Add(this.pb_star_2);
-            this.panel_rate_me.Controls.Add(this.pb_star_1);
             this.panel_rate_me.Controls.Add(this.button_leave_review);
             this.panel_rate_me.Controls.Add(this.button_confirm_rate);
             this.panel_rate_me.Controls.Add(this.button_close_rate_win);
             this.panel_rate_me.Controls.Add(this.label_rate);
+            this.panel_rate_me.Controls.Add(this.pb_star_1);
             this.panel_rate_me.Location = new System.Drawing.Point(625, 277);
             this.panel_rate_me.Name = "panel_rate_me";
             this.panel_rate_me.Size = new System.Drawing.Size(674, 453);
@@ -1102,11 +1102,11 @@
             this.Controls.Add(this.labelEpNum);
             this.Controls.Add(this.labelRelease);
             this.Controls.Add(this.buttonBeckToMain);
-            this.Controls.Add(this.panel_display_Series);
-            this.Controls.Add(this.player_fast);
-            this.Controls.Add(this.panelReviewList);
             this.Controls.Add(this.panelLeaveReview);
             this.Controls.Add(this.panel_rate_me);
+            this.Controls.Add(this.panel_display_Series);
+            this.Controls.Add(this.panelReviewList);
+            this.Controls.Add(this.player_fast);
             this.DoubleBuffered = true;
             this.Name = "WatchSeries";
             this.Text = "WatchSeries";
