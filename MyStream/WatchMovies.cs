@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -187,17 +188,24 @@ namespace MyStream
 
         private void button_confirm_rate_Click(object sender, EventArgs e)
         {
-            panel_rate_me.Visible = false;
-            int rate = int.Parse(label_rating_input.Text);
-            string movie_name = comboBoxChooseMovie.Text;
-            ContentController.addRate(rate, movie_name);
-            pb_star_1.Image = Resources.grey_star;
-            pb_star_2.Image = Resources.grey_star;
-            pb_star_3.Image = Resources.grey_star;
-            pb_star_4.Image = Resources.grey_star;
-            pb_star_5.Image = Resources.grey_star;
-            label_rating_input.Text = string.Empty;
-            comboBoxChooseMovie.SelectedIndex = -1;
+            if(comboBoxChooseMovie.SelectedIndex == -1)
+            {
+                MessageBox.Show("please choose a movie to rate first");
+            }
+            else
+            {
+                panel_rate_me.Visible = false;
+                int rate = int.Parse(label_rating_input.Text);
+                string movie_name = comboBoxChooseMovie.Text;
+                ContentController.addRate(rate, movie_name);
+                pb_star_1.Image = Resources.grey_star;
+                pb_star_2.Image = Resources.grey_star;
+                pb_star_3.Image = Resources.grey_star;
+                pb_star_4.Image = Resources.grey_star;
+                pb_star_5.Image = Resources.grey_star;
+                label_rating_input.Text = string.Empty;
+                comboBoxChooseMovie.SelectedIndex = -1;
+            }
         }
 
         private void buttonViewReviews_Click(object sender, EventArgs e)
@@ -275,12 +283,19 @@ namespace MyStream
 
         private void buttonConfirmReview_Click(object sender, EventArgs e)
         {
-            string movie = comboBoxMovieToReview.Text;
-            string review = textBoxReview.Text;
-            panelLeaveReview.Visible = false;
-            comboBoxMovieToReview.SelectedIndex = -1;
-            textBoxReview.Text = string.Empty;
-            ContentController.addMovieReviews(movie, review);
+            if (comboBoxMovieToReview.SelectedIndex == -1)
+            {
+                MessageBox.Show("please choose a movie to review first");
+            }
+            else
+            {
+                string movie = comboBoxMovieToReview.Text;
+                string review = textBoxReview.Text;
+                panelLeaveReview.Visible = false;
+                comboBoxMovieToReview.SelectedIndex = -1;
+                textBoxReview.Text = string.Empty;
+                ContentController.addMovieReviews(movie, review);
+            }
         }
 
         private void buttonCloseReviewList_Click(object sender, EventArgs e)
@@ -292,19 +307,27 @@ namespace MyStream
 
         private void buttonViewReview_Click(object sender, EventArgs e)
         {
-            string movie = comboBoxChooseMovieToReviewList.Text;
-            foreach (KeyValuePair<string, Content> content in Content._contents)
+            if (comboBoxChooseMovieToReviewList.SelectedIndex == -1)
             {
-                if (content.Value._name == movie)
-                {
-                    foreach (string review in content.Value._review)
-                    {
-                        listViewReview.Items.Add(review);
-                    }
-                    break;
-                }
+                MessageBox.Show("please choose a movie to view first");
             }
-            listViewReview.Show();
+            else
+            {
+                string movie = comboBoxChooseMovieToReviewList.Text;
+                foreach (KeyValuePair<string, Content> content in Content._contents)
+                {
+                    if (content.Value._name == movie)
+                    {
+                        foreach (string review in content.Value._review)
+                        {
+                            listViewReview.Items.Add(review);
+                        }
+                        break;
+                    }
+                }
+                listViewReview.Show();
+            }
+            
            
         }
 

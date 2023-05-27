@@ -100,6 +100,7 @@ namespace MyStream
             buttonChangePassword.Visible = true;
             buttonChangeEmail.Visible = true;
             buttonChangeUserName.Visible = true;
+            buttonDeleteUser.Visible = true;
             labelheadline.Text = "Settings";
         }
 
@@ -109,6 +110,7 @@ namespace MyStream
             buttonChangePassword.Visible = false;
             buttonChangeEmail.Visible = false;
             buttonChangeUserName.Visible = false;
+            buttonDeleteUser.Visible = false;
             buttonWatchContent.Visible = true;
             buttonFavList.Visible = true;
             buttonRandom.Visible = true;
@@ -125,6 +127,7 @@ namespace MyStream
             panelPassword.Visible = true;
             panelEmail.Visible = false;
             panelUsername.Visible = false;
+            panelDeleteUser.Visible = false;
         }
 
         private void buttonChangeEmail_Click(object sender, EventArgs e)
@@ -132,6 +135,7 @@ namespace MyStream
             panelEmail.Visible = true;
             panelPassword.Visible = false;
             panelUsername.Visible = false;
+            panelDeleteUser.Visible = false;
         }
 
         private void buttonChangeUserName_Click(object sender, EventArgs e)
@@ -139,6 +143,7 @@ namespace MyStream
             panelUsername.Visible = true;
             panelPassword.Visible = false;
             panelEmail.Visible = false;
+            panelDeleteUser.Visible = false;
         }
 
         private void button_backToMain_Click_1(object sender, EventArgs e)
@@ -258,7 +263,9 @@ namespace MyStream
 
         private void buttonPodcast_Click(object sender, EventArgs e)
         {
-            
+            ListenPodcast podcast = new ListenPodcast(Username);
+            podcast.Show();
+            this.Hide();
         }
 
         private void buttonBackFromMovies_Click(object sender, EventArgs e)
@@ -310,6 +317,8 @@ namespace MyStream
                     panelUsername.Visible = false;
                     Username = textBoxNewUsername.Text;
                     label_hello.Text = "Hello, " + textBoxNewUsername.Text;
+                    textBoxNewUsername.Text = string.Empty;
+                    textBoxOldUsername.Text = string.Empty;
                 }
             }
         }
@@ -367,6 +376,41 @@ namespace MyStream
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonClearDelete_Click(object sender, EventArgs e)
+        {
+            textBoxPassword_delete.Text = string.Empty;
+            textBoxUsername_delete.Text = string.Empty;
+        }
+
+        private void buttonConfirmDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult a = MessageBox.Show("Are you sure you want to Delete your User?\nall of your file will be lost", "DeleteUser", MessageBoxButtons.YesNo);
+            if (a == DialogResult.Yes)
+            {
+                UserController.deleteUser(textBoxUsername_delete.Text);
+                MessageBox.Show("User deleted succssfuly");
+                panelDeleteUser.Visible = false;
+                textBoxPassword_delete.Text = string.Empty;
+                textBoxUsername_delete.Text = string.Empty;
+                Login login = new Login();
+                Close();
+                login.Show();
+            }
+        }
+
+        private void buttonCloseDelete_Click(object sender, EventArgs e)
+        {
+            panelDeleteUser.Visible=false;
+        }
+
+        private void buttonDeleteUser_Click(object sender, EventArgs e)
+        {
+            panelDeleteUser.Visible = true;
+            panelPassword.Visible = false;
+            panelEmail.Visible = false;
+            panelUsername.Visible = false;
         }
     }
 }

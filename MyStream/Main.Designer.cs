@@ -75,10 +75,21 @@
             this.buttonClearUsername = new System.Windows.Forms.Button();
             this.buttonConfirmUsername = new System.Windows.Forms.Button();
             this.labelChangeUsername = new System.Windows.Forms.Label();
+            this.buttonDeleteUser = new System.Windows.Forms.Button();
+            this.panelDeleteUser = new System.Windows.Forms.Panel();
+            this.textBoxPassword_delete = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buttonCloseDelete = new System.Windows.Forms.Button();
+            this.textBoxUsername_delete = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.buttonClearDelete = new System.Windows.Forms.Button();
+            this.buttonConfirmDelete = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.panelPassword.SuspendLayout();
             this.panelEmail.SuspendLayout();
             this.panelFavList.SuspendLayout();
             this.panelUsername.SuspendLayout();
+            this.panelDeleteUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonLogout
@@ -115,7 +126,7 @@
             this.buttonFavList.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonFavList.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.buttonFavList.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonFavList.Location = new System.Drawing.Point(1564, 625);
+            this.buttonFavList.Location = new System.Drawing.Point(1563, 697);
             this.buttonFavList.Name = "buttonFavList";
             this.buttonFavList.Size = new System.Drawing.Size(333, 55);
             this.buttonFavList.TabIndex = 0;
@@ -129,7 +140,7 @@
             this.buttonRandom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonRandom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.buttonRandom.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonRandom.Location = new System.Drawing.Point(1564, 535);
+            this.buttonRandom.Location = new System.Drawing.Point(1563, 609);
             this.buttonRandom.Name = "buttonRandom";
             this.buttonRandom.Size = new System.Drawing.Size(333, 55);
             this.buttonRandom.TabIndex = 0;
@@ -219,7 +230,7 @@
             this.button_backToMain_content.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_backToMain_content.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.button_backToMain_content.ForeColor = System.Drawing.SystemColors.Control;
-            this.button_backToMain_content.Location = new System.Drawing.Point(1570, 441);
+            this.button_backToMain_content.Location = new System.Drawing.Point(1570, 516);
             this.button_backToMain_content.Name = "button_backToMain_content";
             this.button_backToMain_content.Size = new System.Drawing.Size(317, 50);
             this.button_backToMain_content.TabIndex = 5;
@@ -657,9 +668,9 @@
             this.labelNewUsername.ForeColor = System.Drawing.Color.Gray;
             this.labelNewUsername.Location = new System.Drawing.Point(171, 223);
             this.labelNewUsername.Name = "labelNewUsername";
-            this.labelNewUsername.Size = new System.Drawing.Size(174, 29);
+            this.labelNewUsername.Size = new System.Drawing.Size(270, 44);
             this.labelNewUsername.TabIndex = 18;
-            this.labelNewUsername.Text = "NewUsername";
+            this.labelNewUsername.Text = "New Username";
             // 
             // buttonBckToMainFromUsername
             // 
@@ -743,6 +754,143 @@
             this.labelChangeUsername.TabIndex = 5;
             this.labelChangeUsername.Text = "Change Username";
             // 
+            // buttonDeleteUser
+            // 
+            this.buttonDeleteUser.BackColor = System.Drawing.SystemColors.Highlight;
+            this.buttonDeleteUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDeleteUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.buttonDeleteUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonDeleteUser.Location = new System.Drawing.Point(1563, 429);
+            this.buttonDeleteUser.Name = "buttonDeleteUser";
+            this.buttonDeleteUser.Size = new System.Drawing.Size(333, 55);
+            this.buttonDeleteUser.TabIndex = 26;
+            this.buttonDeleteUser.Text = "Delete User";
+            this.buttonDeleteUser.UseMnemonic = false;
+            this.buttonDeleteUser.UseVisualStyleBackColor = false;
+            this.buttonDeleteUser.Visible = false;
+            this.buttonDeleteUser.Click += new System.EventHandler(this.buttonDeleteUser_Click);
+            // 
+            // panelDeleteUser
+            // 
+            this.panelDeleteUser.BackColor = System.Drawing.SystemColors.Desktop;
+            this.panelDeleteUser.Controls.Add(this.textBoxPassword_delete);
+            this.panelDeleteUser.Controls.Add(this.label2);
+            this.panelDeleteUser.Controls.Add(this.buttonCloseDelete);
+            this.panelDeleteUser.Controls.Add(this.textBoxUsername_delete);
+            this.panelDeleteUser.Controls.Add(this.label4);
+            this.panelDeleteUser.Controls.Add(this.buttonClearDelete);
+            this.panelDeleteUser.Controls.Add(this.buttonConfirmDelete);
+            this.panelDeleteUser.Controls.Add(this.label5);
+            this.panelDeleteUser.Location = new System.Drawing.Point(-2, 221);
+            this.panelDeleteUser.Name = "panelDeleteUser";
+            this.panelDeleteUser.Size = new System.Drawing.Size(624, 685);
+            this.panelDeleteUser.TabIndex = 27;
+            this.panelDeleteUser.Visible = false;
+            // 
+            // textBoxPassword_delete
+            // 
+            this.textBoxPassword_delete.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBoxPassword_delete.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPassword_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.textBoxPassword_delete.ForeColor = System.Drawing.Color.Black;
+            this.textBoxPassword_delete.Location = new System.Drawing.Point(173, 270);
+            this.textBoxPassword_delete.Multiline = true;
+            this.textBoxPassword_delete.Name = "textBoxPassword_delete";
+            this.textBoxPassword_delete.Size = new System.Drawing.Size(320, 40);
+            this.textBoxPassword_delete.TabIndex = 19;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(171, 223);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(180, 44);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Password";
+            // 
+            // buttonCloseDelete
+            // 
+            this.buttonCloseDelete.BackColor = System.Drawing.Color.Black;
+            this.buttonCloseDelete.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonCloseDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.buttonCloseDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.buttonCloseDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonCloseDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.buttonCloseDelete.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonCloseDelete.Location = new System.Drawing.Point(164, 635);
+            this.buttonCloseDelete.Name = "buttonCloseDelete";
+            this.buttonCloseDelete.Size = new System.Drawing.Size(317, 50);
+            this.buttonCloseDelete.TabIndex = 17;
+            this.buttonCloseDelete.Text = "Close";
+            this.buttonCloseDelete.UseVisualStyleBackColor = false;
+            this.buttonCloseDelete.Click += new System.EventHandler(this.buttonCloseDelete_Click);
+            // 
+            // textBoxUsername_delete
+            // 
+            this.textBoxUsername_delete.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBoxUsername_delete.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxUsername_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.textBoxUsername_delete.ForeColor = System.Drawing.Color.Black;
+            this.textBoxUsername_delete.Location = new System.Drawing.Point(173, 175);
+            this.textBoxUsername_delete.Multiline = true;
+            this.textBoxUsername_delete.Name = "textBoxUsername_delete";
+            this.textBoxUsername_delete.Size = new System.Drawing.Size(320, 40);
+            this.textBoxUsername_delete.TabIndex = 14;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label4.ForeColor = System.Drawing.Color.Gray;
+            this.label4.Location = new System.Drawing.Point(171, 128);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(194, 44);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "UserName";
+            // 
+            // buttonClearDelete
+            // 
+            this.buttonClearDelete.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonClearDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClearDelete.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonClearDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.buttonClearDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonClearDelete.Location = new System.Drawing.Point(173, 460);
+            this.buttonClearDelete.Name = "buttonClearDelete";
+            this.buttonClearDelete.Size = new System.Drawing.Size(294, 62);
+            this.buttonClearDelete.TabIndex = 6;
+            this.buttonClearDelete.Text = "Clear";
+            this.buttonClearDelete.UseVisualStyleBackColor = false;
+            this.buttonClearDelete.Click += new System.EventHandler(this.buttonClearDelete_Click);
+            // 
+            // buttonConfirmDelete
+            // 
+            this.buttonConfirmDelete.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonConfirmDelete.Cursor = System.Windows.Forms.Cursors.Default;
+            this.buttonConfirmDelete.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonConfirmDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.buttonConfirmDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonConfirmDelete.Location = new System.Drawing.Point(173, 373);
+            this.buttonConfirmDelete.Name = "buttonConfirmDelete";
+            this.buttonConfirmDelete.Size = new System.Drawing.Size(294, 62);
+            this.buttonConfirmDelete.TabIndex = 7;
+            this.buttonConfirmDelete.Text = "Confirm";
+            this.buttonConfirmDelete.UseVisualStyleBackColor = false;
+            this.buttonConfirmDelete.Click += new System.EventHandler(this.buttonConfirmDelete_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label5.Location = new System.Drawing.Point(180, 6);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(287, 61);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Delete User";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -750,6 +898,8 @@
             this.BackgroundImage = global::MyStream.Properties.Resources.תמונה5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1909, 991);
+            this.Controls.Add(this.panelDeleteUser);
+            this.Controls.Add(this.buttonDeleteUser);
             this.Controls.Add(this.labelheadline);
             this.Controls.Add(this.buttonBackToMainGenral);
             this.Controls.Add(this.button_backToMain_content);
@@ -781,6 +931,8 @@
             this.panelFavList.PerformLayout();
             this.panelUsername.ResumeLayout(false);
             this.panelUsername.PerformLayout();
+            this.panelDeleteUser.ResumeLayout(false);
+            this.panelDeleteUser.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -835,5 +987,15 @@
         private System.Windows.Forms.Button buttonClearUsername;
         private System.Windows.Forms.Button buttonConfirmUsername;
         private System.Windows.Forms.Label labelChangeUsername;
+        private System.Windows.Forms.Button buttonDeleteUser;
+        private System.Windows.Forms.Panel panelDeleteUser;
+        private System.Windows.Forms.TextBox textBoxPassword_delete;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonCloseDelete;
+        private System.Windows.Forms.TextBox textBoxUsername_delete;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button buttonClearDelete;
+        private System.Windows.Forms.Button buttonConfirmDelete;
+        private System.Windows.Forms.Label label5;
     }
 }

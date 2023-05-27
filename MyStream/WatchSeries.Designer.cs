@@ -72,13 +72,13 @@
             this.buttonBridgerton = new System.Windows.Forms.Button();
             this.buttonAvatar = new System.Windows.Forms.Button();
             this.panelReviewList = new System.Windows.Forms.Panel();
-            this.listViewReview = new System.Windows.Forms.ListView();
             this.buttonViewReview = new System.Windows.Forms.Button();
             this.buttonCloseReviewList = new System.Windows.Forms.Button();
             this.buttonLeaveReviewFromList = new System.Windows.Forms.Button();
             this.comboBoxChooseSeriesToReviewList = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.listViewReview = new System.Windows.Forms.ListView();
             this.panelLeaveReview = new System.Windows.Forms.Panel();
             this.textBoxReview = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -98,11 +98,11 @@
             this.pb_star_4 = new System.Windows.Forms.PictureBox();
             this.pb_star_3 = new System.Windows.Forms.PictureBox();
             this.pb_star_2 = new System.Windows.Forms.PictureBox();
-            this.pb_star_1 = new System.Windows.Forms.PictureBox();
             this.button_leave_review = new System.Windows.Forms.Button();
             this.button_confirm_rate = new System.Windows.Forms.Button();
             this.button_close_rate_win = new System.Windows.Forms.Button();
             this.label_rate = new System.Windows.Forms.Label();
+            this.pb_star_1 = new System.Windows.Forms.PictureBox();
             this.player_fast = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel_display_Series.SuspendLayout();
             this.panelVikings.SuspendLayout();
@@ -168,7 +168,7 @@
             this.labelName.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.labelName.Location = new System.Drawing.Point(1564, 74);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(339, 94);
+            this.labelName.Size = new System.Drawing.Size(339, 105);
             this.labelName.TabIndex = 29;
             this.labelName.Text = "Name:";
             this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -657,19 +657,6 @@
             this.panelReviewList.TabIndex = 34;
             this.panelReviewList.Visible = false;
             // 
-            // listViewReview
-            // 
-            this.listViewReview.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.listViewReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.listViewReview.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.listViewReview.HideSelection = false;
-            this.listViewReview.Location = new System.Drawing.Point(40, 198);
-            this.listViewReview.Name = "listViewReview";
-            this.listViewReview.Size = new System.Drawing.Size(737, 406);
-            this.listViewReview.TabIndex = 33;
-            this.listViewReview.UseCompatibleStateImageBehavior = false;
-            this.listViewReview.View = System.Windows.Forms.View.Tile;
-            // 
             // buttonViewReview
             // 
             this.buttonViewReview.BackColor = System.Drawing.SystemColors.Highlight;
@@ -720,8 +707,8 @@
             this.comboBoxChooseSeriesToReviewList.Items.AddRange(new object[] {
             "Avatar",
             "Bridgerton",
-            "Brooklyn_99",
-            "The _Walking_Dead",
+            "Brooklyn 99",
+            "The Walking Dead",
             "Vikings"});
             this.comboBoxChooseSeriesToReviewList.Location = new System.Drawing.Point(442, 134);
             this.comboBoxChooseSeriesToReviewList.Name = "comboBoxChooseSeriesToReviewList";
@@ -752,6 +739,19 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Review List";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // listViewReview
+            // 
+            this.listViewReview.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.listViewReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.listViewReview.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.listViewReview.HideSelection = false;
+            this.listViewReview.Location = new System.Drawing.Point(40, 198);
+            this.listViewReview.Name = "listViewReview";
+            this.listViewReview.Size = new System.Drawing.Size(737, 406);
+            this.listViewReview.TabIndex = 33;
+            this.listViewReview.UseCompatibleStateImageBehavior = false;
+            this.listViewReview.View = System.Windows.Forms.View.Tile;
             // 
             // panelLeaveReview
             // 
@@ -799,8 +799,8 @@
             this.comboBoxSeriesToReview.Items.AddRange(new object[] {
             "Avatar",
             "Bridgerton",
-            "Brooklyn_99",
-            "The _Walking_Dead",
+            "Brooklyn 99",
+            "The Walking Dead",
             "Vikings"});
             this.comboBoxSeriesToReview.Location = new System.Drawing.Point(294, 126);
             this.comboBoxSeriesToReview.Name = "comboBoxSeriesToReview";
@@ -829,7 +829,7 @@
             this.buttonRateMovieFromReview.Name = "buttonRateMovieFromReview";
             this.buttonRateMovieFromReview.Size = new System.Drawing.Size(275, 55);
             this.buttonRateMovieFromReview.TabIndex = 18;
-            this.buttonRateMovieFromReview.Text = "Rate Movie";
+            this.buttonRateMovieFromReview.Text = "Rate Series";
             this.buttonRateMovieFromReview.UseVisualStyleBackColor = false;
             this.buttonRateMovieFromReview.Click += new System.EventHandler(this.buttonRateMovieFromReview_Click);
             // 
@@ -915,8 +915,8 @@
             this.comboBoxChooseSeries.Items.AddRange(new object[] {
             "Avatar",
             "Bridgerton",
-            "Brooklyn_99",
-            "The _Walking_Dead",
+            "Brooklyn 99",
+            "The Walking Dead",
             "Vikings"});
             this.comboBoxChooseSeries.Location = new System.Drawing.Point(294, 126);
             this.comboBoxChooseSeries.Name = "comboBoxChooseSeries";
@@ -1006,18 +1006,6 @@
             this.pb_star_2.TabStop = false;
             this.pb_star_2.Click += new System.EventHandler(this.pb_star_2_Click);
             // 
-            // pb_star_1
-            // 
-            this.pb_star_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb_star_1.Image = global::MyStream.Properties.Resources.grey_star;
-            this.pb_star_1.Location = new System.Drawing.Point(105, 209);
-            this.pb_star_1.Name = "pb_star_1";
-            this.pb_star_1.Size = new System.Drawing.Size(58, 57);
-            this.pb_star_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_star_1.TabIndex = 19;
-            this.pb_star_1.TabStop = false;
-            this.pb_star_1.Click += new System.EventHandler(this.pb_star_1_Click);
-            // 
             // button_leave_review
             // 
             this.button_leave_review.BackColor = System.Drawing.SystemColors.Highlight;
@@ -1072,6 +1060,18 @@
             this.label_rate.Text = "Rate";
             this.label_rate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // pb_star_1
+            // 
+            this.pb_star_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_star_1.Image = global::MyStream.Properties.Resources.grey_star;
+            this.pb_star_1.Location = new System.Drawing.Point(105, 209);
+            this.pb_star_1.Name = "pb_star_1";
+            this.pb_star_1.Size = new System.Drawing.Size(58, 57);
+            this.pb_star_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_star_1.TabIndex = 19;
+            this.pb_star_1.TabStop = false;
+            this.pb_star_1.Click += new System.EventHandler(this.pb_star_1_Click);
+            // 
             // player_fast
             // 
             this.player_fast.Enabled = true;
@@ -1102,10 +1102,10 @@
             this.Controls.Add(this.labelEpNum);
             this.Controls.Add(this.labelRelease);
             this.Controls.Add(this.buttonBeckToMain);
+            this.Controls.Add(this.panelReviewList);
             this.Controls.Add(this.panelLeaveReview);
             this.Controls.Add(this.panel_rate_me);
             this.Controls.Add(this.panel_display_Series);
-            this.Controls.Add(this.panelReviewList);
             this.Controls.Add(this.player_fast);
             this.DoubleBuffered = true;
             this.Name = "WatchSeries";
