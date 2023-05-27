@@ -180,40 +180,15 @@ namespace MyStream
 
         
 
-        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
-        {
-            
-        }
+        
 
         private Point initialMousePos;
         private Point initialPictureBoxPos;
         private bool isDragging = false;
+       
+
+
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        private void pictureBox1_MouseDown_1(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                initialMousePos = e.Location;
-                initialPictureBoxPos = pictureBox1.Location;
-                isDragging = true;
-            }
-        }
-
-        private void pictureBox1_MouseUp_1(object sender, MouseEventArgs e)
-        {
-            isDragging = false;
-        }
-
-        private void pictureBox1_MouseMove_1(object sender, MouseEventArgs e)
         {
             if (isDragging)
             {
@@ -223,9 +198,19 @@ namespace MyStream
             }
         }
 
-        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+            isDragging = false;
+        }
+
+        private void pictureBox1_MouseHover_1(object sender, EventArgs e)
         {
             LblDragMe.Visible = true;
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            isDragging = true;
         }
     }
 }

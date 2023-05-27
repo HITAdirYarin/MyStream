@@ -56,6 +56,8 @@ namespace MyStream
             }
             else
             {
+                panelLeaveReview.Visible = false;
+                panelReviewList.Visible = false;
                 player_fast.SendToBack();
                 panel_display_Series.SendToBack();
                 panel_rate_me.Visible = true;
@@ -131,17 +133,24 @@ namespace MyStream
 
         private void button_confirm_rate_Click(object sender, EventArgs e)
         {
-            panel_rate_me.Visible = false;
-            int rate = int.Parse(label_rating_input.Text);
-            string Series_name = comboBoxChooseSeries.Text;
-            ContentController.addRate(rate, Series_name); // problem - need to build or update addRate function (build update series func)!
-            pb_star_1.Image = Resources.grey_star;
-            pb_star_2.Image = Resources.grey_star;
-            pb_star_3.Image = Resources.grey_star;
-            pb_star_4.Image = Resources.grey_star;
-            pb_star_5.Image = Resources.grey_star;
-            label_rating_input.Text = string.Empty;
-            comboBoxChooseSeries.SelectedIndex = -1;
+            if (comboBoxChooseSeries.SelectedIndex == -1)
+            {
+                MessageBox.Show("please choose a series to rate first");
+            }
+            else
+            {
+                panel_rate_me.Visible = false;
+                int rate = int.Parse(label_rating_input.Text);
+                string Series_name = comboBoxChooseSeries.Text;
+                ContentController.addRate(rate, Series_name);
+                pb_star_1.Image = Resources.grey_star;
+                pb_star_2.Image = Resources.grey_star;
+                pb_star_3.Image = Resources.grey_star;
+                pb_star_4.Image = Resources.grey_star;
+                pb_star_5.Image = Resources.grey_star;
+                label_rating_input.Text = string.Empty;
+                comboBoxChooseSeries.SelectedIndex = -1;
+            }
         }
 
         private void buttonViewReviews_Click(object sender, EventArgs e)
@@ -196,6 +205,8 @@ namespace MyStream
             }
             else
             {
+                panelReviewList.Visible = false;
+                panel_rate_me.Visible = false;
                 player_fast.SendToBack();
                 panel_display_Series.SendToBack();
                 panelLeaveReview.Visible = true;
@@ -204,12 +215,19 @@ namespace MyStream
 
         private void buttonConfirmReview_Click(object sender, EventArgs e)
         {
-            string name = comboBoxSeriesToReview.Text;
-            string review = textBoxReview.Text;
-            panelLeaveReview.Visible = false;
-            comboBoxSeriesToReview.SelectedIndex = -1;
-            textBoxReview.Text = string.Empty;
-            ContentController.addSeriesReviews(name, review); // problem - need to build or update addReview function (build update series func)!
+            if (comboBoxSeriesToReview.SelectedIndex == -1)
+            {
+                MessageBox.Show("please choose a series to review first");
+            }
+            else
+            {
+                string name = comboBoxSeriesToReview.Text;
+                string review = textBoxReview.Text;
+                panelLeaveReview.Visible = false;
+                comboBoxSeriesToReview.SelectedIndex = -1;
+                textBoxReview.Text = string.Empty;
+                ContentController.addSeriesReviews(name, review);
+            }
         }
 
         private void buttonCloseReviewList_Click(object sender, EventArgs e)
@@ -243,7 +261,7 @@ namespace MyStream
             if (countBrooklyn % 2 == 1)
             {
                 setInfo(null);
-                Series Brooklyn_99 = Content._contents["Brooklyn_99"] as Series;
+                Series Brooklyn_99 = Content._contents["Brooklyn 99"] as Series;
                 if (Brooklyn_99 == null)
                 {
                     MessageBox.Show("ERROR");
@@ -320,7 +338,7 @@ namespace MyStream
             if(countWalkingDead%2 == 1) 
             {
                 setInfo(null);
-                Series The_Walking_Dead = Content._contents["The_Walking_Dead"] as Series;
+                Series The_Walking_Dead = Content._contents["The Walking Dead"] as Series;
                 if (The_Walking_Dead == null)
                 {
                     MessageBox.Show("ERROR");
@@ -364,8 +382,12 @@ namespace MyStream
             else { panelVikings.Visible = false; setInfo(null); }
         }
 
-        private void buttonViewReview_Click(object sender, EventArgs e) // need to fix "updateSeries" for this!
+        private void buttonViewReview_Click(object sender, EventArgs e) 
         {
+            if (comboBoxChooseSeriesToReviewList.SelectedIndex == -1)
+            {
+                MessageBox.Show("please choose a series to view first");
+            }
             string series = comboBoxChooseSeriesToReviewList.Text;
             foreach (KeyValuePair<string, Content> content in Content._contents)
             {
@@ -405,7 +427,7 @@ namespace MyStream
         }
         private void button8_Click(object sender, EventArgs e)
         {
-            Series Brooklyn_99 = Content._contents["Brooklyn_99"] as Series;
+            Series Brooklyn_99 = Content._contents["Brooklyn 99"] as Series;
             play_Episode(Brooklyn_99 , Brooklyn_99._episodes[0]);
         } //episode 1 - brooklyn
 
@@ -433,25 +455,25 @@ namespace MyStream
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Series Brooklyn_99 = Content._contents["Brooklyn_99"] as Series;
+            Series Brooklyn_99 = Content._contents["Brooklyn 99"] as Series;
             play_Episode(Brooklyn_99, Brooklyn_99._episodes[1]);
         } //episode 2 - brooklyn
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Series Brooklyn_99 = Content._contents["Brooklyn_99"] as Series;
+            Series Brooklyn_99 = Content._contents["Brooklyn 99"] as Series;
             play_Episode(Brooklyn_99, Brooklyn_99._episodes[2]);
         } //episode 3 - brooklyn
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Series Brooklyn_99 = Content._contents["Brooklyn_99"] as Series;
+            Series Brooklyn_99 = Content._contents["Brooklyn 99"] as Series;
             play_Episode(Brooklyn_99, Brooklyn_99._episodes[3]);
         } //episode 4 - brooklyn
 
         private void button10_Click(object sender, EventArgs e) //episode 5 - brooklyn
         {
-            Series Brooklyn_99 = Content._contents["Brooklyn_99"] as Series;
+            Series Brooklyn_99 = Content._contents["Brooklyn 99"] as Series;
             play_Episode(Brooklyn_99, Brooklyn_99._episodes[4]);
         }
 
@@ -493,19 +515,19 @@ namespace MyStream
 
         private void button13_Click(object sender, EventArgs e) //episode 1 - walking dead
         {
-            Series The_Walking_Dead = Content._contents["The_Walking_Dead"] as Series;
+            Series The_Walking_Dead = Content._contents["The Walking Dead"] as Series;
             play_Episode(The_Walking_Dead, The_Walking_Dead._episodes[0]);
         }
 
         private void button12_Click(object sender, EventArgs e) //episode 2 - walking dead
         {
-            Series The_Walking_Dead = Content._contents["The_Walking_Dead"] as Series;
+            Series The_Walking_Dead = Content._contents["The Walking Dead"] as Series;
             play_Episode(The_Walking_Dead, The_Walking_Dead._episodes[1]);
         }
 
         private void button11_Click(object sender, EventArgs e) //episode 3 - walking dead
         {
-            Series The_Walking_Dead = Content._contents["The_Walking_Dead"] as Series;
+            Series The_Walking_Dead = Content._contents["The Walking Dead"] as Series;
             play_Episode(The_Walking_Dead, The_Walking_Dead._episodes[2]);
         }
 

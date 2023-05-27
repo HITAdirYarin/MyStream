@@ -43,14 +43,14 @@ namespace MyStream
             a._episodes.Add("Episode_2.mp4");
             a._episodes.Add("Episode_3.mp4");
             ContentHendler.saveSeries(a);
-            a = new Series("Brooklyn_99", 5, "12/05/2013", "comedy", "series", 0, 0);
+            a = new Series("Brooklyn 99", 5, "12/05/2013", "comedy", "series", 0, 0);
             a._episodes.Add("Episode_1.mp4");
             a._episodes.Add("Episode_2.mp4");
             a._episodes.Add("Episode_3.mp4");
             a._episodes.Add("Episode_4.mp4");
             a._episodes.Add("Episode_5.mp4");
             ContentHendler.saveSeries(a);
-            a = new Series("The_Walking_Dead", 3, "1/07/2015", "horror", "series", 0, 0);
+            a = new Series("The Walking Dead", 3, "1/07/2015", "horror", "series", 0, 0);
             a._episodes.Add("Episode_1.mp4");
             a._episodes.Add("Episode_2.mp4");
             a._episodes.Add("Episode_3.mp4");

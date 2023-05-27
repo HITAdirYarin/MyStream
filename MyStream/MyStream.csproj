@@ -91,6 +91,12 @@
     <Compile Include="Content.cs" />
     <Compile Include="ContentController.cs" />
     <Compile Include="ContentHendler.cs" />
+    <Compile Include="ListenPodcast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListenPodcast.Designer.cs">
+      <DependentUpon>ListenPodcast.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     <Compile Include="WatchSeries.Designer.cs">
       <DependentUpon>WatchSeries.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ListenPodcast.resx">
+      <DependentUpon>ListenPodcast.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
