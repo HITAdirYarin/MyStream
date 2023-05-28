@@ -142,7 +142,35 @@ namespace MyStream
                 panel_rate_me.Visible = false;
                 int rate = int.Parse(label_rating_input.Text);
                 string Series_name = comboBoxChooseSeries.Text;
-                ContentController.addRate(rate, Series_name);
+                foreach (KeyValuePair<int, User> user in User._users)
+                {
+                    bool userFound = false;
+                    if (_username == user.Value._UserName)
+                    {
+                        userFound = true;
+                        bool rated = false;
+                        foreach (string item in user.Value._rates)
+                        {
+                            if (item == Series_name)
+                            {
+                                rated = true;
+                                MessageBox.Show("You can rate each content only once!");
+                                break;
+                            }
+                        }
+                        if (!rated)
+                        {
+                            ContentController.addRate(rate, Series_name);
+                            user.Value._rates.Add(Series_name);
+                            UserHendler.updateUser(user.Value._userId, user.Value);
+                        }
+                        break;
+                    }
+                    if (userFound)
+                    {
+                        break;
+                    }
+                }              
                 pb_star_1.Image = Resources.grey_star;
                 pb_star_2.Image = Resources.grey_star;
                 pb_star_3.Image = Resources.grey_star;
@@ -218,6 +246,10 @@ namespace MyStream
             if (comboBoxSeriesToReview.SelectedIndex == -1)
             {
                 MessageBox.Show("please choose a series to review first");
+            }
+            if (String.IsNullOrWhiteSpace(textBoxReview.Text))
+            {
+                MessageBox.Show("You cannot leave an empty review !");
             }
             else
             {
@@ -359,6 +391,7 @@ namespace MyStream
 
         private void buttonVikings_Click(object sender, EventArgs e)
         {
+            
             countVikings++;
             if(countVikings%2== 1) 
             {

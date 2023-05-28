@@ -78,13 +78,13 @@
             this.buttonCloseReview = new System.Windows.Forms.Button();
             this.labelLeaveReview = new System.Windows.Forms.Label();
             this.panelReviewList = new System.Windows.Forms.Panel();
-            this.listViewReview = new System.Windows.Forms.ListView();
             this.buttonViewReview = new System.Windows.Forms.Button();
             this.buttonCloseReviewList = new System.Windows.Forms.Button();
             this.buttonLeaveReviewFromList = new System.Windows.Forms.Button();
             this.comboBoxChooseMovieToReviewList = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.listViewReview = new System.Windows.Forms.ListView();
+            this.label4 = new System.Windows.Forms.Label();
             this.player_fast = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel_display_movie.SuspendLayout();
             this.panel_rate_me.SuspendLayout();
@@ -732,31 +732,18 @@
             // panelReviewList
             // 
             this.panelReviewList.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panelReviewList.Controls.Add(this.listViewReview);
             this.panelReviewList.Controls.Add(this.buttonViewReview);
             this.panelReviewList.Controls.Add(this.buttonCloseReviewList);
             this.panelReviewList.Controls.Add(this.buttonLeaveReviewFromList);
             this.panelReviewList.Controls.Add(this.comboBoxChooseMovieToReviewList);
-            this.panelReviewList.Controls.Add(this.label4);
             this.panelReviewList.Controls.Add(this.label3);
+            this.panelReviewList.Controls.Add(this.listViewReview);
+            this.panelReviewList.Controls.Add(this.label4);
             this.panelReviewList.Location = new System.Drawing.Point(537, 173);
             this.panelReviewList.Name = "panelReviewList";
             this.panelReviewList.Size = new System.Drawing.Size(808, 692);
             this.panelReviewList.TabIndex = 1;
             this.panelReviewList.Visible = false;
-            // 
-            // listViewReview
-            // 
-            this.listViewReview.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.listViewReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.listViewReview.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.listViewReview.HideSelection = false;
-            this.listViewReview.Location = new System.Drawing.Point(40, 198);
-            this.listViewReview.Name = "listViewReview";
-            this.listViewReview.Size = new System.Drawing.Size(737, 406);
-            this.listViewReview.TabIndex = 33;
-            this.listViewReview.UseCompatibleStateImageBehavior = false;
-            this.listViewReview.View = System.Windows.Forms.View.Tile;
             // 
             // buttonViewReview
             // 
@@ -821,18 +808,6 @@
             this.comboBoxChooseMovieToReviewList.TabIndex = 29;
             this.comboBoxChooseMovieToReviewList.SelectedIndexChanged += new System.EventHandler(this.comboBoxChooseMovieToReviewList_SelectedIndexChanged);
             // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label4.Location = new System.Drawing.Point(46, 126);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(280, 47);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Choose Movie:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Transparent;
@@ -844,6 +819,31 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Review List";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // listViewReview
+            // 
+            this.listViewReview.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.listViewReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.listViewReview.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.listViewReview.HideSelection = false;
+            this.listViewReview.Location = new System.Drawing.Point(40, 198);
+            this.listViewReview.Name = "listViewReview";
+            this.listViewReview.Size = new System.Drawing.Size(737, 406);
+            this.listViewReview.TabIndex = 33;
+            this.listViewReview.UseCompatibleStateImageBehavior = false;
+            this.listViewReview.View = System.Windows.Forms.View.Tile;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label4.Location = new System.Drawing.Point(46, 126);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(280, 47);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Choose Movie:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // player_fast
             // 
@@ -877,11 +877,11 @@
             this.Controls.Add(this.labelRelease);
             this.Controls.Add(this.buttonBeckToMain);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelReviewList);
             this.Controls.Add(this.panelLeaveReview);
             this.Controls.Add(this.panel_rate_me);
-            this.Controls.Add(this.panel_display_movie);
             this.Controls.Add(this.player_fast);
+            this.Controls.Add(this.panel_display_movie);
+            this.Controls.Add(this.panelReviewList);
             this.DoubleBuffered = true;
             this.Name = "WatchMovies";
             this.Text = "WatchMovies";

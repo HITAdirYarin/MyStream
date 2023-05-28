@@ -62,6 +62,20 @@ namespace MyStream
             a._episodes.Add("Episode_4.mp4");
             ContentHendler.saveSeries(a);
         }
+        public static void addPodcasts()
+        {
+            Podcast a = new Podcast("Android Over Iphone", "Android Over Iphone.mp3", "23/11/2022", "Ben simany", "Gal touti", "Technology","podcast");
+            ContentHendler.savePod(a);
+            a = new Podcast("Deep Web", "Deep Web.mp3", "13/07/2021", "Tal golan", "Nili ezra", "Technology", "podcast");
+            ContentHendler.savePod(a);
+            a = new Podcast("Harsh Reality Of Dating", "Harsh Reality Of Dating.mp3", "30/07/2019", "David levi", "Bat-sheva levi", "Life", "podcast");
+            ContentHendler.savePod(a);
+            a = new Podcast("Reason ipads With USB-C", "Reason ipads With USB-C.mp3", "19/05/2018", "Adir kandabi", "Yarin ozeri", "Technology", "podcast");
+            ContentHendler.savePod(a);
+            a = new Podcast("What Do Girls Want From Men", "What Do Girls Want From Men.mp3", "19/01/2015", "Lior morali", "Omer levi", "Technology", "podcast");
+            ContentHendler.savePod(a);
+
+        }
         public static void addRate(int choose, string name)
         {
             Content.addRate(choose, name);

@@ -19,8 +19,9 @@ namespace MyStream
         public static int _countUsers = 1;
 
         public List<int> _Fav = new List<int>();
-
+        public List<string> _rates { get; set; }
         public static Dictionary<int,User> _users = new Dictionary<int,User>();
+        
 
         public User()
         {
@@ -28,12 +29,14 @@ namespace MyStream
             _UserName = "none";
             _Email = "none";
             _Password = "none";
+            _rates= new List<string>(); 
         }
         public User(string userName, string email, string password)
         {
             _UserName = userName;
             _Email = email;
             _Password = password;
+            _rates = new List<string>();
         }
 
         public void SetValues(string userName, string email, string password) // set values for the constructor
