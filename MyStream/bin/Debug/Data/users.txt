@@ -1,2 +1,1 @@
-{"_userId":2,"_UserName":"adirkandabi","_Email":"kandabiadir@gmail.com","_Password":"kandabiadir1"}
-{"_userId":3,"_UserName":"ozeriyarin","_Email":"ozeriyarin@gmail.com","_Password":"1234567"}
+{"_userId":4,"_UserName":"adir kandabi","_Email":"kandabiadir@gmail.com","_Password":"kandabiadir1","_rates":["Frozen"]}

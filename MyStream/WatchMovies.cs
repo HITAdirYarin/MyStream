@@ -15,6 +15,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using WMPLib;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace MyStream
 {
@@ -188,7 +189,8 @@ namespace MyStream
 
         private void button_confirm_rate_Click(object sender, EventArgs e)
         {
-            if(comboBoxChooseMovie.SelectedIndex == -1)
+          
+            if (comboBoxChooseMovie.SelectedIndex == -1)
             {
                 MessageBox.Show("please choose a movie to rate first");
             }
@@ -197,7 +199,35 @@ namespace MyStream
                 panel_rate_me.Visible = false;
                 int rate = int.Parse(label_rating_input.Text);
                 string movie_name = comboBoxChooseMovie.Text;
-                ContentController.addRate(rate, movie_name);
+                foreach (KeyValuePair<int, User> user in User._users)
+                {
+                    bool userFound = false;
+                    if (_username == user.Value._UserName)
+                    {
+                        userFound = true;
+                        bool rated = false; 
+                        foreach (string item in user.Value._rates)
+                        {
+                            if (item == movie_name)
+                            {
+                                rated = true;
+                                MessageBox.Show("You can rate each content only once!");
+                                break;
+                            }
+                          }
+                        if (!rated)
+                        {
+                            ContentController.addRate(rate, movie_name);
+                            user.Value._rates.Add(movie_name);
+                            UserHendler.updateUser(user.Value._userId, user.Value);
+                        }
+                        break;
+                    }
+                    if (userFound)
+                    {
+                        break;
+                    }
+                }              
                 pb_star_1.Image = Resources.grey_star;
                 pb_star_2.Image = Resources.grey_star;
                 pb_star_3.Image = Resources.grey_star;
@@ -286,6 +316,10 @@ namespace MyStream
             if (comboBoxMovieToReview.SelectedIndex == -1)
             {
                 MessageBox.Show("please choose a movie to review first");
+            }
+            if (String.IsNullOrWhiteSpace(textBoxReview.Text))
+            {
+                MessageBox.Show("You cannot leave an empty review !");
             }
             else
             {

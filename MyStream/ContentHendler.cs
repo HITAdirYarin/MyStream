@@ -131,6 +131,51 @@ namespace MyStream
 
             }
             return true;
-        } 
+        }
+        //***************************
+        //Podcasts:
+        public static bool savePod(Podcast podcast) //The function recieve a podcast and serialize it
+        {
+            string json = JsonSerializer.Serialize(podcast);
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "podcasts.txt");
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(filePath, append: true))
+                {
+                    writer.WriteLine(json);
+                    writer.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("ERROR :" + e.Message);
+                return false;
+            }
+            return true;
+        }
+        public static bool loadPod() // The function loads the podcasts from the file to the program's RAM 
+        {
+            string dataFile;
+            Podcast a = new Podcast();
+            try
+            {
+                StreamReader reader = new StreamReader(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "podcasts.txt"));
+                dataFile = reader.ReadLine();
+                while (dataFile != null)
+                {
+                    a = JsonSerializer.Deserialize<Podcast>(dataFile);
+                    Content._contents.Add(a._name, a);
+                    dataFile = reader.ReadLine();
+                }
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("ERROR : " + e.Message);
+                return false;
+
+            }
+            return true;
+        }
     }
 }

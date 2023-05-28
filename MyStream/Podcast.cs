@@ -8,22 +8,28 @@ namespace MyStream
 {
     public class Podcast : Content
     {
-        private int _episodeAmount { get; set; }
-        private string _host { get; set; }
-        private string _guest { get; set; }
-        private Dictionary<int, PodcastsEpisode> _episode;
-
-        public Podcast(int contentID, string name, string date,string genre, int episodeAmount, string host, string guest) 
-    
+        public string _host { get; set; }
+        public string _guest { get; set; }
+        public string _path { get; set; }
+       
+        public Podcast()
         {
-            _episode = new Dictionary<int, PodcastsEpisode>();
-            _episodeAmount = episodeAmount;
-            _host = host;
+            _host = "no host";
+            _guest = "no guest";
+            _path = "no path";
+            _review.Add("no reviews");
+        }
+        public Podcast(string name,string path, string date,string host, string guest, string genre,string type)     
+        {
+            _name = name;
+            _path = path;
+            _date = date;
+            _host=host;
             _guest = guest;
+            _genre = genre;
+            _type = type;
+            _review.Add("no reviews");
         }
-        public PodcastsEpisode GetEpisode(int numOf)
-        {
-            return _episode[numOf];
-        }
+      
     }
 }

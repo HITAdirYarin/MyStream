@@ -1102,11 +1102,11 @@
             this.Controls.Add(this.labelEpNum);
             this.Controls.Add(this.labelRelease);
             this.Controls.Add(this.buttonBeckToMain);
-            this.Controls.Add(this.panelReviewList);
             this.Controls.Add(this.panelLeaveReview);
             this.Controls.Add(this.panel_rate_me);
             this.Controls.Add(this.panel_display_Series);
             this.Controls.Add(this.player_fast);
+            this.Controls.Add(this.panelReviewList);
             this.DoubleBuffered = true;
             this.Name = "WatchSeries";
             this.Text = "WatchSeries";

@@ -386,17 +386,36 @@ namespace MyStream
 
         private void buttonConfirmDelete_Click(object sender, EventArgs e)
         {
-            DialogResult a = MessageBox.Show("Are you sure you want to Delete your User?\nall of your file will be lost", "DeleteUser", MessageBoxButtons.YesNo);
-            if (a == DialogResult.Yes)
+            bool verify = false;
+            foreach(KeyValuePair<int, User> user in User._users)
             {
-                UserController.deleteUser(textBoxUsername_delete.Text);
-                MessageBox.Show("User deleted succssfuly");
-                panelDeleteUser.Visible = false;
-                textBoxPassword_delete.Text = string.Empty;
-                textBoxUsername_delete.Text = string.Empty;
-                Login login = new Login();
-                Close();
-                login.Show();
+                if (user.Value._UserName == Username)
+                {
+                    if (textBoxPassword_delete.Text == user.Value._Password && textBoxUsername_delete.Text==user.Value._UserName)
+                    {
+                        verify = true;                      
+                    }
+                    break;
+                }
+            }
+            if (!verify)
+            {
+                MessageBox.Show("Invalid password or username");
+            }
+            else
+            {
+                DialogResult a = MessageBox.Show("Are you sure you want to Delete your User?\nall of your file will be lost", "DeleteUser", MessageBoxButtons.YesNo);
+                if (a == DialogResult.Yes)
+                {
+                    UserController.deleteUser(textBoxUsername_delete.Text);
+                    MessageBox.Show("User deleted succssfuly");
+                    panelDeleteUser.Visible = false;
+                    textBoxPassword_delete.Text = string.Empty;
+                    textBoxUsername_delete.Text = string.Empty;
+                    Login login = new Login();
+                    Close();
+                    login.Show();
+                }
             }
         }
 
