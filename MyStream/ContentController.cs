@@ -72,7 +72,7 @@ namespace MyStream
             ContentHendler.savePod(a);
             a = new Podcast("Reason ipads With USB-C", "Reason ipads With USB-C.mp3", "19/05/2018", "Adir kandabi", "Yarin ozeri", "Technology", "podcast");
             ContentHendler.savePod(a);
-            a = new Podcast("What Do Girls Want From Men", "What Do Girls Want From Men.mp3", "19/01/2015", "Lior morali", "Omer levi", "Technology", "podcast");
+            a = new Podcast("What Do Girls Want From Men", "What Do Girls Want From Men.mp3", "19/01/2015", "Lior morali", "Omer levi", "Love", "podcast");
             ContentHendler.savePod(a);
 
         }

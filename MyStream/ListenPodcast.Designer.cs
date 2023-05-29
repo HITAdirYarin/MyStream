@@ -42,21 +42,25 @@
             this.labelHost = new System.Windows.Forms.Label();
             this.labelRelease = new System.Windows.Forms.Label();
             this.buttonBeckToMain = new System.Windows.Forms.Button();
-            this.player_fast = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel_display_Podcast = new System.Windows.Forms.Panel();
-            this.buttonVikings = new System.Windows.Forms.Button();
-            this.buttonWalkingDead = new System.Windows.Forms.Button();
-            this.buttonBrooklyn = new System.Windows.Forms.Button();
-            this.buttonBridgerton = new System.Windows.Forms.Button();
-            this.buttonAvatar = new System.Windows.Forms.Button();
+            this.playerPodcast5 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.buttonpodcast5 = new System.Windows.Forms.Button();
+            this.playerPodcast4 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.buttonpodcast4 = new System.Windows.Forms.Button();
+            this.playerPodcast3 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.buttonpodcast3 = new System.Windows.Forms.Button();
+            this.playerPodcast2 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.buttonpodcast2 = new System.Windows.Forms.Button();
+            this.playerPodcast1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.buttonpodcast1 = new System.Windows.Forms.Button();
             this.panelReviewList = new System.Windows.Forms.Panel();
+            this.listViewReview = new System.Windows.Forms.ListView();
             this.buttonViewReview = new System.Windows.Forms.Button();
             this.buttonCloseReviewList = new System.Windows.Forms.Button();
             this.buttonLeaveReviewFromList = new System.Windows.Forms.Button();
             this.comboBoxChoosePodcastToReviewList = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.listViewReview = new System.Windows.Forms.ListView();
             this.panelLeaveReview = new System.Windows.Forms.Panel();
             this.textBoxReview = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -81,8 +85,12 @@
             this.button_close_rate_win = new System.Windows.Forms.Button();
             this.label_rate = new System.Windows.Forms.Label();
             this.pb_star_1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.player_fast)).BeginInit();
             this.panel_display_Podcast.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPodcast5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPodcast4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPodcast3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPodcast2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPodcast1)).BeginInit();
             this.panelReviewList.SuspendLayout();
             this.panelLeaveReview.SuspendLayout();
             this.panel_rate_me.SuspendLayout();
@@ -118,6 +126,7 @@
             this.buttonAddToFav.TabIndex = 44;
             this.buttonAddToFav.Text = "Add to favorits";
             this.buttonAddToFav.UseVisualStyleBackColor = false;
+            this.buttonAddToFav.Click += new System.EventHandler(this.buttonAddToFav_Click);
             // 
             // buttonClosePlayer
             // 
@@ -260,99 +269,162 @@
             this.buttonBeckToMain.UseVisualStyleBackColor = false;
             this.buttonBeckToMain.Click += new System.EventHandler(this.buttonBeckToMain_Click);
             // 
-            // player_fast
-            // 
-            this.player_fast.Enabled = true;
-            this.player_fast.Location = new System.Drawing.Point(-3001, -2015);
-            this.player_fast.Name = "player_fast";
-            this.player_fast.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("player_fast.OcxState")));
-            this.player_fast.Size = new System.Drawing.Size(7910, 5021);
-            this.player_fast.TabIndex = 45;
-            this.player_fast.Visible = false;
-            // 
             // panel_display_Podcast
             // 
             this.panel_display_Podcast.BackColor = System.Drawing.Color.Black;
-            this.panel_display_Podcast.Controls.Add(this.buttonVikings);
-            this.panel_display_Podcast.Controls.Add(this.buttonWalkingDead);
-            this.panel_display_Podcast.Controls.Add(this.buttonBrooklyn);
-            this.panel_display_Podcast.Controls.Add(this.buttonBridgerton);
-            this.panel_display_Podcast.Controls.Add(this.buttonAvatar);
+            this.panel_display_Podcast.Controls.Add(this.playerPodcast5);
+            this.panel_display_Podcast.Controls.Add(this.buttonpodcast5);
+            this.panel_display_Podcast.Controls.Add(this.playerPodcast4);
+            this.panel_display_Podcast.Controls.Add(this.buttonpodcast4);
+            this.panel_display_Podcast.Controls.Add(this.playerPodcast3);
+            this.panel_display_Podcast.Controls.Add(this.buttonpodcast3);
+            this.panel_display_Podcast.Controls.Add(this.playerPodcast2);
+            this.panel_display_Podcast.Controls.Add(this.buttonpodcast2);
+            this.panel_display_Podcast.Controls.Add(this.playerPodcast1);
+            this.panel_display_Podcast.Controls.Add(this.buttonpodcast1);
             this.panel_display_Podcast.Location = new System.Drawing.Point(-5, -6);
             this.panel_display_Podcast.Name = "panel_display_Podcast";
             this.panel_display_Podcast.Size = new System.Drawing.Size(1567, 1003);
             this.panel_display_Podcast.TabIndex = 46;
             // 
-            // buttonVikings
+            // playerPodcast5
             // 
-            this.buttonVikings.BackgroundImage = global::MyStream.Properties.Resources.vikings;
-            this.buttonVikings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonVikings.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonVikings.Location = new System.Drawing.Point(77, 835);
-            this.buttonVikings.Name = "buttonVikings";
-            this.buttonVikings.Size = new System.Drawing.Size(231, 154);
-            this.buttonVikings.TabIndex = 4;
-            this.buttonVikings.UseVisualStyleBackColor = true;
+            this.playerPodcast5.Enabled = true;
+            this.playerPodcast5.Location = new System.Drawing.Point(456, 535);
+            this.playerPodcast5.Name = "playerPodcast5";
+            this.playerPodcast5.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("playerPodcast5.OcxState")));
+            this.playerPodcast5.Size = new System.Drawing.Size(642, 94);
+            this.playerPodcast5.TabIndex = 13;
+            this.playerPodcast5.Visible = false;
             // 
-            // buttonWalkingDead
+            // buttonpodcast5
             // 
-            this.buttonWalkingDead.BackgroundImage = global::MyStream.Properties.Resources.thewalkingdead;
-            this.buttonWalkingDead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonWalkingDead.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonWalkingDead.Location = new System.Drawing.Point(77, 630);
-            this.buttonWalkingDead.Name = "buttonWalkingDead";
-            this.buttonWalkingDead.Size = new System.Drawing.Size(231, 154);
-            this.buttonWalkingDead.TabIndex = 3;
-            this.buttonWalkingDead.UseVisualStyleBackColor = true;
+            this.buttonpodcast5.BackgroundImage = global::MyStream.Properties.Resources.podcast1;
+            this.buttonpodcast5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonpodcast5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonpodcast5.Location = new System.Drawing.Point(77, 815);
+            this.buttonpodcast5.Name = "buttonpodcast5";
+            this.buttonpodcast5.Size = new System.Drawing.Size(231, 154);
+            this.buttonpodcast5.TabIndex = 12;
+            this.buttonpodcast5.UseVisualStyleBackColor = true;
+            this.buttonpodcast5.Click += new System.EventHandler(this.buttonpodcast5_Click);
             // 
-            // buttonBrooklyn
+            // playerPodcast4
             // 
-            this.buttonBrooklyn.BackgroundImage = global::MyStream.Properties.Resources.brooklyn99;
-            this.buttonBrooklyn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonBrooklyn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBrooklyn.Location = new System.Drawing.Point(77, 426);
-            this.buttonBrooklyn.Name = "buttonBrooklyn";
-            this.buttonBrooklyn.Size = new System.Drawing.Size(231, 154);
-            this.buttonBrooklyn.TabIndex = 2;
-            this.buttonBrooklyn.UseVisualStyleBackColor = true;
+            this.playerPodcast4.Enabled = true;
+            this.playerPodcast4.Location = new System.Drawing.Point(456, 409);
+            this.playerPodcast4.Name = "playerPodcast4";
+            this.playerPodcast4.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("playerPodcast4.OcxState")));
+            this.playerPodcast4.Size = new System.Drawing.Size(642, 94);
+            this.playerPodcast4.TabIndex = 11;
+            this.playerPodcast4.Visible = false;
             // 
-            // buttonBridgerton
+            // buttonpodcast4
             // 
-            this.buttonBridgerton.BackgroundImage = global::MyStream.Properties.Resources.bridgerton;
-            this.buttonBridgerton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonBridgerton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBridgerton.Location = new System.Drawing.Point(77, 222);
-            this.buttonBridgerton.Name = "buttonBridgerton";
-            this.buttonBridgerton.Size = new System.Drawing.Size(231, 154);
-            this.buttonBridgerton.TabIndex = 1;
-            this.buttonBridgerton.UseVisualStyleBackColor = true;
+            this.buttonpodcast4.BackgroundImage = global::MyStream.Properties.Resources.podcast1;
+            this.buttonpodcast4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonpodcast4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonpodcast4.Location = new System.Drawing.Point(77, 612);
+            this.buttonpodcast4.Name = "buttonpodcast4";
+            this.buttonpodcast4.Size = new System.Drawing.Size(231, 154);
+            this.buttonpodcast4.TabIndex = 10;
+            this.buttonpodcast4.UseVisualStyleBackColor = true;
+            this.buttonpodcast4.Click += new System.EventHandler(this.buttonpodcast4_Click);
             // 
-            // buttonAvatar
+            // playerPodcast3
             // 
-            this.buttonAvatar.BackgroundImage = global::MyStream.Properties.Resources.avatar;
-            this.buttonAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonAvatar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonAvatar.Location = new System.Drawing.Point(77, 20);
-            this.buttonAvatar.Name = "buttonAvatar";
-            this.buttonAvatar.Size = new System.Drawing.Size(231, 154);
-            this.buttonAvatar.TabIndex = 0;
-            this.buttonAvatar.UseVisualStyleBackColor = true;
+            this.playerPodcast3.Enabled = true;
+            this.playerPodcast3.Location = new System.Drawing.Point(456, 271);
+            this.playerPodcast3.Name = "playerPodcast3";
+            this.playerPodcast3.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("playerPodcast3.OcxState")));
+            this.playerPodcast3.Size = new System.Drawing.Size(642, 94);
+            this.playerPodcast3.TabIndex = 9;
+            this.playerPodcast3.Visible = false;
+            // 
+            // buttonpodcast3
+            // 
+            this.buttonpodcast3.BackgroundImage = global::MyStream.Properties.Resources.podcast1;
+            this.buttonpodcast3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonpodcast3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonpodcast3.Location = new System.Drawing.Point(77, 414);
+            this.buttonpodcast3.Name = "buttonpodcast3";
+            this.buttonpodcast3.Size = new System.Drawing.Size(231, 154);
+            this.buttonpodcast3.TabIndex = 8;
+            this.buttonpodcast3.UseVisualStyleBackColor = true;
+            this.buttonpodcast3.Click += new System.EventHandler(this.buttonpodcast3_Click);
+            // 
+            // playerPodcast2
+            // 
+            this.playerPodcast2.Enabled = true;
+            this.playerPodcast2.Location = new System.Drawing.Point(456, 130);
+            this.playerPodcast2.Name = "playerPodcast2";
+            this.playerPodcast2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("playerPodcast2.OcxState")));
+            this.playerPodcast2.Size = new System.Drawing.Size(642, 94);
+            this.playerPodcast2.TabIndex = 7;
+            this.playerPodcast2.Visible = false;
+            // 
+            // buttonpodcast2
+            // 
+            this.buttonpodcast2.BackgroundImage = global::MyStream.Properties.Resources.podcast1;
+            this.buttonpodcast2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonpodcast2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonpodcast2.Location = new System.Drawing.Point(77, 211);
+            this.buttonpodcast2.Name = "buttonpodcast2";
+            this.buttonpodcast2.Size = new System.Drawing.Size(231, 154);
+            this.buttonpodcast2.TabIndex = 6;
+            this.buttonpodcast2.UseVisualStyleBackColor = true;
+            this.buttonpodcast2.Click += new System.EventHandler(this.buttonpodcast2_Click);
+            // 
+            // playerPodcast1
+            // 
+            this.playerPodcast1.Enabled = true;
+            this.playerPodcast1.Location = new System.Drawing.Point(456, 20);
+            this.playerPodcast1.Name = "playerPodcast1";
+            this.playerPodcast1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("playerPodcast1.OcxState")));
+            this.playerPodcast1.Size = new System.Drawing.Size(642, 94);
+            this.playerPodcast1.TabIndex = 5;
+            this.playerPodcast1.Visible = false;
+            // 
+            // buttonpodcast1
+            // 
+            this.buttonpodcast1.BackgroundImage = global::MyStream.Properties.Resources.podcast1;
+            this.buttonpodcast1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonpodcast1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonpodcast1.Location = new System.Drawing.Point(77, 20);
+            this.buttonpodcast1.Name = "buttonpodcast1";
+            this.buttonpodcast1.Size = new System.Drawing.Size(231, 154);
+            this.buttonpodcast1.TabIndex = 0;
+            this.buttonpodcast1.UseVisualStyleBackColor = true;
+            this.buttonpodcast1.Click += new System.EventHandler(this.buttonpodcast1_Click);
             // 
             // panelReviewList
             // 
             this.panelReviewList.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panelReviewList.Controls.Add(this.listViewReview);
             this.panelReviewList.Controls.Add(this.buttonViewReview);
             this.panelReviewList.Controls.Add(this.buttonCloseReviewList);
             this.panelReviewList.Controls.Add(this.buttonLeaveReviewFromList);
             this.panelReviewList.Controls.Add(this.comboBoxChoosePodcastToReviewList);
             this.panelReviewList.Controls.Add(this.label4);
             this.panelReviewList.Controls.Add(this.label3);
-            this.panelReviewList.Controls.Add(this.listViewReview);
             this.panelReviewList.Location = new System.Drawing.Point(616, 124);
             this.panelReviewList.Name = "panelReviewList";
             this.panelReviewList.Size = new System.Drawing.Size(808, 692);
             this.panelReviewList.TabIndex = 35;
             this.panelReviewList.Visible = false;
+            // 
+            // listViewReview
+            // 
+            this.listViewReview.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.listViewReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.listViewReview.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.listViewReview.HideSelection = false;
+            this.listViewReview.Location = new System.Drawing.Point(40, 198);
+            this.listViewReview.Name = "listViewReview";
+            this.listViewReview.Size = new System.Drawing.Size(737, 406);
+            this.listViewReview.TabIndex = 33;
+            this.listViewReview.UseCompatibleStateImageBehavior = false;
+            this.listViewReview.View = System.Windows.Forms.View.Tile;
             // 
             // buttonViewReview
             // 
@@ -411,6 +483,7 @@
             this.comboBoxChoosePodcastToReviewList.Name = "comboBoxChoosePodcastToReviewList";
             this.comboBoxChoosePodcastToReviewList.Size = new System.Drawing.Size(335, 37);
             this.comboBoxChoosePodcastToReviewList.TabIndex = 29;
+            this.comboBoxChoosePodcastToReviewList.SelectedIndexChanged += new System.EventHandler(this.comboBoxChoosePodcastToReviewList_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -435,19 +508,6 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Review List";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // listViewReview
-            // 
-            this.listViewReview.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.listViewReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.listViewReview.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.listViewReview.HideSelection = false;
-            this.listViewReview.Location = new System.Drawing.Point(40, 198);
-            this.listViewReview.Name = "listViewReview";
-            this.listViewReview.Size = new System.Drawing.Size(737, 406);
-            this.listViewReview.TabIndex = 33;
-            this.listViewReview.UseCompatibleStateImageBehavior = false;
-            this.listViewReview.View = System.Windows.Forms.View.Tile;
             // 
             // panelLeaveReview
             // 
@@ -785,15 +845,18 @@
             this.Controls.Add(this.buttonBeckToMain);
             this.Controls.Add(this.panel_display_Podcast);
             this.Controls.Add(this.panelReviewList);
-            this.Controls.Add(this.player_fast);
             this.Controls.Add(this.panel_rate_me);
             this.Controls.Add(this.panelLeaveReview);
             this.DoubleBuffered = true;
             this.Name = "ListenPodcast";
             this.Text = "ListenPodcast";
             this.Load += new System.EventHandler(this.ListenPodcast_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.player_fast)).EndInit();
             this.panel_display_Podcast.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.playerPodcast5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPodcast4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPodcast3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPodcast2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerPodcast1)).EndInit();
             this.panelReviewList.ResumeLayout(false);
             this.panelLeaveReview.ResumeLayout(false);
             this.panelLeaveReview.PerformLayout();
@@ -823,13 +886,8 @@
         private System.Windows.Forms.Label labelHost;
         private System.Windows.Forms.Label labelRelease;
         private System.Windows.Forms.Button buttonBeckToMain;
-        private AxWMPLib.AxWindowsMediaPlayer player_fast;
         private System.Windows.Forms.Panel panel_display_Podcast;
-        private System.Windows.Forms.Button buttonVikings;
-        private System.Windows.Forms.Button buttonWalkingDead;
-        private System.Windows.Forms.Button buttonBrooklyn;
-        private System.Windows.Forms.Button buttonBridgerton;
-        private System.Windows.Forms.Button buttonAvatar;
+        private System.Windows.Forms.Button buttonpodcast1;
         private System.Windows.Forms.Panel panelReviewList;
         private System.Windows.Forms.Button buttonViewReview;
         private System.Windows.Forms.Button buttonCloseReviewList;
@@ -862,5 +920,14 @@
         private System.Windows.Forms.Button button_close_rate_win;
         private System.Windows.Forms.Label label_rate;
         private System.Windows.Forms.PictureBox pb_star_1;
+        private AxWMPLib.AxWindowsMediaPlayer playerPodcast1;
+        private AxWMPLib.AxWindowsMediaPlayer playerPodcast5;
+        private System.Windows.Forms.Button buttonpodcast5;
+        private AxWMPLib.AxWindowsMediaPlayer playerPodcast4;
+        private System.Windows.Forms.Button buttonpodcast4;
+        private AxWMPLib.AxWindowsMediaPlayer playerPodcast3;
+        private System.Windows.Forms.Button buttonpodcast3;
+        private AxWMPLib.AxWindowsMediaPlayer playerPodcast2;
+        private System.Windows.Forms.Button buttonpodcast2;
     }
 }
