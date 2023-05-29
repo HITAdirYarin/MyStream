@@ -14,7 +14,7 @@ namespace MyStream
         [STAThread]
         static void Main()
         {
-
+            ContentHendler.loadPod();
             ContentHendler.loadMovies();
             ContentHendler.loadSeries();
             UserHendler.getUserCount();

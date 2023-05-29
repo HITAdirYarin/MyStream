@@ -139,11 +139,11 @@
   <data name="grey_star" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\grey_star1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="תמונה11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\תמונה1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="thegodfather" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\thegodfather.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WhatsApp Image 2023-05-08 at 12.30.38" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WhatsApp Image 2023-05-08 at 12.30.38.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="תמונה1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\תמונה1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,6 +187,9 @@
   <data name="WalkingDeadEp2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WalkingDeadEp2.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="podcast" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\podcast.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="תמונה31" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\תמונה31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,11 +208,14 @@
   <data name="WhatsApp Image 2023-05-08 at 15.31.09" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WhatsApp Image 2023-05-08 at 15.31.09.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="vikings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vikings.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WhatsApp Image 2023-05-08 at 12.30.38" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WhatsApp Image 2023-05-08 at 12.30.38.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="shrek" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shrek.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vikings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vikings.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="brooklynEp3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\brooklynEp3.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,7 +259,7 @@
   <data name="ted" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ted.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="תמונה11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\תמונה1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="podcast1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\podcast.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -851,7 +851,7 @@
             this.player_fast.Location = new System.Drawing.Point(0, 0);
             this.player_fast.Name = "player_fast";
             this.player_fast.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("player_fast.OcxState")));
-            this.player_fast.Size = new System.Drawing.Size(7910, 5021);
+            this.player_fast.Size = new System.Drawing.Size(11865, 7532);
             this.player_fast.TabIndex = 17;
             this.player_fast.Visible = false;
             this.player_fast.Enter += new System.EventHandler(this.player_fast_Enter_1);
@@ -877,11 +877,11 @@
             this.Controls.Add(this.labelRelease);
             this.Controls.Add(this.buttonBeckToMain);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelReviewList);
             this.Controls.Add(this.panelLeaveReview);
             this.Controls.Add(this.panel_rate_me);
             this.Controls.Add(this.player_fast);
             this.Controls.Add(this.panel_display_movie);
-            this.Controls.Add(this.panelReviewList);
             this.DoubleBuffered = true;
             this.Name = "WatchMovies";
             this.Text = "WatchMovies";

@@ -21,6 +21,7 @@ namespace MyStream
         static int countBrooklyn = 0;
         static int countWalkingDead = 0;
         static int countVikings = 0;
+        private bool buttonClicked = false;
         public string _username { get; set; }
         public WatchSeries()
         {
@@ -284,6 +285,7 @@ namespace MyStream
             {
                 listViewReview.Items.Clear();
             }
+            buttonClicked = false;
         }
 
         private void button3_Click(object sender, EventArgs e) //Broklyn99 open panel activator
@@ -417,23 +419,27 @@ namespace MyStream
 
         private void buttonViewReview_Click(object sender, EventArgs e) 
         {
-            if (comboBoxChooseSeriesToReviewList.SelectedIndex == -1)
+            if(!buttonClicked)
             {
-                MessageBox.Show("please choose a series to view first");
-            }
-            string series = comboBoxChooseSeriesToReviewList.Text;
-            foreach (KeyValuePair<string, Content> content in Content._contents)
-            {
-                if (content.Value._name == series)
+                if (comboBoxChooseSeriesToReviewList.SelectedIndex == -1)
                 {
-                    foreach (string review in content.Value._review)
-                    {
-                        listViewReview.Items.Add(review);
-                    }
-                    break;
+                    MessageBox.Show("please choose a series to view first");
                 }
+                string series = comboBoxChooseSeriesToReviewList.Text;
+                foreach (KeyValuePair<string, Content> content in Content._contents)
+                {
+                    if (content.Value._name == series)
+                    {
+                        foreach (string review in content.Value._review)
+                        {
+                            listViewReview.Items.Add(review);
+                        }
+                        break;
+                    }
+                }
+                buttonClicked = true;
             }
-            listViewReview.Show();
+            
         }
 
         private void play_Episode(Series series , string path) //activate the episode that user selected

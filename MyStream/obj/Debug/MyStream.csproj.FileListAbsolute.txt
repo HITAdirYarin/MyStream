@@ -437,3 +437,4 @@ C:\Users\HP\OneDrive\Desktop\clone_final_best\MyStream\MyStream\obj\Debug\MyStre
 C:\Users\HP\OneDrive\Desktop\clone_final_best\MyStream\MyStream\obj\Debug\MyStream.WatchSeries.resources
 C:\Users\kanda\OneDrive\Desktop\ComputerSaince\SemesterB\Project\MyStream\MyStream\obj\Debug\MyStream.WatchSeries.resources
 C:\Users\kanda\OneDrive\Desktop\ComputerSaince\SemesterB\Project\MyStream\MyStream\obj\Debug\MyStream.ListenPodcast.resources
+C:\Users\HP\OneDrive\Desktop\clone_final_best\MyStream\MyStream\obj\Debug\MyStream.ListenPodcast.resources

@@ -22,6 +22,8 @@ namespace MyStream
     public partial class WatchMovies : Form
     {
         public string _username { get; set; }
+        private bool buttonClicked = false;
+        static int count = 0;
         public WatchMovies()
         {
             InitializeComponent();
@@ -307,7 +309,9 @@ namespace MyStream
             {
                 player_fast.SendToBack();
                 panel_display_movie.SendToBack();
+                panelReviewList.Visible = false;
                 panelLeaveReview.Visible = true;
+                panel_rate_me.Visible = false;
             }
         }
 
@@ -341,25 +345,28 @@ namespace MyStream
 
         private void buttonViewReview_Click(object sender, EventArgs e)
         {
-            if (comboBoxChooseMovieToReviewList.SelectedIndex == -1)
+            if (!buttonClicked)
             {
-                MessageBox.Show("please choose a movie to view first");
-            }
-            else
-            {
-                string movie = comboBoxChooseMovieToReviewList.Text;
-                foreach (KeyValuePair<string, Content> content in Content._contents)
+                if (comboBoxChooseMovieToReviewList.SelectedIndex == -1)
                 {
-                    if (content.Value._name == movie)
+                    MessageBox.Show("please choose a movie to view first");
+                }
+                else
+                {
+                    string movie = comboBoxChooseMovieToReviewList.Text;
+                    foreach (KeyValuePair<string, Content> content in Content._contents)
                     {
-                        foreach (string review in content.Value._review)
+                        if (content.Value._name == movie)
                         {
-                            listViewReview.Items.Add(review);
+                            foreach (string review in content.Value._review)
+                            {
+                                listViewReview.Items.Add(review);
+                            }
+                            break;
                         }
-                        break;
                     }
                 }
-                listViewReview.Show();
+                buttonClicked = true;
             }
             
            
@@ -485,7 +492,8 @@ namespace MyStream
                 labelDescription.Text += "A marvelous fairy tale, with a thrilling quest and a happily-ever-after ending";
             }
         }
-        static int count = 0;
+
+        
         private void comboBoxChooseMovieToReviewList_SelectedIndexChanged(object sender, EventArgs e)
         {
             count++;
@@ -493,6 +501,7 @@ namespace MyStream
             {
                 listViewReview.Items.Clear();
             }
+            buttonClicked = false;
         }
 
         private void player_fast_Enter_1(object sender, EventArgs e)
