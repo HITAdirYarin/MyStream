@@ -179,38 +179,5 @@ namespace MyStream
         }
 
         
-
-        
-
-        private Point initialMousePos;
-        private Point initialPictureBoxPos;
-        private bool isDragging = false;
-       
-
-
-        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isDragging)
-            {
-                int deltaX = e.X - initialMousePos.X;
-                int deltaY = e.Y - initialMousePos.Y;
-                pictureBox1.Location = new Point(initialPictureBoxPos.X + deltaX, initialPictureBoxPos.Y + deltaY);
-            }
-        }
-
-        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
-        {
-            isDragging = false;
-        }
-
-        private void pictureBox1_MouseHover_1(object sender, EventArgs e)
-        {
-            LblDragMe.Visible = true;
-        }
-
-        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
-        {
-            isDragging = true;
-        }
     }
 }

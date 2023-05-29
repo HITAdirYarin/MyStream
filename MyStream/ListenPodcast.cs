@@ -102,60 +102,7 @@ namespace MyStream
             panel_display_Podcast.Visible = true;
         }
 
-        private void pb_star_1_Click(object sender, EventArgs e)
-        {
-            pb_star_1.Image = Resources.yellow_star;
-            pb_star_2.Image = Resources.grey_star;
-            pb_star_3.Image = Resources.grey_star;
-            pb_star_4.Image = Resources.grey_star;
-            pb_star_5.Image = Resources.grey_star;
-            label_rating_input.Text = "1";
-            labelrating1.Text = "/5";
-        }
-
-        private void pb_star_2_Click(object sender, EventArgs e)
-        {
-            pb_star_1.Image = Resources.yellow_star;
-            pb_star_2.Image = Resources.yellow_star;
-            pb_star_3.Image = Resources.grey_star;
-            pb_star_4.Image = Resources.grey_star;
-            pb_star_5.Image = Resources.grey_star;
-            label_rating_input.Text = "2";
-            labelrating1.Text = "/5";
-        }
-
-        private void pb_star_3_Click(object sender, EventArgs e)
-        {
-            pb_star_1.Image = Resources.yellow_star;
-            pb_star_2.Image = Resources.yellow_star;
-            pb_star_3.Image = Resources.yellow_star;
-            pb_star_4.Image = Resources.grey_star;
-            pb_star_5.Image = Resources.grey_star;
-            label_rating_input.Text = "3";
-            labelrating1.Text = "/5";
-        }
-
-        private void pb_star_4_Click(object sender, EventArgs e)
-        {
-            pb_star_1.Image = Resources.yellow_star;
-            pb_star_2.Image = Resources.yellow_star;
-            pb_star_3.Image = Resources.yellow_star;
-            pb_star_4.Image = Resources.yellow_star;
-            pb_star_5.Image = Resources.grey_star;
-            label_rating_input.Text = "4";
-            labelrating1.Text = "/5";
-        }
-
-        private void pb_star_5_Click(object sender, EventArgs e)
-        {
-            pb_star_1.Image = Resources.yellow_star;
-            pb_star_2.Image = Resources.yellow_star;
-            pb_star_3.Image = Resources.yellow_star;
-            pb_star_4.Image = Resources.yellow_star;
-            pb_star_5.Image = Resources.yellow_star;
-            label_rating_input.Text = "5";
-            labelrating1.Text = "/5";
-        }
+        
 
         private void button_close_rate_win_Click(object sender, EventArgs e)
         {
@@ -199,7 +146,7 @@ namespace MyStream
                         if (!rated)
                         {
                            // ContentController.addRate(rate, podcast_name);
-                           // user.Value._rates.Add(podcast_name);
+                            user.Value._rates.Add(podcast_name);
                             UserHendler.updateUser(user.Value._userId, user.Value);
                         }
                         break;
@@ -527,6 +474,62 @@ namespace MyStream
                 }
             }
             else { playerPodcast5.Visible = false; setInfo(null); }
+        }
+
+        
+
+        private void pb_star_1_Click_1(object sender, EventArgs e)
+        {
+            pb_star_1.Image = Resources.yellow_star;
+            pb_star_2.Image = Resources.grey_star;
+            pb_star_3.Image = Resources.grey_star;
+            pb_star_4.Image = Resources.grey_star;
+            pb_star_5.Image = Resources.grey_star;
+            label_rating_input.Text = "1";
+            labelrating1.Text = "/5";
+        }
+
+        private void pb_star_2_Click_1(object sender, EventArgs e)
+        {
+            pb_star_1.Image = Resources.yellow_star;
+            pb_star_2.Image = Resources.yellow_star;
+            pb_star_3.Image = Resources.grey_star;
+            pb_star_4.Image = Resources.grey_star;
+            pb_star_5.Image = Resources.grey_star;
+            label_rating_input.Text = "2";
+            labelrating1.Text = "/5";
+        }
+
+        private void pb_star_3_Click_1(object sender, EventArgs e)
+        {
+            pb_star_1.Image = Resources.yellow_star;
+            pb_star_2.Image = Resources.yellow_star;
+            pb_star_3.Image = Resources.yellow_star;
+            pb_star_4.Image = Resources.grey_star;
+            pb_star_5.Image = Resources.grey_star;
+            label_rating_input.Text = "3";
+            labelrating1.Text = "/5";
+        }
+        private void pb_star_4_Click_1(object sender, EventArgs e)
+        {
+            pb_star_1.Image = Resources.yellow_star;
+            pb_star_2.Image = Resources.yellow_star;
+            pb_star_3.Image = Resources.yellow_star;
+            pb_star_4.Image = Resources.yellow_star;
+            pb_star_5.Image = Resources.grey_star;
+            label_rating_input.Text = "4";
+            labelrating1.Text = "/5";
+        }
+
+        private void pb_star_5_Click_1(object sender, EventArgs e)
+        {
+            pb_star_1.Image = Resources.yellow_star;
+            pb_star_2.Image = Resources.yellow_star;
+            pb_star_3.Image = Resources.yellow_star;
+            pb_star_4.Image = Resources.yellow_star;
+            pb_star_5.Image = Resources.yellow_star;
+            label_rating_input.Text = "5";
+            labelrating1.Text = "/5";
         }
     }
 }
