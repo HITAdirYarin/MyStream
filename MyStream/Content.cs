@@ -70,6 +70,10 @@ namespace MyStream
                     {
                         ContentHendler.updateSeries(content.Value as Series);
                     }
+                    else if (content.Value._type == "podcast")
+                    {
+                        ContentHendler.updatePod(content.Value as Podcast);
+                    }
                     break;
                 }
             }

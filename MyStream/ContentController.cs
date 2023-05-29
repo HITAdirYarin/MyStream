@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MyStream
 {
@@ -105,6 +106,41 @@ namespace MyStream
                 a.addReview(review);
             }
             ContentHendler.updateSeries(a);
+        }
+        public static void addPodReviews(string name,string review)
+        {
+            Podcast a = Content._contents[name] as Podcast;
+            if (a._review[0] == "no reviews")
+            {
+                a._review[0] = review;
+            }
+            else
+            {
+                a.addReview(review);
+            }
+            ContentHendler.updatePod(a);
+        }
+
+        public static bool addFav(string username,string content)
+        {
+            foreach (KeyValuePair<int, User> user in User._users)
+            {
+                if (user.Value._UserName == username)
+                {
+                    foreach(string item in user.Value._fav)
+                    {
+                        if (item == content)
+                        {
+                            MessageBox.Show("The content is already in your favorites list");
+                            return false;
+                        }
+                    }
+                    user.Value._fav.Add(content);
+                    UserHendler.updateUser(user.Value._userId,user.Value);
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

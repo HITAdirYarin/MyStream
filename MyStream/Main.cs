@@ -415,12 +415,35 @@ namespace MyStream
             panelUsername.Visible = false;
         }
 
-        private void buttonRandom_Click(object sender, EventArgs e) // activeted the random steam 
+        private void buttonRandom_Click(object sender, EventArgs e) // activated the random steam 
         {
-            //string contentName, path;
-            //SurpriseMe Random = new SurpriseMe(Username , contentName , path);
-            //Random.Show();
-            //this.Hide();
+            string[] content = new string[14];
+            int i = 0;
+            foreach (KeyValuePair<string, Content> item in Content._contents)
+            {
+                if (item.Value._type != "podcast")
+                {
+                    content[i++] = item.Value._name;
+                }
+            }
+            Random random = new Random();
+            int randomIndex = random.Next(0, 14);
+            Content chosen = Content._contents[content[randomIndex]];
+            if (chosen._type == "movie") {
+                SurpriseMe Random = new SurpriseMe(Username,chosen._name, "YouTubeMovies", chosen._name+".mp4");
+                Random.Show();
+                this.Hide();
+            }
+            else
+            {
+                Series series = chosen as Series;
+                randomIndex = random.Next(series._episodeAmount);
+                SurpriseMe Random = new SurpriseMe(Username, series._name, series._name, series._episodes[randomIndex]);
+                Random.Show();
+                this.Hide();
+            }
+
+             
         }
     }
 }

@@ -177,5 +177,20 @@ namespace MyStream
             }
             return true;
         }
+        public static void updatePod(Podcast pod) // The function updates pod's details(useful to update rates and reviews)
+        {
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "podcasts.txt");
+            string[] lines = File.ReadAllLines(filePath);
+            for (int i = 0; i < lines.Length; i++)
+            {
+                Podcast temp = JsonSerializer.Deserialize<Podcast>(lines[i]);
+                if (pod._name == temp._name)
+                {
+                    lines[i] = JsonSerializer.Serialize(pod);
+                    File.WriteAllLines(filePath, lines);
+                    break;
+                }
+            }
+        }
     }
 }

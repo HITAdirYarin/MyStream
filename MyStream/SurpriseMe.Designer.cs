@@ -65,6 +65,7 @@
             this.buttonAddToFav.TabIndex = 27;
             this.buttonAddToFav.Text = "Add to favorits";
             this.buttonAddToFav.UseVisualStyleBackColor = false;
+            this.buttonAddToFav.Click += new System.EventHandler(this.buttonAddToFav_Click);
             // 
             // labelName
             // 
@@ -137,6 +138,7 @@
             this.player_fast.Size = new System.Drawing.Size(11865, 7532);
             this.player_fast.TabIndex = 28;
             this.player_fast.Visible = false;
+            this.player_fast.Enter += new System.EventHandler(this.player_fast_Enter);
             // 
             // SurpriseMe
             // 

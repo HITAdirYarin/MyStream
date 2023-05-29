@@ -368,8 +368,6 @@ namespace MyStream
                 }
                 buttonClicked = true;
             }
-            
-           
         }
 
         private void buttonLeaveReviewFromList_Click(object sender, EventArgs e)
