@@ -1,1 +1,1 @@
-{"_userId":5,"_UserName":"ozeriyarin","_Email":"ozeriyarin@gmail.com","_Password":"1234567","_rates":["Bridgerton","Avatar","Ted","deep web"]}
+{"_userId":1,"_UserName":"adir kandabi","_Email":"adir@gmail.com","_Password":"kandabiadir1","_fav":["Vikings","Brooklyn 99"],"_rates":[]}

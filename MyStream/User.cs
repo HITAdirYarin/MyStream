@@ -18,7 +18,7 @@ namespace MyStream
         public string _Password { get; set; }
         public static int _countUsers = 1;
 
-        public List<int> _Fav = new List<int>();
+        public List<string> _fav { get; set; }
         public List<string> _rates { get; set; }
         public static Dictionary<int,User> _users = new Dictionary<int,User>();
         
@@ -30,6 +30,7 @@ namespace MyStream
             _Email = "none";
             _Password = "none";
             _rates= new List<string>(); 
+            _fav = new List<string>();
         }
         public User(string userName, string email, string password)
         {
@@ -37,6 +38,7 @@ namespace MyStream
             _Email = email;
             _Password = password;
             _rates = new List<string>();
+            _fav = new List<string>();
         }
 
         public void SetValues(string userName, string email, string password) // set values for the constructor
@@ -145,17 +147,6 @@ namespace MyStream
                 }
             }
             return false;
-        }
-        public void GetUserFav() 
-        {
-            Console.WriteLine(this._UserName + " favorite list:");
-            foreach (int fav in _Fav)
-                Console.WriteLine(fav);
-        }
-
-        public void AddToUserFav(int contentid)
-        {
-            _Fav.Add(contentid);
         }
     }
 }

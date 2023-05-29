@@ -439,3 +439,4 @@ C:\Users\HP\OneDrive\Desktop\clone_final_best\MyStream\MyStream\obj\Debug\MyStre
 C:\Users\HP\OneDrive\Desktop\clone_final_best\MyStream\MyStream\obj\Debug\MyStream.csproj.CopyComplete
 C:\Users\HP\OneDrive\Desktop\clone_final_best\MyStream\MyStream\obj\Debug\MyStream.exe
 C:\Users\HP\OneDrive\Desktop\clone_final_best\MyStream\MyStream\obj\Debug\MyStream.pdb
+C:\Users\kanda\OneDrive\Desktop\ComputerSaince\SemesterB\Project\MyStream\MyStream\obj\Debug\MyStream.SurpriseMe.resources

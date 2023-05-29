@@ -145,7 +145,7 @@ namespace MyStream
                         }
                         if (!rated)
                         {
-                           // ContentController.addRate(rate, podcast_name);
+                            ContentController.addRate(rate, podcast_name);
                             user.Value._rates.Add(podcast_name);
                             UserHendler.updateUser(user.Value._userId, user.Value);
                         }
@@ -203,7 +203,7 @@ namespace MyStream
                 panelLeaveReview.Visible = false;
                 comboBoxPodcastToReview.SelectedIndex = -1;
                 textBoxReview.Text = string.Empty;
-               // ContentController.addSeriesReviews(name, review); // need to build a function!
+                ContentController.addPodReviews(name, review); 
             }
         }
 
@@ -298,7 +298,12 @@ namespace MyStream
 
         private void buttonAddToFav_Click(object sender, EventArgs e)
         {
-
+            //if (ContentController.addFav(_username, _contentName))
+            //{
+            //    MessageBox.Show("The content has been added to your favorites list");  Yarin needs to do panel like in
+            //}                                                                          the reviews and rating panels,
+                                                                                      // then "_contentName" will taken 
+                                                                                      // from comboBox ! (same with series and movies)
         }
 
         private void comboBoxChoosePodcastToReviewList_SelectedIndexChanged(object sender, EventArgs e)

@@ -11,6 +11,7 @@ namespace MyStream
     {
         public string _director { get; set; }
 
+
         //methods
         public Stream() 
         {

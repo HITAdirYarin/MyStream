@@ -13,19 +13,20 @@ namespace MyStream
 {
     public partial class SurpriseMe : Form
     {
+        public string _contentName { get; set; }
         public string _username { get; set; }
         public SurpriseMe()
         {
             InitializeComponent();
-
         }
 
-        public SurpriseMe(string username , string ContentName, string path)
+        public SurpriseMe(string username , string contentName,string folder, string path)
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized; // set full screen
             _username = username;
-            playRandomContent(ContentName, path);
+            _contentName = contentName;
+            playRandomContent(contentName, folder ,path);
         }
 
         private void buttonBeckToMain_Click(object sender, EventArgs e)
@@ -36,11 +37,11 @@ namespace MyStream
             main.Show();
         }
 
-        private void playRandomContent(string ContentName , string path) //activate a random content that user selected
+        private void playRandomContent(string ContentName,string folder , string path) //activate a random content that user selected
         {
             Content content = Content._contents[ContentName];
             setInfo(content);
-            string fullPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, content._name, path));
+            string fullPath = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, folder, path));
             if (File.Exists(fullPath))
             {
                
@@ -51,7 +52,7 @@ namespace MyStream
             }
             else
             {
-                MessageBox.Show("There is an error with playing the episode");
+                MessageBox.Show("There is an error with playing the content");
             }
         }
 
@@ -73,5 +74,18 @@ namespace MyStream
                 labelRate.Text = "Rate:";
             }
         } // set the info for the picked series
+
+        private void player_fast_Enter(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void buttonAddToFav_Click(object sender, EventArgs e)
+        {
+            if (ContentController.addFav(_username, _contentName))
+            {
+                MessageBox.Show("The content has been added to your favorites list");
+            }
+        }
     }
 }
