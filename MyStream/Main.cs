@@ -345,12 +345,7 @@ namespace MyStream
         }
 
         
-        private void chromiumWebBrowser1_LoadingStateChanged_1(object sender, LoadingStateChangedEventArgs e)
-        {
-           // ChromiumWebBrowser browser = new ChromiumWebBrowser("https://youtu.be/8iDt45kWUdI");
-           // this.Controls.Add(browser);
-           // browser.Dock = DockStyle.Fill;
-        }
+        
 
         private void buttonAddContent_Click(object sender, EventArgs e)
         {
@@ -360,19 +355,7 @@ namespace MyStream
         {
         }
 
-        private void buttonBrowes_Click(object sender, EventArgs e) // browes the content that the user add - not working!
-        {
-            //ChromiumWebBrowser browser = new ChromiumWebBrowser(textBoxLinkAddCont.Text);
-            //chromiumWebBrowserAddCont=browser;
-            //this.Controls.Add(chromiumWebBrowserAddCont);
-            //chromiumWebBrowserAddCont.Dock = DockStyle.Fill;
-        }
-
-        private void buttonSave_Click(object sender, EventArgs e) // save content that user add - need to apply
-        {
-            //ContentController.addContent(); // need to wrap it like we did in user
-        }
-
+        
         private void label7_Click(object sender, EventArgs e)
         {
 
@@ -430,6 +413,14 @@ namespace MyStream
             panelPassword.Visible = false;
             panelEmail.Visible = false;
             panelUsername.Visible = false;
+        }
+
+        private void buttonRandom_Click(object sender, EventArgs e) // activeted the random steam 
+        {
+            //string contentName, path;
+            //SurpriseMe Random = new SurpriseMe(Username , contentName , path);
+            //Random.Show();
+            //this.Hide();
         }
     }
 }

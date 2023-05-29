@@ -146,6 +146,7 @@
             this.buttonRandom.TabIndex = 0;
             this.buttonRandom.Text = "Surprise me!";
             this.buttonRandom.UseVisualStyleBackColor = false;
+            this.buttonRandom.Click += new System.EventHandler(this.buttonRandom_Click);
             // 
             // buttonWatchContent
             // 
@@ -668,7 +669,7 @@
             this.labelNewUsername.ForeColor = System.Drawing.Color.Gray;
             this.labelNewUsername.Location = new System.Drawing.Point(171, 223);
             this.labelNewUsername.Name = "labelNewUsername";
-            this.labelNewUsername.Size = new System.Drawing.Size(270, 44);
+            this.labelNewUsername.Size = new System.Drawing.Size(180, 29);
             this.labelNewUsername.TabIndex = 18;
             this.labelNewUsername.Text = "New Username";
             // 
@@ -806,7 +807,7 @@
             this.label2.ForeColor = System.Drawing.Color.Gray;
             this.label2.Location = new System.Drawing.Point(171, 223);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 44);
+            this.label2.Size = new System.Drawing.Size(120, 29);
             this.label2.TabIndex = 18;
             this.label2.Text = "Password";
             // 
@@ -846,7 +847,7 @@
             this.label4.ForeColor = System.Drawing.Color.Gray;
             this.label4.Location = new System.Drawing.Point(171, 128);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(194, 44);
+            this.label4.Size = new System.Drawing.Size(129, 29);
             this.label4.TabIndex = 10;
             this.label4.Text = "UserName";
             // 

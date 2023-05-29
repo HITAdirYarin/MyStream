@@ -1,2 +1,1 @@
-{"_userId":4,"_UserName":"adir kandabi","_Email":"kandabiadir@gmail.com","_Password":"kandabiadir1","_rates":["Frozen"]}
-{"_userId":5,"_UserName":"ozeriyarin","_Email":"ozeriyarin@gmail.com","_Password":"1234567","_rates":[]}
+{"_userId":5,"_UserName":"ozeriyarin","_Email":"ozeriyarin@gmail.com","_Password":"1234567","_rates":["Bridgerton","Avatar","Ted","deep web"]}
