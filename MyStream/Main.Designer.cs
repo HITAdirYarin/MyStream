@@ -68,10 +68,10 @@
             this.labelChooseContent = new System.Windows.Forms.Label();
             this.labelAddToFav = new System.Windows.Forms.Label();
             this.removeFav = new System.Windows.Forms.Button();
-            this.listViewFav = new System.Windows.Forms.ListView();
             this.labelMyFavoritesList = new System.Windows.Forms.Label();
             this.buttonBackFromFav = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.listViewFav = new System.Windows.Forms.ListView();
             this.buttonChangeUserName = new System.Windows.Forms.Button();
             this.panelUsername = new System.Windows.Forms.Panel();
             this.textBoxNewUsername = new System.Windows.Forms.TextBox();
@@ -579,9 +579,9 @@
             this.panelFavList.Controls.Add(this.buttonBackFromFav);
             this.panelFavList.Controls.Add(this.label6);
             this.panelFavList.Controls.Add(this.listViewFav);
-            this.panelFavList.Location = new System.Drawing.Point(-11, 12);
+            this.panelFavList.Location = new System.Drawing.Point(-2, 134);
             this.panelFavList.Name = "panelFavList";
-            this.panelFavList.Size = new System.Drawing.Size(1738, 975);
+            this.panelFavList.Size = new System.Drawing.Size(1559, 859);
             this.panelFavList.TabIndex = 23;
             this.panelFavList.Visible = false;
             // 
@@ -675,20 +675,6 @@
             this.removeFav.UseVisualStyleBackColor = false;
             this.removeFav.Click += new System.EventHandler(this.removeFav_Click);
             // 
-            // listViewFav
-            // 
-            this.listViewFav.BackColor = System.Drawing.SystemColors.Desktop;
-            this.listViewFav.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listViewFav.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.listViewFav.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.listViewFav.HideSelection = false;
-            this.listViewFav.Location = new System.Drawing.Point(47, 117);
-            this.listViewFav.Name = "listViewFav";
-            this.listViewFav.Size = new System.Drawing.Size(910, 650);
-            this.listViewFav.TabIndex = 34;
-            this.listViewFav.UseCompatibleStateImageBehavior = false;
-            this.listViewFav.View = System.Windows.Forms.View.Tile;
-            // 
             // labelMyFavoritesList
             // 
             this.labelMyFavoritesList.AutoSize = true;
@@ -727,6 +713,20 @@
             this.label6.Size = new System.Drawing.Size(423, 61);
             this.label6.TabIndex = 18;
             this.label6.Text = "Change Password";
+            // 
+            // listViewFav
+            // 
+            this.listViewFav.BackColor = System.Drawing.SystemColors.Desktop;
+            this.listViewFav.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listViewFav.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.listViewFav.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.listViewFav.HideSelection = false;
+            this.listViewFav.Location = new System.Drawing.Point(47, 117);
+            this.listViewFav.Name = "listViewFav";
+            this.listViewFav.Size = new System.Drawing.Size(910, 650);
+            this.listViewFav.TabIndex = 34;
+            this.listViewFav.UseCompatibleStateImageBehavior = false;
+            this.listViewFav.View = System.Windows.Forms.View.Tile;
             // 
             // buttonChangeUserName
             // 
@@ -1007,7 +1007,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MyStream.Properties.Resources.תמונה5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1919, 963);
+            this.ClientSize = new System.Drawing.Size(1909, 993);
             this.Controls.Add(this.buttonDeleteUser);
             this.Controls.Add(this.labelheadline);
             this.Controls.Add(this.buttonBackToMainGenral);
@@ -1032,7 +1032,6 @@
             this.DoubleBuffered = true;
             this.Name = "Main";
             this.Text = "Main";
-            this.Load += new System.EventHandler(this.Main_Load);
             this.panelPassword.ResumeLayout(false);
             this.panelPassword.PerformLayout();
             this.panelEmail.ResumeLayout(false);

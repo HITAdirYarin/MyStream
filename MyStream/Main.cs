@@ -404,17 +404,32 @@ namespace MyStream
             buttonConfirmDel.Visible = false;
             buttonCloseDelMiniPanel.Visible = false;
             comboBoxPickContentToDel.SelectedIndex = -1;
+            comboBoxPickContentToDel.Items.Clear();
         }
 
         private void buttonConfirmDel_Click(object sender, EventArgs e) // confirm the delete of the content from favorite list
         {
             ContentController.removeFav(Username, comboBoxPickContentToDel.Text);
             MessageBox.Show("The content has been deleted from your list");
-        }
-
-        private void Main_Load(object sender, EventArgs e)
-        {
-
+            labelAddToFav.Visible = false;
+            labelChooseContent.Visible = false;
+            comboBoxPickContentToDel.Visible = false;
+            buttonConfirmDel.Visible = false;
+            buttonCloseDelMiniPanel.Visible = false;
+            comboBoxPickContentToDel.SelectedIndex = -1;
+            comboBoxPickContentToDel.Items.Clear();
+            listViewFav.Items.Clear();
+            foreach (KeyValuePair<int, User> user in User._users)
+            {
+                if (user.Value._UserName == Username)
+                {
+                    foreach (string fav in user.Value._fav)
+                    {
+                        listViewFav.Items.Add(fav);
+                    }
+                    break;
+                }
+            }
         }
     }
 }

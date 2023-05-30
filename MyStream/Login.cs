@@ -126,5 +126,15 @@ namespace MyStream
            panelRegister.Visible = false;
           
         }
+
+        private void pictureBoxController1_MouseHover(object sender, EventArgs e)
+        {
+            labelDragMe.Visible = true;
+        }
+
+        private void pictureBoxController1_MouseLeave(object sender, EventArgs e)
+        {
+            labelDragMe.Visible = false;
+        }
     }
 }
