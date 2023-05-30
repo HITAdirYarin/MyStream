@@ -82,7 +82,7 @@ namespace MyStream
             }
             return true;
         }
-        public static void deleteUser(string userName)
+        public static void deleteUser(string userName) // deleting a user from the file by Deserialize
         {
             int userId;
             foreach (KeyValuePair<int, User> user in User._users)
@@ -112,8 +112,6 @@ namespace MyStream
                 }
             }
         }
-            
-
         public static bool saveUsersCount() // The function saves the number of users that exist (useful to give a new user an appropriate id number)
         {
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "numOfUsers.txt");

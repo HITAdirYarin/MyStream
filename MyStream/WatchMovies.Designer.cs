@@ -86,6 +86,12 @@
             this.listViewReview = new System.Windows.Forms.ListView();
             this.label4 = new System.Windows.Forms.Label();
             this.player_fast = new AxWMPLib.AxWindowsMediaPlayer();
+            this.panelAddToFav = new System.Windows.Forms.Panel();
+            this.comboBoxPickMovieToFav = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.buttonConfirmFav = new System.Windows.Forms.Button();
+            this.buttonClosePickFav = new System.Windows.Forms.Button();
+            this.labelAddToFav = new System.Windows.Forms.Label();
             this.panel_display_movie.SuspendLayout();
             this.panel_rate_me.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_star_5)).BeginInit();
@@ -96,6 +102,7 @@
             this.panelLeaveReview.SuspendLayout();
             this.panelReviewList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.player_fast)).BeginInit();
+            this.panelAddToFav.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -133,7 +140,6 @@
             this.panel_display_movie.Name = "panel_display_movie";
             this.panel_display_movie.Size = new System.Drawing.Size(1568, 1003);
             this.panel_display_movie.TabIndex = 1;
-            this.panel_display_movie.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_display_movie_Paint);
             // 
             // button7
             // 
@@ -253,7 +259,6 @@
             this.panel_rate_me.Size = new System.Drawing.Size(674, 453);
             this.panel_rate_me.TabIndex = 1;
             this.panel_rate_me.Visible = false;
-            this.panel_rate_me.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_rate_me_Paint);
             // 
             // labelrating1
             // 
@@ -285,7 +290,6 @@
             this.comboBoxChooseMovie.Name = "comboBoxChooseMovie";
             this.comboBoxChooseMovie.Size = new System.Drawing.Size(291, 37);
             this.comboBoxChooseMovie.TabIndex = 27;
-            this.comboBoxChooseMovie.SelectedIndexChanged += new System.EventHandler(this.comboBoxChooseMovie_SelectedIndexChanged);
             // 
             // choose_movie
             // 
@@ -575,7 +579,6 @@
             this.labelName.TabIndex = 14;
             this.labelName.Text = "Name:";
             this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelName.Click += new System.EventHandler(this.labelName_Click);
             // 
             // buttonClosePlayer
             // 
@@ -854,7 +857,92 @@
             this.player_fast.Size = new System.Drawing.Size(11865, 7532);
             this.player_fast.TabIndex = 17;
             this.player_fast.Visible = false;
-            this.player_fast.Enter += new System.EventHandler(this.player_fast_Enter_1);
+            // 
+            // panelAddToFav
+            // 
+            this.panelAddToFav.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panelAddToFav.Controls.Add(this.comboBoxPickMovieToFav);
+            this.panelAddToFav.Controls.Add(this.label6);
+            this.panelAddToFav.Controls.Add(this.buttonConfirmFav);
+            this.panelAddToFav.Controls.Add(this.buttonClosePickFav);
+            this.panelAddToFav.Controls.Add(this.labelAddToFav);
+            this.panelAddToFav.Location = new System.Drawing.Point(597, 225);
+            this.panelAddToFav.Name = "panelAddToFav";
+            this.panelAddToFav.Size = new System.Drawing.Size(674, 331);
+            this.panelAddToFav.TabIndex = 50;
+            this.panelAddToFav.Visible = false;
+            // 
+            // comboBoxPickMovieToFav
+            // 
+            this.comboBoxPickMovieToFav.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPickMovieToFav.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.comboBoxPickMovieToFav.FormattingEnabled = true;
+            this.comboBoxPickMovieToFav.Items.AddRange(new object[] {
+            "Fast and Furious 9",
+            "Ted",
+            "300",
+            "Frozen",
+            "Friends with Benefits",
+            "Titanic",
+            "Shrek",
+            "21 Jump street",
+            "The Godfather"});
+            this.comboBoxPickMovieToFav.Location = new System.Drawing.Point(294, 113);
+            this.comboBoxPickMovieToFav.Name = "comboBoxPickMovieToFav";
+            this.comboBoxPickMovieToFav.Size = new System.Drawing.Size(364, 37);
+            this.comboBoxPickMovieToFav.TabIndex = 27;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label6.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label6.Location = new System.Drawing.Point(25, 104);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(280, 60);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Choose Movie:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // buttonConfirmFav
+            // 
+            this.buttonConfirmFav.BackColor = System.Drawing.SystemColors.Highlight;
+            this.buttonConfirmFav.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonConfirmFav.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.buttonConfirmFav.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonConfirmFav.Location = new System.Drawing.Point(31, 252);
+            this.buttonConfirmFav.Name = "buttonConfirmFav";
+            this.buttonConfirmFav.Size = new System.Drawing.Size(174, 55);
+            this.buttonConfirmFav.TabIndex = 17;
+            this.buttonConfirmFav.Text = "Confirm";
+            this.buttonConfirmFav.UseVisualStyleBackColor = false;
+            this.buttonConfirmFav.Click += new System.EventHandler(this.buttonConfirmFav_Click);
+            // 
+            // buttonClosePickFav
+            // 
+            this.buttonClosePickFav.BackColor = System.Drawing.SystemColors.Highlight;
+            this.buttonClosePickFav.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClosePickFav.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.buttonClosePickFav.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonClosePickFav.Location = new System.Drawing.Point(481, 252);
+            this.buttonClosePickFav.Name = "buttonClosePickFav";
+            this.buttonClosePickFav.Size = new System.Drawing.Size(177, 55);
+            this.buttonClosePickFav.TabIndex = 16;
+            this.buttonClosePickFav.Text = "Close";
+            this.buttonClosePickFav.UseVisualStyleBackColor = false;
+            this.buttonClosePickFav.Click += new System.EventHandler(this.buttonClosePickFav_Click);
+            // 
+            // labelAddToFav
+            // 
+            this.labelAddToFav.BackColor = System.Drawing.Color.Transparent;
+            this.labelAddToFav.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.labelAddToFav.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.labelAddToFav.Location = new System.Drawing.Point(165, 0);
+            this.labelAddToFav.Name = "labelAddToFav";
+            this.labelAddToFav.Size = new System.Drawing.Size(374, 113);
+            this.labelAddToFav.TabIndex = 15;
+            this.labelAddToFav.Text = "Add to favorite";
+            this.labelAddToFav.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // WatchMovies
             // 
@@ -877,11 +965,12 @@
             this.Controls.Add(this.labelRelease);
             this.Controls.Add(this.buttonBeckToMain);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel_rate_me);
+            this.Controls.Add(this.panel_display_movie);
             this.Controls.Add(this.panelReviewList);
             this.Controls.Add(this.panelLeaveReview);
-            this.Controls.Add(this.panel_rate_me);
+            this.Controls.Add(this.panelAddToFav);
             this.Controls.Add(this.player_fast);
-            this.Controls.Add(this.panel_display_movie);
             this.DoubleBuffered = true;
             this.Name = "WatchMovies";
             this.Text = "WatchMovies";
@@ -896,6 +985,7 @@
             this.panelLeaveReview.PerformLayout();
             this.panelReviewList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.player_fast)).EndInit();
+            this.panelAddToFav.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -959,5 +1049,11 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panelAddToFav;
+        private System.Windows.Forms.ComboBox comboBoxPickMovieToFav;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button buttonConfirmFav;
+        private System.Windows.Forms.Button buttonClosePickFav;
+        private System.Windows.Forms.Label labelAddToFav;
     }
 }

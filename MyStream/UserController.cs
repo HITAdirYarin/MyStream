@@ -9,7 +9,7 @@ namespace MyStream
 {
     public class UserController
     {
-        public static bool register(string userName, string email,string password)
+        public static bool register(string userName, string email,string password) // register to the app by saving the info about the user
         {
             User a = new User();
            if(!a.Register(userName,email, password))
@@ -23,16 +23,16 @@ namespace MyStream
             User._users.Add(a._userId, a);
             return true;
         }
-        public static void deleteUser(string userName)
+        public static void deleteUser(string userName) // delete the user from the file
         {
             UserHendler.deleteUser(userName);
         }
-        public static bool ChangePassword(string password , string username) 
+        public static bool ChangePassword(string password , string username) //change the password for the user
         {
             return User.ChangePassword(password, username);
             
         }
-        public static bool ChangeUserName(string newUserName,string oldUserName)
+        public static bool ChangeUserName(string newUserName,string oldUserName) //change the username for the user
         {
             if (!User.isUserNameValid(newUserName))
             {
@@ -40,7 +40,7 @@ namespace MyStream
             }
             return User.ChangeUsername(newUserName, oldUserName);
         }
-        public static bool ChangeEmail(string email,string userName)
+        public static bool ChangeEmail(string email,string userName) //change the Email for the user
         {
             if(!User.IsValidGmailAddress(email))
             {

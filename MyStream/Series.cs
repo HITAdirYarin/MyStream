@@ -16,7 +16,7 @@ namespace MyStream
         public List<string> _episodes { get; set; }
 
         // Methods
-        public Series()
+        public Series() // basic constructor
         {
             _name = "no name";
             _episodeAmount = 0;
@@ -29,7 +29,7 @@ namespace MyStream
             _review = new List<string>();
             _review.Add("no reviews");
         }
-        public Series(string name, int episodeAmount,string date,string genre,string type,int rateCount,int rateAvg)
+        public Series(string name, int episodeAmount,string date,string genre,string type,int rateCount,int rateAvg) // advanced constructor
         {
             _name = name;
             _episodeAmount = episodeAmount;

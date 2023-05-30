@@ -26,7 +26,7 @@ namespace MyStream
         public static Dictionary<string, Content> _contents = new Dictionary<string, Content>();
 
         // Methods
-        public Content()
+        public Content() //basic constuctor
         {
             _name = "no name";
             _date = "no date";
@@ -36,7 +36,7 @@ namespace MyStream
             _rateAvg = 0;
             _review = new List<string>();
         }
-        public Content( string name,string date,string genre,string type,int rateCount,double rate)
+        public Content( string name,string date,string genre,string type,int rateCount,double rate) //advanced constuctor
         {
             _name = name;         
             _date = date;
@@ -46,12 +46,12 @@ namespace MyStream
             _rateAvg = rate;
         }
 
-        public void addReview(string review)
+        public void addReview(string review) // add review to the content review list
         {
             _review.Add(review);          
         }
       
-        public static void addRate(int rate,string name)
+        public static void addRate(int rate,string name) //adding rate to this content , calculating avg 
         {
             double sum;
             foreach (KeyValuePair<string, Content> content in Content._contents)
@@ -78,7 +78,7 @@ namespace MyStream
                 }
             }
         }
-        public static double getAvgRate(double rate_sum,int amount)
+        public static double getAvgRate(double rate_sum,int amount) // returns avg rate for this content
         {
             return rate_sum / amount;
         }

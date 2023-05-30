@@ -23,7 +23,7 @@ namespace MyStream
         public static Dictionary<int,User> _users = new Dictionary<int,User>();
         
 
-        public User()
+        public User() // basic constructor
         {
             _userId = 0;
             _UserName = "none";
@@ -32,7 +32,7 @@ namespace MyStream
             _rates= new List<string>(); 
             _fav = new List<string>();
         }
-        public User(string userName, string email, string password)
+        public User(string userName, string email, string password) // advanced constructor
         {
             _UserName = userName;
             _Email = email;

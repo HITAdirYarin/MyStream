@@ -74,7 +74,7 @@ namespace MyStream
 
         //***************************
         //Series:
-        public static bool saveSeries(Series series)
+        public static bool saveSeries(Series series) //Serialize series to a file
         {
             string json = JsonSerializer.Serialize(series);
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "series.txt");

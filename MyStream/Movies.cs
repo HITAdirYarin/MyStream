@@ -9,7 +9,7 @@ namespace MyStream
     public class Movies : Stream 
     {
         public string _path { get; set; }
-        public Movies()
+        public Movies() // basic constructor
         {
             _name = "no name";
             _path = "no path";
@@ -22,7 +22,7 @@ namespace MyStream
             _review = new List<string>();
             _review.Add("no reviews");
         }
-       public Movies(string name, string path,string director, string date, string genre, string type,int rateCount,double rate)
+       public Movies(string name, string path,string director, string date, string genre, string type,int rateCount,double rate) // advanced constructor
         {
             _name = name;
             _path = path;

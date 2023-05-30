@@ -72,9 +72,9 @@
             this.labelName.BackColor = System.Drawing.Color.Transparent;
             this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelName.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelName.Location = new System.Drawing.Point(1559, 113);
+            this.labelName.Location = new System.Drawing.Point(1562, 113);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(339, 94);
+            this.labelName.Size = new System.Drawing.Size(336, 94);
             this.labelName.TabIndex = 26;
             this.labelName.Text = "Name:";
             this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -84,9 +84,9 @@
             this.labelRate.BackColor = System.Drawing.Color.Transparent;
             this.labelRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelRate.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelRate.Location = new System.Drawing.Point(1559, 408);
+            this.labelRate.Location = new System.Drawing.Point(1565, 408);
             this.labelRate.Name = "labelRate";
-            this.labelRate.Size = new System.Drawing.Size(333, 56);
+            this.labelRate.Size = new System.Drawing.Size(327, 56);
             this.labelRate.TabIndex = 25;
             this.labelRate.Text = "Rate:";
             this.labelRate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -96,9 +96,9 @@
             this.labelGanre.BackColor = System.Drawing.Color.Transparent;
             this.labelGanre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelGanre.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelGanre.Location = new System.Drawing.Point(1556, 313);
+            this.labelGanre.Location = new System.Drawing.Point(1565, 313);
             this.labelGanre.Name = "labelGanre";
-            this.labelGanre.Size = new System.Drawing.Size(333, 56);
+            this.labelGanre.Size = new System.Drawing.Size(324, 56);
             this.labelGanre.TabIndex = 24;
             this.labelGanre.Text = "Ganere:";
             this.labelGanre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -108,9 +108,9 @@
             this.labelRelease.BackColor = System.Drawing.Color.Transparent;
             this.labelRelease.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.labelRelease.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelRelease.Location = new System.Drawing.Point(1556, 207);
+            this.labelRelease.Location = new System.Drawing.Point(1562, 207);
             this.labelRelease.Name = "labelRelease";
-            this.labelRelease.Size = new System.Drawing.Size(339, 86);
+            this.labelRelease.Size = new System.Drawing.Size(333, 86);
             this.labelRelease.TabIndex = 20;
             this.labelRelease.Text = "Release date:";
             this.labelRelease.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -132,13 +132,12 @@
             // player_fast
             // 
             this.player_fast.Enabled = true;
-            this.player_fast.Location = new System.Drawing.Point(-4978, -3271);
+            this.player_fast.Location = new System.Drawing.Point(0, 0);
             this.player_fast.Name = "player_fast";
             this.player_fast.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("player_fast.OcxState")));
-            this.player_fast.Size = new System.Drawing.Size(11865, 7532);
+            this.player_fast.Size = new System.Drawing.Size(17798, 11298);
             this.player_fast.TabIndex = 28;
             this.player_fast.Visible = false;
-            this.player_fast.Enter += new System.EventHandler(this.player_fast_Enter);
             // 
             // SurpriseMe
             // 
