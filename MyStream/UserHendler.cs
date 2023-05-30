@@ -33,7 +33,7 @@ namespace MyStream
             }
             return true;
         } 
-        public static bool updateUser(int userId,User newUser) //The function update a user's details and serialize it
+        public static bool updateUser(User newUser) //The function update a user's details and serialize it
         {
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "users.txt");
             bool userUpdated = false;
@@ -42,7 +42,8 @@ namespace MyStream
                 string[] lines = File.ReadAllLines(filePath);
                 for (int i = 0; i < lines.Length; i++)
                 {
-                    if (newUser._userId == userId)
+                    User temp = JsonSerializer.Deserialize<User>(lines[i]);
+                    if (newUser._userId == temp._userId)
                     {                     
                         lines[i]= JsonSerializer.Serialize(newUser);
                         File.WriteAllLines(filePath, lines);

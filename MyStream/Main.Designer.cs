@@ -62,6 +62,13 @@
             this.buttonConfirmEmail = new System.Windows.Forms.Button();
             this.labelChangeEmail = new System.Windows.Forms.Label();
             this.panelFavList = new System.Windows.Forms.Panel();
+            this.buttonConfirmDel = new System.Windows.Forms.Button();
+            this.buttonCloseDelMiniPanel = new System.Windows.Forms.Button();
+            this.comboBoxPickContentToDel = new System.Windows.Forms.ComboBox();
+            this.labelChooseContent = new System.Windows.Forms.Label();
+            this.labelAddToFav = new System.Windows.Forms.Label();
+            this.removeFav = new System.Windows.Forms.Button();
+            this.listViewFav = new System.Windows.Forms.ListView();
             this.labelMyFavoritesList = new System.Windows.Forms.Label();
             this.buttonBackFromFav = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -85,13 +92,6 @@
             this.buttonClearDelete = new System.Windows.Forms.Button();
             this.buttonConfirmDelete = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.listViewFav = new System.Windows.Forms.ListView();
-            this.removeFav = new System.Windows.Forms.Button();
-            this.comboBoxPickContentToDel = new System.Windows.Forms.ComboBox();
-            this.labelChooseContent = new System.Windows.Forms.Label();
-            this.labelAddToFav = new System.Windows.Forms.Label();
-            this.buttonCloseDelMiniPanel = new System.Windows.Forms.Button();
-            this.buttonConfirmDel = new System.Windows.Forms.Button();
             this.panelPassword.SuspendLayout();
             this.panelEmail.SuspendLayout();
             this.panelFavList.SuspendLayout();
@@ -575,15 +575,119 @@
             this.panelFavList.Controls.Add(this.labelChooseContent);
             this.panelFavList.Controls.Add(this.labelAddToFav);
             this.panelFavList.Controls.Add(this.removeFav);
-            this.panelFavList.Controls.Add(this.listViewFav);
             this.panelFavList.Controls.Add(this.labelMyFavoritesList);
             this.panelFavList.Controls.Add(this.buttonBackFromFav);
             this.panelFavList.Controls.Add(this.label6);
-            this.panelFavList.Location = new System.Drawing.Point(-11, 135);
+            this.panelFavList.Controls.Add(this.listViewFav);
+            this.panelFavList.Location = new System.Drawing.Point(-11, 12);
             this.panelFavList.Name = "panelFavList";
-            this.panelFavList.Size = new System.Drawing.Size(1569, 852);
+            this.panelFavList.Size = new System.Drawing.Size(1738, 975);
             this.panelFavList.TabIndex = 23;
             this.panelFavList.Visible = false;
+            // 
+            // buttonConfirmDel
+            // 
+            this.buttonConfirmDel.BackColor = System.Drawing.Color.Black;
+            this.buttonConfirmDel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonConfirmDel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.buttonConfirmDel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.buttonConfirmDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonConfirmDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.buttonConfirmDel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonConfirmDel.Location = new System.Drawing.Point(993, 416);
+            this.buttonConfirmDel.Name = "buttonConfirmDel";
+            this.buttonConfirmDel.Size = new System.Drawing.Size(172, 50);
+            this.buttonConfirmDel.TabIndex = 41;
+            this.buttonConfirmDel.Text = "Confirm";
+            this.buttonConfirmDel.UseVisualStyleBackColor = false;
+            this.buttonConfirmDel.Visible = false;
+            this.buttonConfirmDel.Click += new System.EventHandler(this.buttonConfirmDel_Click);
+            // 
+            // buttonCloseDelMiniPanel
+            // 
+            this.buttonCloseDelMiniPanel.BackColor = System.Drawing.Color.Black;
+            this.buttonCloseDelMiniPanel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonCloseDelMiniPanel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.buttonCloseDelMiniPanel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.buttonCloseDelMiniPanel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonCloseDelMiniPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.buttonCloseDelMiniPanel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.buttonCloseDelMiniPanel.Location = new System.Drawing.Point(1350, 417);
+            this.buttonCloseDelMiniPanel.Name = "buttonCloseDelMiniPanel";
+            this.buttonCloseDelMiniPanel.Size = new System.Drawing.Size(172, 50);
+            this.buttonCloseDelMiniPanel.TabIndex = 41;
+            this.buttonCloseDelMiniPanel.Text = "Close";
+            this.buttonCloseDelMiniPanel.UseVisualStyleBackColor = false;
+            this.buttonCloseDelMiniPanel.Visible = false;
+            this.buttonCloseDelMiniPanel.Click += new System.EventHandler(this.buttonCloseDelMiniPanel_Click);
+            // 
+            // comboBoxPickContentToDel
+            // 
+            this.comboBoxPickContentToDel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPickContentToDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.comboBoxPickContentToDel.FormattingEnabled = true;
+            this.comboBoxPickContentToDel.Location = new System.Drawing.Point(1247, 274);
+            this.comboBoxPickContentToDel.Name = "comboBoxPickContentToDel";
+            this.comboBoxPickContentToDel.Size = new System.Drawing.Size(304, 37);
+            this.comboBoxPickContentToDel.TabIndex = 40;
+            this.comboBoxPickContentToDel.Visible = false;
+            // 
+            // labelChooseContent
+            // 
+            this.labelChooseContent.BackColor = System.Drawing.Color.Transparent;
+            this.labelChooseContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.labelChooseContent.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.labelChooseContent.Location = new System.Drawing.Point(937, 263);
+            this.labelChooseContent.Name = "labelChooseContent";
+            this.labelChooseContent.Size = new System.Drawing.Size(306, 60);
+            this.labelChooseContent.TabIndex = 39;
+            this.labelChooseContent.Text = "Choose Content:";
+            this.labelChooseContent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelChooseContent.Visible = false;
+            // 
+            // labelAddToFav
+            // 
+            this.labelAddToFav.BackColor = System.Drawing.Color.Transparent;
+            this.labelAddToFav.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.labelAddToFav.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.labelAddToFav.Location = new System.Drawing.Point(1078, 132);
+            this.labelAddToFav.Name = "labelAddToFav";
+            this.labelAddToFav.Size = new System.Drawing.Size(444, 113);
+            this.labelAddToFav.TabIndex = 36;
+            this.labelAddToFav.Text = "Remove From Favorite";
+            this.labelAddToFav.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelAddToFav.Visible = false;
+            // 
+            // removeFav
+            // 
+            this.removeFav.BackColor = System.Drawing.Color.Black;
+            this.removeFav.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.removeFav.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.removeFav.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.removeFav.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.removeFav.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.removeFav.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.removeFav.Location = new System.Drawing.Point(1031, 785);
+            this.removeFav.Name = "removeFav";
+            this.removeFav.Size = new System.Drawing.Size(317, 50);
+            this.removeFav.TabIndex = 35;
+            this.removeFav.Text = "Remove from favorite";
+            this.removeFav.UseVisualStyleBackColor = false;
+            this.removeFav.Click += new System.EventHandler(this.removeFav_Click);
+            // 
+            // listViewFav
+            // 
+            this.listViewFav.BackColor = System.Drawing.SystemColors.Desktop;
+            this.listViewFav.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listViewFav.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.listViewFav.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.listViewFav.HideSelection = false;
+            this.listViewFav.Location = new System.Drawing.Point(47, 117);
+            this.listViewFav.Name = "listViewFav";
+            this.listViewFav.Size = new System.Drawing.Size(910, 650);
+            this.listViewFav.TabIndex = 34;
+            this.listViewFav.UseCompatibleStateImageBehavior = false;
+            this.listViewFav.View = System.Windows.Forms.View.Tile;
             // 
             // labelMyFavoritesList
             // 
@@ -897,117 +1001,13 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Delete User";
             // 
-            // listViewFav
-            // 
-            this.listViewFav.BackColor = System.Drawing.SystemColors.Desktop;
-            this.listViewFav.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listViewFav.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.listViewFav.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.listViewFav.HideSelection = false;
-            this.listViewFav.Location = new System.Drawing.Point(47, 117);
-            this.listViewFav.Name = "listViewFav";
-            this.listViewFav.Size = new System.Drawing.Size(910, 650);
-            this.listViewFav.TabIndex = 34;
-            this.listViewFav.UseCompatibleStateImageBehavior = false;
-            this.listViewFav.View = System.Windows.Forms.View.Tile;
-            // 
-            // removeFav
-            // 
-            this.removeFav.BackColor = System.Drawing.Color.Black;
-            this.removeFav.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.removeFav.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.removeFav.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.removeFav.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.removeFav.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.removeFav.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.removeFav.Location = new System.Drawing.Point(1031, 785);
-            this.removeFav.Name = "removeFav";
-            this.removeFav.Size = new System.Drawing.Size(317, 50);
-            this.removeFav.TabIndex = 35;
-            this.removeFav.Text = "Remove from favorite";
-            this.removeFav.UseVisualStyleBackColor = false;
-            this.removeFav.Click += new System.EventHandler(this.removeFav_Click);
-            // 
-            // comboBoxPickContentToDel
-            // 
-            this.comboBoxPickContentToDel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxPickContentToDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.comboBoxPickContentToDel.FormattingEnabled = true;
-            this.comboBoxPickContentToDel.Location = new System.Drawing.Point(1247, 274);
-            this.comboBoxPickContentToDel.Name = "comboBoxPickContentToDel";
-            this.comboBoxPickContentToDel.Size = new System.Drawing.Size(304, 37);
-            this.comboBoxPickContentToDel.TabIndex = 40;
-            this.comboBoxPickContentToDel.Visible = false;
-            // 
-            // labelChooseContent
-            // 
-            this.labelChooseContent.BackColor = System.Drawing.Color.Transparent;
-            this.labelChooseContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.labelChooseContent.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelChooseContent.Location = new System.Drawing.Point(937, 263);
-            this.labelChooseContent.Name = "labelChooseContent";
-            this.labelChooseContent.Size = new System.Drawing.Size(306, 60);
-            this.labelChooseContent.TabIndex = 39;
-            this.labelChooseContent.Text = "Choose Content:";
-            this.labelChooseContent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelChooseContent.Visible = false;
-            // 
-            // labelAddToFav
-            // 
-            this.labelAddToFav.BackColor = System.Drawing.Color.Transparent;
-            this.labelAddToFav.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.labelAddToFav.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.labelAddToFav.Location = new System.Drawing.Point(1078, 132);
-            this.labelAddToFav.Name = "labelAddToFav";
-            this.labelAddToFav.Size = new System.Drawing.Size(444, 113);
-            this.labelAddToFav.TabIndex = 36;
-            this.labelAddToFav.Text = "Remove From Favorite";
-            this.labelAddToFav.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelAddToFav.Visible = false;
-            // 
-            // buttonCloseDelMiniPanel
-            // 
-            this.buttonCloseDelMiniPanel.BackColor = System.Drawing.Color.Black;
-            this.buttonCloseDelMiniPanel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.buttonCloseDelMiniPanel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.buttonCloseDelMiniPanel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.buttonCloseDelMiniPanel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonCloseDelMiniPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.buttonCloseDelMiniPanel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.buttonCloseDelMiniPanel.Location = new System.Drawing.Point(1350, 417);
-            this.buttonCloseDelMiniPanel.Name = "buttonCloseDelMiniPanel";
-            this.buttonCloseDelMiniPanel.Size = new System.Drawing.Size(172, 50);
-            this.buttonCloseDelMiniPanel.TabIndex = 41;
-            this.buttonCloseDelMiniPanel.Text = "Close";
-            this.buttonCloseDelMiniPanel.UseVisualStyleBackColor = false;
-            this.buttonCloseDelMiniPanel.Visible = false;
-            this.buttonCloseDelMiniPanel.Click += new System.EventHandler(this.buttonCloseDelMiniPanel_Click);
-            // 
-            // buttonConfirmDel
-            // 
-            this.buttonConfirmDel.BackColor = System.Drawing.Color.Black;
-            this.buttonConfirmDel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.buttonConfirmDel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.buttonConfirmDel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.buttonConfirmDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonConfirmDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.buttonConfirmDel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.buttonConfirmDel.Location = new System.Drawing.Point(993, 416);
-            this.buttonConfirmDel.Name = "buttonConfirmDel";
-            this.buttonConfirmDel.Size = new System.Drawing.Size(172, 50);
-            this.buttonConfirmDel.TabIndex = 41;
-            this.buttonConfirmDel.Text = "Confirm";
-            this.buttonConfirmDel.UseVisualStyleBackColor = false;
-            this.buttonConfirmDel.Visible = false;
-            this.buttonConfirmDel.Click += new System.EventHandler(this.buttonConfirmDel_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MyStream.Properties.Resources.תמונה5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1272, 660);
+            this.ClientSize = new System.Drawing.Size(1919, 963);
             this.Controls.Add(this.buttonDeleteUser);
             this.Controls.Add(this.labelheadline);
             this.Controls.Add(this.buttonBackToMainGenral);
@@ -1024,14 +1024,15 @@
             this.Controls.Add(this.buttonChangeEmail);
             this.Controls.Add(this.buttonChangeUserName);
             this.Controls.Add(this.buttonChangePassword);
-            this.Controls.Add(this.panelFavList);
             this.Controls.Add(this.panelDeleteUser);
             this.Controls.Add(this.panelUsername);
             this.Controls.Add(this.panelEmail);
             this.Controls.Add(this.panelPassword);
+            this.Controls.Add(this.panelFavList);
             this.DoubleBuffered = true;
             this.Name = "Main";
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.panelPassword.ResumeLayout(false);
             this.panelPassword.PerformLayout();
             this.panelEmail.ResumeLayout(false);

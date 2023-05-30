@@ -210,7 +210,7 @@ namespace MyStream
                         {
                             ContentController.addRate(rate, movie_name);
                             user.Value._rates.Add(movie_name);
-                            UserHendler.updateUser(user.Value._userId, user.Value);
+                            UserHendler.updateUser( user.Value);
                         }
                         break;
                     }
@@ -509,7 +509,6 @@ namespace MyStream
                 {
                     MessageBox.Show("The content has been added to your favorites list");
                 }
-                else { MessageBox.Show("Theres been a problem adding this content into your favorite list"); }
                 panelAddToFav.Visible = false;
                 comboBoxPickMovieToFav.SelectedIndex = -1;
             }
