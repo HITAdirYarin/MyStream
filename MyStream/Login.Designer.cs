@@ -57,6 +57,7 @@
             this.button_clear = new System.Windows.Forms.Button();
             this.button_register = new System.Windows.Forms.Button();
             this.label = new System.Windows.Forms.Label();
+            this.labelDragMe = new System.Windows.Forms.Label();
             this.pictureBoxController1 = new MyStream.PictureBoxController(this.components);
             this.panelRegister.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxController1)).BeginInit();
@@ -422,17 +423,32 @@
             this.label.TabIndex = 6;
             this.label.Text = "Get Started";
             // 
+            // labelDragMe
+            // 
+            this.labelDragMe.AutoSize = true;
+            this.labelDragMe.BackColor = System.Drawing.Color.Transparent;
+            this.labelDragMe.Font = new System.Drawing.Font("Microsoft Tai Le", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDragMe.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.labelDragMe.Location = new System.Drawing.Point(1283, 603);
+            this.labelDragMe.Name = "labelDragMe";
+            this.labelDragMe.Size = new System.Drawing.Size(591, 61);
+            this.labelDragMe.TabIndex = 12;
+            this.labelDragMe.Text = "You can Drag The Robot!";
+            this.labelDragMe.Visible = false;
+            // 
             // pictureBoxController1
             // 
             this.pictureBoxController1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxController1.BackgroundImage = global::MyStream.Properties.Resources.תמונה11;
             this.pictureBoxController1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxController1.Location = new System.Drawing.Point(937, 723);
+            this.pictureBoxController1.Location = new System.Drawing.Point(702, 487);
             this.pictureBoxController1.Name = "pictureBoxController1";
-            this.pictureBoxController1.Size = new System.Drawing.Size(233, 208);
+            this.pictureBoxController1.Size = new System.Drawing.Size(468, 444);
             this.pictureBoxController1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxController1.TabIndex = 11;
             this.pictureBoxController1.TabStop = false;
+            this.pictureBoxController1.MouseLeave += new System.EventHandler(this.pictureBoxController1_MouseLeave);
+            this.pictureBoxController1.MouseHover += new System.EventHandler(this.pictureBoxController1_MouseHover);
             // 
             // Login
             // 
@@ -442,6 +458,7 @@
             this.BackgroundImage = global::MyStream.Properties.Resources.תמונה4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1909, 984);
+            this.Controls.Add(this.labelDragMe);
             this.Controls.Add(this.panelRegister);
             this.Controls.Add(this.pictureBoxController1);
             this.Controls.Add(this.checkBoxShowPassword);
@@ -503,6 +520,7 @@
         private System.Windows.Forms.Button button_register;
         private System.Windows.Forms.Label label;
         private PictureBoxController pictureBoxController1;
+        private System.Windows.Forms.Label labelDragMe;
     }
 }
 
