@@ -12,14 +12,14 @@ namespace MyStream
         public string _guest { get; set; }
         public string _path { get; set; }
        
-        public Podcast()
+        public Podcast() // basic constructor
         {
             _host = "no host";
             _guest = "no guest";
             _path = "no path";
             _review.Add("no reviews");
         }
-        public Podcast(string name,string path, string date,string host, string guest, string genre,string type)     
+        public Podcast(string name,string path, string date,string host, string guest, string genre,string type)  // advanced constructor   
         {
             _name = name;
             _path = path;

@@ -10,6 +10,7 @@ namespace MyStream
     {
         /// <summary>
         /// The main entry point for the application.
+        /// this program run MyStream - a streaming application
         /// </summary>
         [STAThread]
         static void Main()

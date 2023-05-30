@@ -12,38 +12,20 @@ namespace MyStream
 {
     public partial class Login : Form
     {
-        public Login()
+        public Login() //basic constructor
         {
             InitializeComponent();
         }
-
-        private void headline_Click(object sender, EventArgs e)
-        {
-
-        } // empty
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        } // empty
-
-        private void forms_Load(object sender, EventArgs e)
+        private void forms_Load(object sender, EventArgs e) // load login form
         {
             this.WindowState = FormWindowState.Maximized;
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        } // empty
-
-        private void signup_Click(object sender, EventArgs e)
+        private void signup_Click(object sender, EventArgs e) // show the panel for the signup
         {
             panelRegister.Visible = true;
             
         }
-
-        private void SignIn_Click(object sender, EventArgs e)
+        private void SignIn_Click(object sender, EventArgs e) //log the user in
         {
             if (isValidUser(email_text.Text, password_text.Text))
             {
@@ -58,8 +40,7 @@ namespace MyStream
                 MessageBox.Show("Invalid username or password. Please try again.");
             }
         }
-
-        public bool isValidUser(string email, string password)
+        public bool isValidUser(string email, string password) //check if the user is valid
         {
             foreach (KeyValuePair<int, User> item in User._users)
             {
@@ -70,18 +51,7 @@ namespace MyStream
 
             }
             return false;
-        } // check if user is valid
-
-        private void password_text_TextChanged(object sender, EventArgs e)
-        {
-
-        } // empty
-
-        private void email_text_TextChanged(object sender, EventArgs e)
-        {
-
-        } // empty
-
+        } 
         private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             if(checkBoxShowPassword.Checked) 
@@ -91,28 +61,7 @@ namespace MyStream
             else
                 password_text.UseSystemPasswordChar = false;
         } // check if to show password or not
-
-        private void textBox_username_TextChanged(object sender, EventArgs e)
-        {
-
-        } // empty
-
-        private void textBox_email_TextChanged(object sender, EventArgs e)
-        {
-
-        } // empty
-
-        private void textBox_password1_TextChanged(object sender, EventArgs e)
-        {
-
-        } // empty
-
-        private void textBox_password2_TextChanged(object sender, EventArgs e)
-        {
-
-        } // empty
-
-        private void checkBoxShowPasswordRegist_CheckedChanged(object sender, EventArgs e)
+        private void checkBoxShowPasswordRegist_CheckedChanged(object sender, EventArgs e) // check if to show password or not
         {
             if (checkBoxShowPasswordRegist.Checked)
             {
@@ -126,7 +75,7 @@ namespace MyStream
             }
         }
 
-        private void button_register_Click(object sender, EventArgs e)
+        private void button_register_Click(object sender, EventArgs e) // check if can register and then bring the user to login again 
         {
             if (User.isPasswordsValid(textBox_password1.Text, textBox_password2.Text) && User.IsValidGmailAddress(textBox_email.Text)
                 && User.isUserNameValid(textBox_username.Text))
@@ -151,7 +100,7 @@ namespace MyStream
             }
         }
 
-        public bool isUserExist(string email, string username)
+        public bool isUserExist(string email, string username) // checks if the user exist in the system
         {
             foreach (KeyValuePair<int, User> item in User._users)
             {
@@ -164,7 +113,7 @@ namespace MyStream
             return false;
         }
 
-        private void button_clear_Click(object sender, EventArgs e)
+        private void button_clear_Click(object sender, EventArgs e) //clear user info that he wrote
         {
             textBox_username.Text = string.Empty;
             textBox_email.Text = string.Empty;
@@ -172,12 +121,10 @@ namespace MyStream
             textBox_password2.Text = string.Empty;
         }
 
-        private void button_backToLogin_Click(object sender, EventArgs e)
+        private void button_backToLogin_Click(object sender, EventArgs e) // back to login , close this panel
         {
            panelRegister.Visible = false;
           
         }
-
-        
     }
 }

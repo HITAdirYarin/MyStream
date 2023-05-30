@@ -24,29 +24,20 @@ namespace MyStream
         public string _username { get; set; }
         private bool buttonClicked = false;
         static int count = 0;
-        public WatchMovies()
+        public WatchMovies() // basic constructor
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized; // set full screen
         }
 
-        public WatchMovies(string username)
+        public WatchMovies(string username) // advanced constructor
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized; // set full screen
             _username = username;
         }
 
-            private void _Click(object sender, EventArgs e)
-        {
-            
-        }
-        private void player_fast_Enter(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void buttonClosePlayer_Click(object sender, EventArgs e)
+        private void buttonClosePlayer_Click(object sender, EventArgs e) // close the active player at this time
         {
             player_fast.Visible = false;
             player_fast.close();
@@ -59,14 +50,14 @@ namespace MyStream
             labelDescription.Text = "Description:";
         }
 
-        private void buttonBeckToMain_Click_1(object sender, EventArgs e)
+        private void buttonBeckToMain_Click_1(object sender, EventArgs e) // close this form - returns to main form
         {
             Main main = new Main(_username);
             this.Close();
             main.Show();
         }
 
-        private void play_movie(Movies movie)
+        private void play_movie(Movies movie) //activate the movie that user selected
         {
             panel_display_movie.SendToBack();
             player_fast.Size = new Size(1042, 650);
@@ -89,7 +80,7 @@ namespace MyStream
             labelRate.Text += " " + rate + "/5";
             player_fast.Show();
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // play the movie "Fast and Furious 9"
         {
             Movies fast9 =Content._contents["Fast and Furious 9"] as Movies ;
             if (fast9 == null)
@@ -103,12 +94,7 @@ namespace MyStream
             }
         }
 
-        private void labelName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonRateMe_Click(object sender, EventArgs e)
+        private void buttonRateMe_Click(object sender, EventArgs e) //open the rate  panel
         {
             if (player_fast.Visible)
             {
@@ -119,10 +105,13 @@ namespace MyStream
                 player_fast.SendToBack();
                 panel_display_movie.SendToBack();
                 panel_rate_me.Visible = true;
+                panelAddToFav.Visible = false;
+                panelLeaveReview.Visible = false;
+                panelReviewList.Visible = false;
             } 
         }
 
-        private void pb_star_5_Click(object sender, EventArgs e)
+        private void pb_star_5_Click(object sender, EventArgs e) // set 5 star in the rating panel
         {
             pb_star_1.Image = Resources.yellow_star;
             pb_star_2.Image = Resources.yellow_star;
@@ -133,7 +122,7 @@ namespace MyStream
             labelrating1.Text = "/5";
         }
 
-        private void button_close_rate_win_Click(object sender, EventArgs e)
+        private void button_close_rate_win_Click(object sender, EventArgs e) // close the rate panel
         {
             panel_rate_me.Visible=false;
             pb_star_1.Image = Resources.grey_star;
@@ -145,7 +134,7 @@ namespace MyStream
             comboBoxChooseMovie.SelectedIndex = -1;
         }
 
-        private void pb_star_4_Click(object sender, EventArgs e)
+        private void pb_star_4_Click(object sender, EventArgs e) // set 4 star in the rating panel
         {
             pb_star_1.Image = Resources.yellow_star;
             pb_star_2.Image = Resources.yellow_star;
@@ -156,7 +145,7 @@ namespace MyStream
             labelrating1.Text = "/5";
         }
 
-        private void pb_star_3_Click(object sender, EventArgs e)
+        private void pb_star_3_Click(object sender, EventArgs e) // set 3 star in the rating panel
         {
             pb_star_1.Image = Resources.yellow_star;
             pb_star_2.Image = Resources.yellow_star;
@@ -167,7 +156,7 @@ namespace MyStream
             labelrating1.Text = "/5";
         }
 
-        private void pb_star_2_Click(object sender, EventArgs e)
+        private void pb_star_2_Click(object sender, EventArgs e) // set 2 star in the rating panel
         {
             pb_star_1.Image = Resources.yellow_star;
             pb_star_2.Image = Resources.yellow_star;
@@ -178,7 +167,7 @@ namespace MyStream
             labelrating1.Text = "/5";
         }
 
-        private void pb_star_1_Click(object sender, EventArgs e)
+        private void pb_star_1_Click(object sender, EventArgs e) // set 1 star in the rating panel
         {
             pb_star_1.Image = Resources.yellow_star;
             pb_star_2.Image = Resources.grey_star;
@@ -189,7 +178,7 @@ namespace MyStream
             labelrating1.Text = "/5";
         }
 
-        private void button_confirm_rate_Click(object sender, EventArgs e)
+        private void button_confirm_rate_Click(object sender, EventArgs e) // confirm the rate add update the avg for this content
         {
           
             if (comboBoxChooseMovie.SelectedIndex == -1)
@@ -240,7 +229,7 @@ namespace MyStream
             }
         }
 
-        private void buttonViewReviews_Click(object sender, EventArgs e)
+        private void buttonViewReviews_Click(object sender, EventArgs e) // open the reviews panel
         {
             if(player_fast.Visible)
             {
@@ -251,27 +240,13 @@ namespace MyStream
                 panelReviewList.Visible = true;
                 panelLeaveReview.Visible = false;
                 panel_rate_me.Visible = false;
+                panelAddToFav.Visible = false;
                 player_fast.SendToBack();
                 panel_display_movie.SendToBack();
             } 
         }
 
-        private void panel_rate_me_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void comboBoxChooseMovie_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel_display_movie_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button_leave_review_Click(object sender, EventArgs e)
+        private void button_leave_review_Click(object sender, EventArgs e) // transfer the user from rate panel to the leave review panel
         {
             panel_rate_me.Visible = false;
             panelLeaveReview.Visible = true;
@@ -284,7 +259,7 @@ namespace MyStream
             comboBoxChooseMovie.SelectedIndex = -1;
         }
 
-        private void buttonRateMovieFromReview_Click(object sender, EventArgs e)
+        private void buttonRateMovieFromReview_Click(object sender, EventArgs e) // transfer the user from leave review panel to the rate panel
         {
             panelLeaveReview.Visible = false;
             panel_rate_me.Visible = true;
@@ -292,14 +267,14 @@ namespace MyStream
             textBoxReview.Text = string.Empty;
         }
 
-        private void buttonCloseReview_Click(object sender, EventArgs e)
+        private void buttonCloseReview_Click(object sender, EventArgs e) // close the leave review panel
         {
             panelLeaveReview.Visible = false;
             comboBoxMovieToReview.SelectedIndex = -1;
             textBoxReview.Text = string.Empty;
         }
 
-        private void buttonLeaveReview_Click(object sender, EventArgs e)
+        private void buttonLeaveReview_Click(object sender, EventArgs e) // open the leave review panel
         {
             if (player_fast.Visible)
             {
@@ -312,10 +287,11 @@ namespace MyStream
                 panelReviewList.Visible = false;
                 panelLeaveReview.Visible = true;
                 panel_rate_me.Visible = false;
+                panelAddToFav.Visible = false;
             }
         }
 
-        private void buttonConfirmReview_Click(object sender, EventArgs e)
+        private void buttonConfirmReview_Click(object sender, EventArgs e) // confirm the review that the user enter
         {
             if (comboBoxMovieToReview.SelectedIndex == -1)
             {
@@ -336,14 +312,14 @@ namespace MyStream
             }
         }
 
-        private void buttonCloseReviewList_Click(object sender, EventArgs e)
+        private void buttonCloseReviewList_Click(object sender, EventArgs e) // close the review list panel
         {
             panelReviewList.Visible = false;
             listViewReview.Clear();
             comboBoxChooseMovieToReviewList.SelectedIndex = -1;
         }
 
-        private void buttonViewReview_Click(object sender, EventArgs e)
+        private void buttonViewReview_Click(object sender, EventArgs e) // open the list view and show all the review for this content
         {
             if (!buttonClicked)
             {
@@ -370,7 +346,7 @@ namespace MyStream
             }
         }
 
-        private void buttonLeaveReviewFromList_Click(object sender, EventArgs e)
+        private void buttonLeaveReviewFromList_Click(object sender, EventArgs e) // transfer the user from view review panel to the leave review panel
         {
             panelReviewList.Visible = false;
             panelReviewList.SendToBack();
@@ -379,7 +355,7 @@ namespace MyStream
             comboBoxChooseMovieToReviewList.SelectedIndex = -1;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // play the movie "300"
         {
             Movies three_300 = Content._contents["300"] as Movies;
             if (three_300 == null)
@@ -393,7 +369,7 @@ namespace MyStream
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) // play the movie "ted"
         {
             Movies ted = Content._contents["Ted"] as Movies;
             if (ted == null)
@@ -407,7 +383,7 @@ namespace MyStream
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e) // play the movie "21 Jump street"
         {
             Movies jump_street = Content._contents["21 Jump street"] as Movies;
             if (jump_street == null)
@@ -421,7 +397,7 @@ namespace MyStream
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e) // play the movie "Frozen"
         {
             Movies frozen = Content._contents["Frozen"] as Movies;
             if (frozen == null)
@@ -435,7 +411,7 @@ namespace MyStream
             }
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e) // play the movie "Friends with Benefits"
         {
             Movies friendswithbenefits = Content._contents["Friends with Benefits"] as Movies;
             if (friendswithbenefits == null)
@@ -449,7 +425,7 @@ namespace MyStream
             }
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e) // play the movie "Titanic"
         {
             Movies titanic = Content._contents["Titanic"] as Movies;
             if (titanic == null)
@@ -463,7 +439,7 @@ namespace MyStream
             }
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e) // play the movie "The Godfather"
         {
             Movies The_godfather = Content._contents["The Godfather"] as Movies;
             if (The_godfather == null)
@@ -477,7 +453,7 @@ namespace MyStream
             }
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void button9_Click(object sender, EventArgs e)  // play the movie "Shrek"
         {
             Movies shrek = Content._contents["Shrek"] as Movies;
             if (shrek == null)
@@ -492,7 +468,7 @@ namespace MyStream
         }
 
         
-        private void comboBoxChooseMovieToReviewList_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxChooseMovieToReviewList_SelectedIndexChanged(object sender, EventArgs e) // ensure that the view list will generate only once
         {
             count++;
             if(count>1)
@@ -502,14 +478,47 @@ namespace MyStream
             buttonClicked = false;
         }
 
-        private void player_fast_Enter_1(object sender, EventArgs e)
+        private void buttonAddToFav_Click(object sender, EventArgs e) // open the add to favorite panel
         {
-
+            if (player_fast.Visible)
+            {
+                MessageBox.Show("please close the podcast first");
+            }
+            else
+            {
+                panelReviewList.Visible = false;
+                panelLeaveReview.Visible = false;
+                panel_rate_me.Visible = false;
+                panelAddToFav.Visible = true;
+                panel_display_movie.SendToBack();
+            }
         }
 
-        private void buttonAddToFav_Click(object sender, EventArgs e)
+        private void buttonConfirmFav_Click(object sender, EventArgs e) // adding this content into the favorite list
         {
+            if (comboBoxPickMovieToFav.SelectedIndex == -1)
+            {
+                MessageBox.Show("please choose a movie to add first");
+            }
 
+
+            else
+            {
+                string contentName = comboBoxPickMovieToFav.Text;
+                if (ContentController.addFav(_username, contentName))
+                {
+                    MessageBox.Show("The content has been added to your favorites list");
+                }
+                else { MessageBox.Show("Theres been a problem adding this content into your favorite list"); }
+                panelAddToFav.Visible = false;
+                comboBoxPickMovieToFav.SelectedIndex = -1;
+            }
+        }
+
+        private void buttonClosePickFav_Click(object sender, EventArgs e) // close favorite list panel
+        {
+            panelAddToFav.Visible = false;
+            comboBoxPickMovieToFav.SelectedIndex = -1;
         }
     }
 }

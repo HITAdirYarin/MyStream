@@ -74,7 +74,6 @@
             this.headline.TabIndex = 0;
             this.headline.Text = "MyStream";
             this.headline.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.headline.Click += new System.EventHandler(this.headline_Click);
             // 
             // label1
             // 
@@ -87,7 +86,6 @@
             this.label1.Size = new System.Drawing.Size(436, 62);
             this.label1.TabIndex = 1;
             this.label1.Text = "Stream Your Life";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // SignIn
             // 
@@ -158,7 +156,6 @@
             this.email_text.Name = "email_text";
             this.email_text.Size = new System.Drawing.Size(391, 68);
             this.email_text.TabIndex = 5;
-            this.email_text.TextChanged += new System.EventHandler(this.email_text_TextChanged);
             // 
             // password_text
             // 
@@ -171,7 +168,6 @@
             this.password_text.PasswordChar = '*';
             this.password_text.Size = new System.Drawing.Size(391, 68);
             this.password_text.TabIndex = 5;
-            this.password_text.TextChanged += new System.EventHandler(this.password_text_TextChanged);
             // 
             // label3
             // 
@@ -185,7 +181,6 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "new to MyStream? ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // signup
             // 
@@ -293,7 +288,6 @@
             this.textBox_password2.PasswordChar = '*';
             this.textBox_password2.Size = new System.Drawing.Size(341, 39);
             this.textBox_password2.TabIndex = 14;
-            this.textBox_password2.TextChanged += new System.EventHandler(this.textBox_password2_TextChanged);
             // 
             // textBox_password1
             // 
@@ -307,7 +301,6 @@
             this.textBox_password1.PasswordChar = '*';
             this.textBox_password1.Size = new System.Drawing.Size(341, 39);
             this.textBox_password1.TabIndex = 15;
-            this.textBox_password1.TextChanged += new System.EventHandler(this.textBox_password1_TextChanged);
             // 
             // textBox_email
             // 
@@ -320,7 +313,6 @@
             this.textBox_email.Name = "textBox_email";
             this.textBox_email.Size = new System.Drawing.Size(341, 39);
             this.textBox_email.TabIndex = 16;
-            this.textBox_email.TextChanged += new System.EventHandler(this.textBox_email_TextChanged);
             // 
             // textBox_username
             // 
@@ -333,7 +325,6 @@
             this.textBox_username.Name = "textBox_username";
             this.textBox_username.Size = new System.Drawing.Size(341, 39);
             this.textBox_username.TabIndex = 17;
-            this.textBox_username.TextChanged += new System.EventHandler(this.textBox_username_TextChanged);
             // 
             // label4
             // 
@@ -451,8 +442,8 @@
             this.BackgroundImage = global::MyStream.Properties.Resources.תמונה4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1909, 984);
-            this.Controls.Add(this.pictureBoxController1);
             this.Controls.Add(this.panelRegister);
+            this.Controls.Add(this.pictureBoxController1);
             this.Controls.Add(this.checkBoxShowPassword);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.password_text);

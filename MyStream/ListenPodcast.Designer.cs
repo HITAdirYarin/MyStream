@@ -43,6 +43,11 @@
             this.labelRelease = new System.Windows.Forms.Label();
             this.buttonBeckToMain = new System.Windows.Forms.Button();
             this.panel_display_Podcast = new System.Windows.Forms.Panel();
+            this.labelPodcastName5 = new System.Windows.Forms.Label();
+            this.labelPodcastName4 = new System.Windows.Forms.Label();
+            this.labelPodcastName3 = new System.Windows.Forms.Label();
+            this.labelPodcastName2 = new System.Windows.Forms.Label();
+            this.labelPodcastName1 = new System.Windows.Forms.Label();
             this.playerPodcast5 = new AxWMPLib.AxWindowsMediaPlayer();
             this.buttonpodcast5 = new System.Windows.Forms.Button();
             this.playerPodcast4 = new AxWMPLib.AxWindowsMediaPlayer();
@@ -85,6 +90,12 @@
             this.button_close_rate_win = new System.Windows.Forms.Button();
             this.label_rate = new System.Windows.Forms.Label();
             this.pb_star_1 = new System.Windows.Forms.PictureBox();
+            this.panelAddToFav = new System.Windows.Forms.Panel();
+            this.comboBoxPickPodToFav = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.buttonConfirmFav = new System.Windows.Forms.Button();
+            this.buttonClosePickFav = new System.Windows.Forms.Button();
+            this.labelAddToFav = new System.Windows.Forms.Label();
             this.panel_display_Podcast.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playerPodcast5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerPodcast4)).BeginInit();
@@ -99,6 +110,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_star_3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_star_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_star_1)).BeginInit();
+            this.panelAddToFav.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelheadline
@@ -272,6 +284,11 @@
             // panel_display_Podcast
             // 
             this.panel_display_Podcast.BackColor = System.Drawing.Color.Black;
+            this.panel_display_Podcast.Controls.Add(this.labelPodcastName5);
+            this.panel_display_Podcast.Controls.Add(this.labelPodcastName4);
+            this.panel_display_Podcast.Controls.Add(this.labelPodcastName3);
+            this.panel_display_Podcast.Controls.Add(this.labelPodcastName2);
+            this.panel_display_Podcast.Controls.Add(this.labelPodcastName1);
             this.panel_display_Podcast.Controls.Add(this.playerPodcast5);
             this.panel_display_Podcast.Controls.Add(this.buttonpodcast5);
             this.panel_display_Podcast.Controls.Add(this.playerPodcast4);
@@ -286,6 +303,56 @@
             this.panel_display_Podcast.Name = "panel_display_Podcast";
             this.panel_display_Podcast.Size = new System.Drawing.Size(1567, 1003);
             this.panel_display_Podcast.TabIndex = 46;
+            // 
+            // labelPodcastName5
+            // 
+            this.labelPodcastName5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.labelPodcastName5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelPodcastName5.Location = new System.Drawing.Point(360, 861);
+            this.labelPodcastName5.Name = "labelPodcastName5";
+            this.labelPodcastName5.Size = new System.Drawing.Size(428, 34);
+            this.labelPodcastName5.TabIndex = 18;
+            this.labelPodcastName5.Text = "What Do Girls Want From Men";
+            // 
+            // labelPodcastName4
+            // 
+            this.labelPodcastName4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.labelPodcastName4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelPodcastName4.Location = new System.Drawing.Point(360, 669);
+            this.labelPodcastName4.Name = "labelPodcastName4";
+            this.labelPodcastName4.Size = new System.Drawing.Size(392, 34);
+            this.labelPodcastName4.TabIndex = 17;
+            this.labelPodcastName4.Text = "Reason ipads With USB-C";
+            // 
+            // labelPodcastName3
+            // 
+            this.labelPodcastName3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.labelPodcastName3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelPodcastName3.Location = new System.Drawing.Point(360, 460);
+            this.labelPodcastName3.Name = "labelPodcastName3";
+            this.labelPodcastName3.Size = new System.Drawing.Size(339, 34);
+            this.labelPodcastName3.TabIndex = 16;
+            this.labelPodcastName3.Text = "Harsh Reality Of Dating";
+            // 
+            // labelPodcastName2
+            // 
+            this.labelPodcastName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.labelPodcastName2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelPodcastName2.Location = new System.Drawing.Point(360, 255);
+            this.labelPodcastName2.Name = "labelPodcastName2";
+            this.labelPodcastName2.Size = new System.Drawing.Size(303, 34);
+            this.labelPodcastName2.TabIndex = 15;
+            this.labelPodcastName2.Text = "Deep Web";
+            // 
+            // labelPodcastName1
+            // 
+            this.labelPodcastName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.labelPodcastName1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelPodcastName1.Location = new System.Drawing.Point(360, 80);
+            this.labelPodcastName1.Name = "labelPodcastName1";
+            this.labelPodcastName1.Size = new System.Drawing.Size(303, 34);
+            this.labelPodcastName1.TabIndex = 14;
+            this.labelPodcastName1.Text = "Android Over IPhone";
             // 
             // playerPodcast5
             // 
@@ -828,13 +895,95 @@
             this.pb_star_1.TabStop = false;
             this.pb_star_1.Click += new System.EventHandler(this.pb_star_1_Click_1);
             // 
+            // panelAddToFav
+            // 
+            this.panelAddToFav.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panelAddToFav.Controls.Add(this.comboBoxPickPodToFav);
+            this.panelAddToFav.Controls.Add(this.label6);
+            this.panelAddToFav.Controls.Add(this.buttonConfirmFav);
+            this.panelAddToFav.Controls.Add(this.buttonClosePickFav);
+            this.panelAddToFav.Controls.Add(this.labelAddToFav);
+            this.panelAddToFav.Location = new System.Drawing.Point(690, 238);
+            this.panelAddToFav.Name = "panelAddToFav";
+            this.panelAddToFav.Size = new System.Drawing.Size(674, 331);
+            this.panelAddToFav.TabIndex = 49;
+            this.panelAddToFav.Visible = false;
+            // 
+            // comboBoxPickPodToFav
+            // 
+            this.comboBoxPickPodToFav.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPickPodToFav.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.comboBoxPickPodToFav.FormattingEnabled = true;
+            this.comboBoxPickPodToFav.Items.AddRange(new object[] {
+            "Android Over Iphone",
+            "Deep Web",
+            "Harsh Reality Of Dating",
+            "Reason ipads With USB-C",
+            "What Do Girls Want From Men"});
+            this.comboBoxPickPodToFav.Location = new System.Drawing.Point(294, 113);
+            this.comboBoxPickPodToFav.Name = "comboBoxPickPodToFav";
+            this.comboBoxPickPodToFav.Size = new System.Drawing.Size(364, 37);
+            this.comboBoxPickPodToFav.TabIndex = 27;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label6.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label6.Location = new System.Drawing.Point(25, 104);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(280, 60);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Choose Podcast:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // buttonConfirmFav
+            // 
+            this.buttonConfirmFav.BackColor = System.Drawing.SystemColors.Highlight;
+            this.buttonConfirmFav.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonConfirmFav.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.buttonConfirmFav.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonConfirmFav.Location = new System.Drawing.Point(31, 252);
+            this.buttonConfirmFav.Name = "buttonConfirmFav";
+            this.buttonConfirmFav.Size = new System.Drawing.Size(174, 55);
+            this.buttonConfirmFav.TabIndex = 17;
+            this.buttonConfirmFav.Text = "Confirm";
+            this.buttonConfirmFav.UseVisualStyleBackColor = false;
+            this.buttonConfirmFav.Click += new System.EventHandler(this.buttonConfirmFav_Click);
+            // 
+            // buttonClosePickFav
+            // 
+            this.buttonClosePickFav.BackColor = System.Drawing.SystemColors.Highlight;
+            this.buttonClosePickFav.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClosePickFav.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.buttonClosePickFav.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonClosePickFav.Location = new System.Drawing.Point(481, 252);
+            this.buttonClosePickFav.Name = "buttonClosePickFav";
+            this.buttonClosePickFav.Size = new System.Drawing.Size(177, 55);
+            this.buttonClosePickFav.TabIndex = 16;
+            this.buttonClosePickFav.Text = "Close";
+            this.buttonClosePickFav.UseVisualStyleBackColor = false;
+            this.buttonClosePickFav.Click += new System.EventHandler(this.buttonClosePickFav_Click);
+            // 
+            // labelAddToFav
+            // 
+            this.labelAddToFav.BackColor = System.Drawing.Color.Transparent;
+            this.labelAddToFav.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.labelAddToFav.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.labelAddToFav.Location = new System.Drawing.Point(165, 0);
+            this.labelAddToFav.Name = "labelAddToFav";
+            this.labelAddToFav.Size = new System.Drawing.Size(374, 113);
+            this.labelAddToFav.TabIndex = 15;
+            this.labelAddToFav.Text = "Add to favorite";
+            this.labelAddToFav.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // ListenPodcast
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MyStream.Properties.Resources.תמונה5;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1909, 991);
+            this.ClientSize = new System.Drawing.Size(1902, 995);
             this.Controls.Add(this.labelheadline);
             this.Controls.Add(this.buttonAddToFav);
             this.Controls.Add(this.buttonClosePlayer);
@@ -850,6 +999,7 @@
             this.Controls.Add(this.buttonBeckToMain);
             this.Controls.Add(this.panelReviewList);
             this.Controls.Add(this.panel_rate_me);
+            this.Controls.Add(this.panelAddToFav);
             this.Controls.Add(this.panelLeaveReview);
             this.Controls.Add(this.panel_display_Podcast);
             this.DoubleBuffered = true;
@@ -871,6 +1021,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_star_3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_star_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_star_1)).EndInit();
+            this.panelAddToFav.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -934,5 +1085,16 @@
         private System.Windows.Forms.Button buttonpodcast3;
         private AxWMPLib.AxWindowsMediaPlayer playerPodcast2;
         private System.Windows.Forms.Button buttonpodcast2;
+        private System.Windows.Forms.Label labelPodcastName1;
+        private System.Windows.Forms.Label labelPodcastName5;
+        private System.Windows.Forms.Label labelPodcastName4;
+        private System.Windows.Forms.Label labelPodcastName3;
+        private System.Windows.Forms.Label labelPodcastName2;
+        private System.Windows.Forms.Panel panelAddToFav;
+        private System.Windows.Forms.ComboBox comboBoxPickPodToFav;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button buttonConfirmFav;
+        private System.Windows.Forms.Button buttonClosePickFav;
+        private System.Windows.Forms.Label labelAddToFav;
     }
 }

@@ -119,9 +119,9 @@ namespace MyStream
                 a.addReview(review);
             }
             ContentHendler.updatePod(a);
-        }
+        } // add the reviews for podcast content to a file 
 
-        public static bool addFav(string username,string content)
+        public static bool addFav(string username,string content) // add the favorite for user to a file 
         {
             foreach (KeyValuePair<int, User> user in User._users)
             {

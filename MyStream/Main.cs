@@ -21,32 +21,21 @@ namespace MyStream
     public partial class Main : Form
     {
         public string Username;
-        public Main()
+        public Main() // basic constructor
         {
             InitializeComponent();
            
         }
 
-        public Main(string username)
+        public Main(string username) // advanced constructor
         {
             this.WindowState = FormWindowState.Maximized; // set full screen
             Username = username;
             InitializeComponent();
             label_hello.Text = "Hello, " + Username;
-           // CefSettings settings = new CefSettings();
-           // Cef.Initialize(settings);
-
-
         }
 
-        private void Main_Load(object sender, EventArgs e)
-        {
-           
-            
-
-        }
-
-        private void buttonWatchContent_Click(object sender, EventArgs e)
+        private void buttonWatchContent_Click(object sender, EventArgs e) // open the options for watching content in main form
         {
             button_movie.Visible = true;
             button_series.Visible = true;
@@ -56,7 +45,7 @@ namespace MyStream
             buttonRandom.Visible = false;
         }
 
-        private void button_backToMain_Click(object sender, EventArgs e)
+        private void button_backToMain_Click(object sender, EventArgs e) // close the options for watching content in main form
         {
             button_movie.Visible = false;
             button_series.Visible = false;
@@ -66,12 +55,7 @@ namespace MyStream
             buttonRandom.Visible = true;
         }
 
-        private void label_hello_Click(object sender, EventArgs e)
-        {       
-
-        } // empty
-
-        private void buttonLogout_Click(object sender, EventArgs e)
+        private void buttonLogout_Click(object sender, EventArgs e) // returns the user back to login form
         {
             DialogResult a = MessageBox.Show("Are you sure you want to LogOut?" ,"LogOut", MessageBoxButtons.YesNo);
             if (a == DialogResult.Yes)
@@ -90,7 +74,7 @@ namespace MyStream
             }
         }
 
-        private void buttonSetting_Click(object sender, EventArgs e)
+        private void buttonSetting_Click(object sender, EventArgs e) // open the options to adjust setting
         {
             buttonWatchContent.Visible = false;
             buttonFavList.Visible = false;
@@ -104,7 +88,7 @@ namespace MyStream
             labelheadline.Text = "Settings";
         }
 
-        private void buttonBackToMainGenral_Click(object sender, EventArgs e)
+        private void buttonBackToMainGenral_Click(object sender, EventArgs e) // close the options to adjust setting
         {
             buttonBackToMainGenral.Visible = false;
             buttonChangePassword.Visible = false;
@@ -117,42 +101,40 @@ namespace MyStream
             buttonSetting.Visible = true;
             labelheadline.Text = "Main Menu";
         }
-
-        private void labelheadline_Click(object sender, EventArgs e)
-        {
-
-        } // empty
-        private void buttonChangePassword_Click(object sender, EventArgs e)
+        private void buttonChangePassword_Click(object sender, EventArgs e) // open the panel to change password
         {
             panelPassword.Visible = true;
             panelEmail.Visible = false;
             panelUsername.Visible = false;
             panelDeleteUser.Visible = false;
+            panelFavList.Visible = false;
         }
 
-        private void buttonChangeEmail_Click(object sender, EventArgs e)
+        private void buttonChangeEmail_Click(object sender, EventArgs e) // open the panel to change Email
         {
             panelEmail.Visible = true;
             panelPassword.Visible = false;
             panelUsername.Visible = false;
             panelDeleteUser.Visible = false;
+            panelFavList.Visible = false;
         }
 
-        private void buttonChangeUserName_Click(object sender, EventArgs e)
+        private void buttonChangeUserName_Click(object sender, EventArgs e) // open the panel to change username
         {
             panelUsername.Visible = true;
             panelPassword.Visible = false;
             panelEmail.Visible = false;
             panelDeleteUser.Visible = false;
+            panelFavList.Visible = false;
         }
 
-        private void button_backToMain_Click_1(object sender, EventArgs e)
+        private void button_backToMain_Click_1(object sender, EventArgs e) // close change password panel
         {
             panelPassword.Visible=false;
             
         }
 
-        private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)
+        private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e) //checks if the password are the same
         {
             if (checkBoxShowPassword.Checked)
             {
@@ -166,18 +148,13 @@ namespace MyStream
             }
         }
 
-        private void textBox_password2_TextChanged(object sender, EventArgs e)
-        {
-
-        } // empty
-
-        private void button_clear_Click(object sender, EventArgs e)
+        private void button_clear_Click(object sender, EventArgs e) // clear the text user wrote
         {
             textBox_password1.Text = string.Empty;
             textBox_password2.Text = string.Empty;
         }
 
-        private void button_Confirm_Click(object sender, EventArgs e)
+        private void button_Confirm_Click(object sender, EventArgs e) // confirm and save the password change
         {
             if (isPasswordsValid(textBox_password1.Text, textBox_password2.Text))
             {
@@ -191,7 +168,7 @@ namespace MyStream
             }
         }
 
-        private bool isPasswordsValid(string password1, string password2)
+        private bool isPasswordsValid(string password1, string password2) // check if the password is valid
         {
             if (password1.Length < 7 || password1 != password2)
             {
@@ -200,18 +177,18 @@ namespace MyStream
             return true;
         }
 
-        private void buttonBackToMainFromEmail_Click(object sender, EventArgs e)
+        private void buttonBackToMainFromEmail_Click(object sender, EventArgs e) // close change Email panel
         {
             panelEmail.Visible = false;
         }
 
-        private void buttonClearEmail_Click(object sender, EventArgs e)
+        private void buttonClearEmail_Click(object sender, EventArgs e) // clear the text user wrote
         {
             textBoxChangeEmail1.Text = string.Empty;
             textBoxChangeEmail2.Text = string.Empty;
         }
 
-        private void buttonConfirmEmail_Click(object sender, EventArgs e)
+        private void buttonConfirmEmail_Click(object sender, EventArgs e) // confirm and save the Email change
         {
            if(textBoxChangeEmail1.Text==textBoxChangeEmail2.Text)
             {
@@ -231,29 +208,14 @@ namespace MyStream
 
         }
 
-        private void textBoxChangeEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        } // empty
-
-        private void panelPodcast_Paint(object sender, PaintEventArgs e)
-        {
-
-        } // empty
-
-        private void buttonBack_Click(object sender, EventArgs e) // back from podcast
-        {
-            
-        }
-
-        private void button_series_Click(object sender, EventArgs e)
+        private void button_series_Click(object sender, EventArgs e) // get the user to watchseries form
         {
             WatchSeries series = new WatchSeries(Username);
             series.Show();
             this.Hide();
         }
 
-        private void button_movie_Click(object sender, EventArgs e)
+        private void button_movie_Click(object sender, EventArgs e) // get the user to watchmovie form
         {
             WatchMovies movies = new WatchMovies(Username);
             movies.Show();
@@ -261,50 +223,39 @@ namespace MyStream
            
         }
 
-        private void buttonPodcast_Click(object sender, EventArgs e)
+        private void buttonPodcast_Click(object sender, EventArgs e) // get the user to watchpodcast form
         {
             ListenPodcast podcast = new ListenPodcast(Username);
             podcast.Show();
             this.Hide();
         }
 
-        private void buttonBackFromMovies_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void buttonBackFromSeries_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void panelEmail_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void buttonBackFromFav_Click(object sender, EventArgs e)
+        private void buttonBackFromFav_Click(object sender, EventArgs e) // close change fav panel
         {
             panelFavList.Visible=false;
         }
 
-        private void panelFavList_Paint(object sender, PaintEventArgs e)
-        {
-
-        } // empty
-
-        private void buttonFavList_Click(object sender, EventArgs e)
+        private void buttonFavList_Click(object sender, EventArgs e) // open change fav panel , and load the listView with the liked content
         {
             panelFavList.Visible = true;
             panelEmail.Visible = false;
             panelPassword.Visible = false;
-            
+            panelDeleteUser.Visible = false;
+            panelUsername.Visible = false;
+            foreach (KeyValuePair<int, User> user in User._users)
+            {
+                if (user.Value._UserName == Username)
+                {
+                    foreach (string fav in user.Value._fav)
+                    {
+                        listViewFav.Items.Add(fav);
+                    }
+                    break;
+                }
+            }
         }
 
-        private void panelPassword_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void buttonConfirmUsername_Click(object sender, EventArgs e)
+        private void buttonConfirmUsername_Click(object sender, EventArgs e) // confirm change username 
         {
             if(textBoxNewUsername.Text == textBoxOldUsername.Text)
                 MessageBox.Show(" Old username is the same as the new one");
@@ -323,51 +274,24 @@ namespace MyStream
             }
         }
 
-        private void buttonClearUsername_Click(object sender, EventArgs e)
+        private void buttonClearUsername_Click(object sender, EventArgs e) // clear the text user wrote
         {
             textBoxNewUsername.Text = string.Empty;
             textBoxOldUsername.Text = string.Empty;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // open change username panel
         {
             panelUsername.Visible = false;
         }
 
-        private void textBoxOldUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxNewUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        
-        
-
-        private void buttonAddContent_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void buttonBackFromAddCont_Click(object sender, EventArgs e) //back from add content to main menu
-        {
-        }
-
-        
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonClearDelete_Click(object sender, EventArgs e)
+        private void buttonClearDelete_Click(object sender, EventArgs e) // clear the text user wrote
         {
             textBoxPassword_delete.Text = string.Empty;
             textBoxUsername_delete.Text = string.Empty;
         }
 
-        private void buttonConfirmDelete_Click(object sender, EventArgs e)
+        private void buttonConfirmDelete_Click(object sender, EventArgs e) // confirm delete user
         {
             bool verify = false;
             foreach(KeyValuePair<int, User> user in User._users)
@@ -402,17 +326,18 @@ namespace MyStream
             }
         }
 
-        private void buttonCloseDelete_Click(object sender, EventArgs e)
+        private void buttonCloseDelete_Click(object sender, EventArgs e) // close delete user panel
         {
             panelDeleteUser.Visible=false;
         }
 
-        private void buttonDeleteUser_Click(object sender, EventArgs e)
+        private void buttonDeleteUser_Click(object sender, EventArgs e) // open delete user panel
         {
             panelDeleteUser.Visible = true;
             panelPassword.Visible = false;
             panelEmail.Visible = false;
             panelUsername.Visible = false;
+            panelFavList.Visible = false;
         }
 
         private void buttonRandom_Click(object sender, EventArgs e) // activated the random steam 
@@ -444,6 +369,38 @@ namespace MyStream
             }
 
              
+        }
+
+        private void removeFav_Click(object sender, EventArgs e) // open a mini panel that allow the user to remove content frmfavorite list
+        {
+            foreach (KeyValuePair<int, User> user in User._users)
+            {
+                if (user.Value._UserName == Username)
+                {
+                    comboBoxPickContentToDel.Items.AddRange(user.Value._fav.ToArray());
+                    break;
+                }
+            }
+            labelAddToFav.Visible = true;
+            labelChooseContent.Visible = true;
+            comboBoxPickContentToDel.Visible = true;
+            buttonConfirmDel.Visible = true;
+            buttonCloseDelMiniPanel.Visible = true;
+        }
+
+        private void buttonCloseDelMiniPanel_Click(object sender, EventArgs e) // close the mini panel 
+        {
+            labelAddToFav.Visible = false;
+            labelChooseContent.Visible = false;
+            comboBoxPickContentToDel.Visible = false;
+            buttonConfirmDel.Visible = false;
+            buttonCloseDelMiniPanel.Visible = false;
+            comboBoxPickContentToDel.SelectedIndex = -1;
+        }
+
+        private void buttonConfirmDel_Click(object sender, EventArgs e) // confirm the delete of the content from favorite list
+        {
+            //write function that delete fav from user file here!
         }
     }
 }

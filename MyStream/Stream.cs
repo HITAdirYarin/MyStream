@@ -13,7 +13,7 @@ namespace MyStream
 
 
         //methods
-        public Stream() 
+        public Stream()  // basic constructor
         {
             _name = "no name";
             _date = "no date";

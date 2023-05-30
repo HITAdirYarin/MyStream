@@ -23,33 +23,33 @@ namespace MyStream
         static int countVikings = 0;
         private bool buttonClicked = false;
         public string _username { get; set; }
-        public WatchSeries()
+        public WatchSeries() // basic constructor
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized; // set full screen
         }
 
-        public WatchSeries(string username)
+        public WatchSeries(string username) // advanced constructor
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized; // set full screen
             _username = username;
         }
 
-        private void buttonBeckToMain_Click(object sender, EventArgs e)
+        private void buttonBeckToMain_Click(object sender, EventArgs e) // close this form - returns to main form
         {
             Main main = new Main(_username);
             this.Close();
             main.Show();
         }
-        private void buttonClosePlayer_Click(object sender, EventArgs e)
+        private void buttonClosePlayer_Click(object sender, EventArgs e) // close the active player at this time
         {
             player_fast.Visible = false;
             player_fast.close();
             panel_display_Series.Visible = true;
         }
 
-        private void buttonRateMe_Click(object sender, EventArgs e)
+        private void buttonRateMe_Click(object sender, EventArgs e) //open the rate  panel
         {
             if (player_fast.Visible)
             {
@@ -59,13 +59,14 @@ namespace MyStream
             {
                 panelLeaveReview.Visible = false;
                 panelReviewList.Visible = false;
+                panelAddToFav.Visible = false;
                 player_fast.SendToBack();
                 panel_display_Series.SendToBack();
                 panel_rate_me.Visible = true;
             }
         }
 
-        private void pb_star_1_Click(object sender, EventArgs e)
+        private void pb_star_1_Click(object sender, EventArgs e) // set 1 star in the rating panel
         {
             pb_star_1.Image = Resources.yellow_star;
             pb_star_2.Image = Resources.grey_star;
@@ -76,7 +77,7 @@ namespace MyStream
             labelrating1.Text = "/5";
         }
 
-        private void pb_star_2_Click(object sender, EventArgs e)
+        private void pb_star_2_Click(object sender, EventArgs e) // set 2 star in the rating panel
         {
             pb_star_1.Image = Resources.yellow_star;
             pb_star_2.Image = Resources.yellow_star;
@@ -87,7 +88,7 @@ namespace MyStream
             labelrating1.Text = "/5";
         }
 
-        private void pb_star_3_Click(object sender, EventArgs e)
+        private void pb_star_3_Click(object sender, EventArgs e) // set 3 star in the rating panel
         {
             pb_star_1.Image = Resources.yellow_star;
             pb_star_2.Image = Resources.yellow_star;
@@ -98,7 +99,7 @@ namespace MyStream
             labelrating1.Text = "/5";
         }
 
-        private void pb_star_4_Click(object sender, EventArgs e)
+        private void pb_star_4_Click(object sender, EventArgs e) // set 4 star in the rating panel
         {
             pb_star_1.Image = Resources.yellow_star;
             pb_star_2.Image = Resources.yellow_star;
@@ -109,7 +110,7 @@ namespace MyStream
             labelrating1.Text = "/5";
         }
 
-        private void pb_star_5_Click(object sender, EventArgs e)
+        private void pb_star_5_Click(object sender, EventArgs e) // set 5 star in the rating panel
         {
             pb_star_1.Image = Resources.yellow_star;
             pb_star_2.Image = Resources.yellow_star;
@@ -120,7 +121,7 @@ namespace MyStream
             labelrating1.Text = "/5";
         }
 
-        private void button_close_rate_win_Click(object sender, EventArgs e)
+        private void button_close_rate_win_Click(object sender, EventArgs e) // close the rate panel
         {
             panel_rate_me.Visible = false;
             pb_star_1.Image = Resources.grey_star;
@@ -132,7 +133,7 @@ namespace MyStream
             comboBoxChooseSeries.SelectedIndex = -1;
         }
 
-        private void button_confirm_rate_Click(object sender, EventArgs e)
+        private void button_confirm_rate_Click(object sender, EventArgs e) // confirm the rate add update the avg for this content
         {
             if (comboBoxChooseSeries.SelectedIndex == -1)
             {
@@ -182,7 +183,7 @@ namespace MyStream
             }
         }
 
-        private void buttonViewReviews_Click(object sender, EventArgs e)
+        private void buttonViewReviews_Click(object sender, EventArgs e) // open the reviews panel
         {
             if (player_fast.Visible)
             {
@@ -193,12 +194,13 @@ namespace MyStream
                 panelReviewList.Visible = true;
                 panelLeaveReview.Visible = false;
                 panel_rate_me.Visible = false;
+                panelAddToFav.Visible = false;
                 player_fast.SendToBack();
                 panel_display_Series.SendToBack();
             } 
         }
 
-        private void button_leave_review_Click(object sender, EventArgs e)
+        private void button_leave_review_Click(object sender, EventArgs e) 
         {
             panel_rate_me.Visible = false;
             panelLeaveReview.Visible = true;
@@ -209,9 +211,9 @@ namespace MyStream
             pb_star_5.Image = Resources.grey_star;
             label_rating_input.Text = string.Empty;
             comboBoxChooseSeries.SelectedIndex = -1;
-        }
+        } // transfer the user from rate panel to the leave review panel
 
-        private void buttonRateMovieFromReview_Click(object sender, EventArgs e)
+        private void buttonRateMovieFromReview_Click(object sender, EventArgs e) // transfer the user from leave review panel to the rate panel
         {
             panelLeaveReview.Visible = false;
             panel_rate_me.Visible = true;
@@ -219,14 +221,14 @@ namespace MyStream
             textBoxReview.Text = string.Empty;
         }
 
-        private void buttonCloseReview_Click(object sender, EventArgs e)
+        private void buttonCloseReview_Click(object sender, EventArgs e) // close the leave review panel
         {
             panelLeaveReview.Visible = false;
             comboBoxSeriesToReview.SelectedIndex = -1;
             textBoxReview.Text = string.Empty;
         }
 
-        private void buttonLeaveReview_Click(object sender, EventArgs e)
+        private void buttonLeaveReview_Click(object sender, EventArgs e) // open the leave review panel
         {
             if (player_fast.Visible)
             {
@@ -236,13 +238,14 @@ namespace MyStream
             {
                 panelReviewList.Visible = false;
                 panel_rate_me.Visible = false;
+                panelAddToFav.Visible = false;
                 player_fast.SendToBack();
                 panel_display_Series.SendToBack();
                 panelLeaveReview.Visible = true;
             }
         }
 
-        private void buttonConfirmReview_Click(object sender, EventArgs e)
+        private void buttonConfirmReview_Click(object sender, EventArgs e) // confirm the review that the user enter
         {
             if (comboBoxSeriesToReview.SelectedIndex == -1)
             {
@@ -263,13 +266,13 @@ namespace MyStream
             }
         }
 
-        private void buttonCloseReviewList_Click(object sender, EventArgs e)
+        private void buttonCloseReviewList_Click(object sender, EventArgs e) // close the review list panel
         {
             panelReviewList.Visible = false;
             listViewReview.Clear();
             comboBoxChooseSeriesToReviewList.SelectedIndex = -1;
         }
-        private void buttonLeaveReviewFromList_Click(object sender, EventArgs e)
+        private void buttonLeaveReviewFromList_Click(object sender, EventArgs e) // transfer the user from view review panel to the leave review panel
         {
             panelReviewList.Visible = false;
             panelReviewList.SendToBack();
@@ -278,7 +281,7 @@ namespace MyStream
             comboBoxChooseSeriesToReviewList.SelectedIndex = -1;
         }
 
-        private void comboBoxChooseSeriesToReviewList_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxChooseSeriesToReviewList_SelectedIndexChanged(object sender, EventArgs e) // ensure that the view list will generate only once
         {
             count++;
             if (count > 1)
@@ -315,7 +318,7 @@ namespace MyStream
             else { panelBrooklyn.Visible = false; setInfo(null); }
         }
 
-        private void buttonAvatar_Click(object sender, EventArgs e)
+        private void buttonAvatar_Click(object sender, EventArgs e) //avatar open panel activator
         {
             countAvatar++;
             if (countAvatar % 2 == 1) 
@@ -340,7 +343,7 @@ namespace MyStream
             else { panelAvatar.Visible = false; setInfo(null); }
         }
 
-        private void buttonBridgerton_Click(object sender, EventArgs e)
+        private void buttonBridgerton_Click(object sender, EventArgs e) //bridgerton open panel activator
         {
             countBridgerton++;
             if (countBridgerton % 2 == 1) 
@@ -365,7 +368,7 @@ namespace MyStream
             else { panelBridgerton.Visible = false; setInfo(null); }
         }
 
-        private void buttonWalkingDead_Click(object sender, EventArgs e)
+        private void buttonWalkingDead_Click(object sender, EventArgs e) //thewalkingdead open panel activator
         {
             
             countWalkingDead++;
@@ -391,7 +394,7 @@ namespace MyStream
             else { panelWalkingDead.Visible=false; setInfo(null); }
         }
 
-        private void buttonVikings_Click(object sender, EventArgs e)
+        private void buttonVikings_Click(object sender, EventArgs e) //vikings open panel activator
         {
             
             countVikings++;
@@ -417,7 +420,7 @@ namespace MyStream
             else { panelVikings.Visible = false; setInfo(null); }
         }
 
-        private void buttonViewReview_Click(object sender, EventArgs e) 
+        private void buttonViewReview_Click(object sender, EventArgs e) // open the list view and show all the review for this content
         {
             if(!buttonClicked)
             {
@@ -458,11 +461,6 @@ namespace MyStream
             {
                 MessageBox.Show("There is an error with playing the episode");
             }
-        }
-
-        private void labelName_Click(object sender, EventArgs e)
-        {
-          
         }
         private void button8_Click(object sender, EventArgs e)
         {
@@ -516,37 +514,37 @@ namespace MyStream
             play_Episode(Brooklyn_99, Brooklyn_99._episodes[4]);
         }
 
-        private void buttonEP1Avatar_Click(object sender, EventArgs e)
+        private void buttonEP1Avatar_Click(object sender, EventArgs e) //episode 1 - avatar
         {
             Series Avatar = Content._contents["Avatar"] as Series;
             play_Episode(Avatar, Avatar._episodes[0]);
         }
 
-        private void buttonEP2Avatar_Click(object sender, EventArgs e)
+        private void buttonEP2Avatar_Click(object sender, EventArgs e) //episode 2 - avatar
         {
             Series Avatar = Content._contents["Avatar"] as Series;
             play_Episode(Avatar, Avatar._episodes[1]);
         }
 
-        private void buttonEP3Avatar_Click(object sender, EventArgs e)
+        private void buttonEP3Avatar_Click(object sender, EventArgs e) //episode 3 - avatar
         {
             Series Avatar = Content._contents["Avatar"] as Series;
             play_Episode(Avatar, Avatar._episodes[2]);
         }
 
-        private void buttonBridgertonEp1_Click(object sender, EventArgs e)
+        private void buttonBridgertonEp1_Click(object sender, EventArgs e) //episode 1 - bridgerton
         {
             Series Bridgerton = Content._contents["Bridgerton"] as Series;
             play_Episode(Bridgerton, Bridgerton._episodes[0]);
         }
 
-        private void buttonBridgertonEp2_Click(object sender, EventArgs e)
+        private void buttonBridgertonEp2_Click(object sender, EventArgs e) //episode 2 - bridgerton
         {
             Series Bridgerton = Content._contents["Bridgerton"] as Series;
             play_Episode(Bridgerton, Bridgerton._episodes[1]);
         }
 
-        private void buttonBridgertonEp3_Click(object sender, EventArgs e)
+        private void buttonBridgertonEp3_Click(object sender, EventArgs e) //episode 3 - bridgerton
         {
             Series Bridgerton = Content._contents["Bridgerton"] as Series;
             play_Episode(Bridgerton, Bridgerton._episodes[2]);
@@ -570,29 +568,71 @@ namespace MyStream
             play_Episode(The_Walking_Dead, The_Walking_Dead._episodes[2]);
         }
 
-        private void buttonEP1Vikings_Click(object sender, EventArgs e)
+        private void buttonEP1Vikings_Click(object sender, EventArgs e) //episode 1 - vikings
         {
             Series Vikings = Content._contents["Vikings"] as Series;
             play_Episode(Vikings, Vikings._episodes[0]);
         }
 
-        private void buttonEP2Vikings_Click(object sender, EventArgs e)
+        private void buttonEP2Vikings_Click(object sender, EventArgs e) //episode 2 - vikings
         {
             Series Vikings = Content._contents["Vikings"] as Series;
             play_Episode(Vikings, Vikings._episodes[1]);
         }
 
-        private void buttonEP3Vikings_Click(object sender, EventArgs e)
+        private void buttonEP3Vikings_Click(object sender, EventArgs e) //episode 3 - vikings
         {
             Series Vikings = Content._contents["Vikings"] as Series;
             play_Episode(Vikings, Vikings._episodes[2]);
         }
 
-        private void buttonEP4Vikings_Click(object sender, EventArgs e)
+        private void buttonEP4Vikings_Click(object sender, EventArgs e) //episode 4 - vikings
         {
             Series Vikings = Content._contents["Vikings"] as Series;
             play_Episode(Vikings, Vikings._episodes[3]);
         }
+
+        private void buttonAddToFav_Click(object sender, EventArgs e) // open the add to favorite panel
+        {
+            if (player_fast.Visible)
+            {
+                MessageBox.Show("please close the podcast first");
+            }
+            else
+            {
+                panelReviewList.Visible = false;
+                panelLeaveReview.Visible = false;
+                panel_rate_me.Visible = false;
+                panelAddToFav.Visible = true;
+                panel_display_Series.SendToBack();
+            }
+        }
+
+        private void buttonClosePickFav_Click(object sender, EventArgs e) // close favorite list panel
+        {
+            panelAddToFav.Visible = false;
+            comboBoxPickSeriesToFav.SelectedIndex = -1;
+        }
+
+        private void buttonConfirmFav_Click(object sender, EventArgs e) // adding this content into the favorite list
+        {
+            if (comboBoxPickSeriesToFav.SelectedIndex == -1)
+            {
+                MessageBox.Show("please choose a movie to add first");
+            }
+
+
+            else
+            {
+                string contentName = comboBoxPickSeriesToFav.Text;
+                if (ContentController.addFav(_username, contentName))
+                {
+                    MessageBox.Show("The content has been added to your favorites list");
+                }
+                else { MessageBox.Show("Theres been a problem adding this content into your favorite list"); }
+                panelAddToFav.Visible = false;
+                comboBoxPickSeriesToFav.SelectedIndex = -1;
+            }
+        }
     }
-    
 }
