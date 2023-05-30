@@ -149,7 +149,7 @@ namespace MyStream
                         {
                             ContentController.addRate(rate, podcast_name);
                             user.Value._rates.Add(podcast_name);
-                            UserHendler.updateUser(user.Value._userId, user.Value);
+                            UserHendler.updateUser( user.Value);
                         }
                         break;
                     }
@@ -530,6 +530,7 @@ namespace MyStream
             pb_star_5.Image = Resources.grey_star;
             label_rating_input.Text = "4";
             labelrating1.Text = "/5";
+
         }
 
         private void pb_star_5_Click_1(object sender, EventArgs e)// set 5 star in the rating panel
@@ -556,7 +557,6 @@ namespace MyStream
                 {
                     MessageBox.Show("The content has been added to your favorites list");
                 }
-                else { MessageBox.Show("Theres been a problem adding this content into your favorite list"); }
                 panelAddToFav.Visible = false;
                 comboBoxPickPodToFav.SelectedIndex = -1;
             }

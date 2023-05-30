@@ -66,7 +66,7 @@ namespace MyStream
                     user.Value._Password = password;
                     userId = user.Value._userId;
                     User newUser = user.Value;
-                    if (UserHendler.updateUser(userId, newUser))
+                    if (UserHendler.updateUser( newUser))
                     {
                         return true;
                     }
@@ -78,6 +78,9 @@ namespace MyStream
         {
             string temp = email;
             if(temp.Length>=email.Length && temp.Substring(temp.Length-10) == "@gmail.com"){
+                if (temp.StartsWith("@gmail.com")){
+                    return false;
+                }
                 return true;
             }
             else
@@ -108,7 +111,7 @@ namespace MyStream
                     user.Value._Email = email;
                    userId=user.Value._userId;
                     User newUser = user.Value;
-                    if (UserHendler.updateUser( userId,newUser))
+                    if (UserHendler.updateUser(newUser))
                     {
                         return true;  
                     }                 
@@ -140,7 +143,7 @@ namespace MyStream
                     user.Value._UserName = newUserName;
                     userId = user.Value._userId;
                     User newUser = user.Value;
-                    if (UserHendler.updateUser(userId, newUser))
+                    if (UserHendler.updateUser( newUser))
                     {
                         return true;
                     }

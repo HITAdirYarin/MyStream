@@ -136,11 +136,23 @@ namespace MyStream
                         }
                     }
                     user.Value._fav.Add(content);
-                    UserHendler.updateUser(user.Value._userId,user.Value);
+                    UserHendler.updateUser(user.Value);
                     return true;
                 }
             }
             return false;
+        }
+        public static void removeFav(string username,string content)
+        {
+            foreach (KeyValuePair<int, User> user in User._users)
+            {
+                if (user.Value._UserName == username)
+                {
+                    user.Value._fav.Remove(content);
+                    UserHendler.updateUser(user.Value);
+                    break;
+                }
+            }
         }
     }
 }

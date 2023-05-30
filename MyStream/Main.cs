@@ -21,6 +21,7 @@ namespace MyStream
     public partial class Main : Form
     {
         public string Username;
+        public static int count = 0;
         public Main() // basic constructor
         {
             InitializeComponent();
@@ -232,25 +233,32 @@ namespace MyStream
 
         private void buttonBackFromFav_Click(object sender, EventArgs e) // close change fav panel
         {
+            count = 0;
             panelFavList.Visible=false;
+            listViewFav.Clear();
         }
 
         private void buttonFavList_Click(object sender, EventArgs e) // open change fav panel , and load the listView with the liked content
         {
-            panelFavList.Visible = true;
-            panelEmail.Visible = false;
-            panelPassword.Visible = false;
-            panelDeleteUser.Visible = false;
-            panelUsername.Visible = false;
-            foreach (KeyValuePair<int, User> user in User._users)
+            count++;
+            if (count == 1)
             {
-                if (user.Value._UserName == Username)
+                panelFavList.Visible = true;
+                panelEmail.Visible = false;
+                panelPassword.Visible = false;
+                panelDeleteUser.Visible = false;
+                panelUsername.Visible = false;
+
+                foreach (KeyValuePair<int, User> user in User._users)
                 {
-                    foreach (string fav in user.Value._fav)
+                    if (user.Value._UserName == Username)
                     {
-                        listViewFav.Items.Add(fav);
+                        foreach (string fav in user.Value._fav)
+                        {
+                            listViewFav.Items.Add(fav);
+                        }
+                        break;
                     }
-                    break;
                 }
             }
         }
@@ -400,7 +408,13 @@ namespace MyStream
 
         private void buttonConfirmDel_Click(object sender, EventArgs e) // confirm the delete of the content from favorite list
         {
-            //write function that delete fav from user file here!
+            ContentController.removeFav(Username, comboBoxPickContentToDel.Text);
+            MessageBox.Show("The content has been deleted from your list");
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
