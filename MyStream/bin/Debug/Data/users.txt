@@ -1,5 +1,2 @@
-{"_userId":4,"_UserName":"adirkandabi","_Email":"adir@gmail.com","_Password":"1234567","_fav":["Fast and Furious 9","Avatar"],"_rates":["Android Over Iphone","Deep Web"]}
-{"_userId":5,"_UserName":"tal golan","_Email":"tal4444@gmail.com","_Password":"1234567","_fav":[],"_rates":["Android Over Iphone","Harsh Reality Of Dating","Deep Web"]}
-{"_userId":6,"_UserName":"kandabi321","_Email":"@gmail.com","_Password":"1234567","_fav":[],"_rates":[]}
-{"_userId":7,"_UserName":"ilanakandabi","_Email":"a@gmail.com","_Password":"12345678","_fav":[],"_rates":[]}
-{"_userId":8,"_UserName":"ozeriyarin","_Email":"ozeriyarin@gmail.com","_Password":"1234567","_fav":[],"_rates":[]}
+{"_userId":1,"_UserName":"kandabiadir","_Email":"adir@gmail.com","_Password":"1234567","_fav":["300"],"_rates":["Fast and Furious 9","300"]}
+{"_userId":2,"_UserName":"kandabi","_Email":"adir123@gmail.com","_Password":"1234567","_fav":[],"_rates":[]}

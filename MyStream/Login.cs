@@ -82,7 +82,7 @@ namespace MyStream
             {
                 if (isUserExist(textBox_email.Text, textBox_username.Text))
                 {
-                    MessageBox.Show("Email or password are already taken, please enter new one.");
+                    MessageBox.Show("Email, username or password are already taken, please enter new one.");
                 }
                 else
                 {

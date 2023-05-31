@@ -251,7 +251,7 @@ namespace MyStream
             {
                 MessageBox.Show("please choose a series to review first");
             }
-            if (String.IsNullOrWhiteSpace(textBoxReview.Text))
+            else if (String.IsNullOrWhiteSpace(textBoxReview.Text))
             {
                 MessageBox.Show("You cannot leave an empty review !");
             }
@@ -596,7 +596,7 @@ namespace MyStream
         {
             if (player_fast.Visible)
             {
-                MessageBox.Show("please close the podcast first");
+                MessageBox.Show("please close the episode first");
             }
             else
             {

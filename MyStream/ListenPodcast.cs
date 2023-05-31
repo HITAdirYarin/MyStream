@@ -194,7 +194,7 @@ namespace MyStream
             {
                 MessageBox.Show("please choose a podcast to review first");
             }
-            if (String.IsNullOrWhiteSpace(textBoxReview.Text))
+           else if (String.IsNullOrWhiteSpace(textBoxReview.Text))
             {
                 MessageBox.Show("You cannot leave an empty review !");
             }

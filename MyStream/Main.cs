@@ -193,7 +193,11 @@ namespace MyStream
         {
            if(textBoxChangeEmail1.Text==textBoxChangeEmail2.Text)
             {
-                if (UserController.ChangeEmail(textBoxChangeEmail1.Text, Username))
+                if(isEmailTaken(textBoxChangeEmail1.Text))
+                {
+                    MessageBox.Show("New email is already taken");
+                }
+               else if (UserController.ChangeEmail(textBoxChangeEmail1.Text, Username))
                 {
 
                     MessageBox.Show("Email changed succsfuly");
@@ -208,8 +212,22 @@ namespace MyStream
                 MessageBox.Show("Emails are not the same!");
 
         }
+        private bool isEmailTaken(string email)
+        {
+            foreach (KeyValuePair<int, User> item in User._users)
+            {
+                if (item.Value._Email == email)
+                {
+                    return true;
+                }
 
-        private void button_series_Click(object sender, EventArgs e) // get the user to watchseries form
+            }
+            return false;
+        }
+
+    
+
+    private void button_series_Click(object sender, EventArgs e) // get the user to watchseries form
         {
             WatchSeries series = new WatchSeries(Username);
             series.Show();
@@ -265,11 +283,19 @@ namespace MyStream
 
         private void buttonConfirmUsername_Click(object sender, EventArgs e) // confirm change username 
         {
-            if(textBoxNewUsername.Text == textBoxOldUsername.Text)
+            if (textBoxOldUsername.Text != Username)
+            {
+                MessageBox.Show(textBoxOldUsername.Text+ " is not your old Username!");
+            }
+           else if(textBoxNewUsername.Text == textBoxOldUsername.Text)
                 MessageBox.Show(" Old username is the same as the new one");
             else 
             {
-                if (UserController.ChangeUserName(textBoxNewUsername.Text, textBoxOldUsername.Text))
+                if (isUsernameTaken(textBoxNewUsername.Text))
+                {
+                    MessageBox.Show("Username is alreay taken !");
+                }
+                else if (UserController.ChangeUserName(textBoxNewUsername.Text, textBoxOldUsername.Text))
                 {
 
                     MessageBox.Show("Username changed succssfuly");
@@ -281,8 +307,22 @@ namespace MyStream
                 }
             }
         }
+        public bool isUsernameTaken(string username)
+        {
+            foreach (KeyValuePair<int, User> item in User._users)
+            {
+                if ( item.Value._UserName == username)
+                {
+                    return true;
+                }
 
-        private void buttonClearUsername_Click(object sender, EventArgs e) // clear the text user wrote
+            }
+            return false;
+        }
+
+    
+
+    private void buttonClearUsername_Click(object sender, EventArgs e) // clear the text user wrote
         {
             textBoxNewUsername.Text = string.Empty;
             textBoxOldUsername.Text = string.Empty;
