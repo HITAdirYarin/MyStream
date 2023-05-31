@@ -1,9 +1,9 @@
-{"_path":"Fast and Furious 9.mp4","_director":"Rob Cohen","_name":"Fast and Furious 9","_date":"25/06/2021","_genre":"Action","_type":"movie","_rateAvg":3.6666666666666665,"_rateCount":3,"_review":["   ","wow"]}
-{"_path":"Ted.mp4","_director":"Seth MacFarlane","_name":"Ted","_date":"09/08/2012","_genre":"Comedy","_type":"movie","_rateAvg":4,"_rateCount":2,"_review":["wow"]}
-{"_path":"300.mp4","_director":"Zack Snyder","_name":"300","_date":"09/03/2007","_genre":"Action","_type":"movie","_rateAvg":2,"_rateCount":1,"_review":["no reviews"]}
-{"_path":"Frozen.mp4","_director":"Jennifer Lee","_name":"Frozen","_date":"28/11/2013","_genre":"Family","_type":"movie","_rateAvg":5,"_rateCount":1,"_review":["no reviews"]}
-{"_path":"Friends with Benefits.mp4","_director":"Will Gluck","_name":"Friends with Benefits","_date":"10/06/2012","_genre":"Comedy","_type":"movie","_rateAvg":5,"_rateCount":1,"_review":["no reviews"]}
-{"_name":"Titanic","_path":"Titanic.mp4","_director":"James Cameron","_date":"09/01/1997","_genre":"Drama","_type":"movie","_rateAvg":0,"_rateCount":0,"_review":["no reviews"]}
-{"_path":"Shrek.mp4","_director":"Vicky Jenson","_name":"Shrek","_date":"09/11/2012","_genre":"Family","_type":"movie","_rateAvg":3,"_rateCount":2,"_review":["no reviews"]}
-{"_path":"21 Jump Street.mp4","_director":"Phil Lord","_name":"21 Jump street","_date":"19/03/2010","_genre":"Comedy","_type":"movie","_rateAvg":2,"_rateCount":1,"_review":["no reviews"]}
-{"_path":"The Godfather.mp4","_director":"Francis Ford Coppola","_name":"The Godfather","_date":"14/02/2000","_genre":"Action","_type":"movie","_rateAvg":3,"_rateCount":2,"_review":["no reviews"]}
+{"_path":"Fast and Furious 9.mp4","_director":"Rob Cohen","_name":"Fast and Furious 9","_date":"25/06/2021","_genre":"Action","_type":"movie","_rateAvg":3,"_rateCount":2,"_review":["no reviews"]}
+{"_path":"Ted.mp4","_director":"Seth MacFarlane","_name":"Ted","_date":"09/08/2012","_genre":"Comedy","_type":"movie","_rateAvg":0,"_rateCount":0,"_review":["no reviews"]}
+{"_path":"300.mp4","_director":"Zack Snyder","_name":"300","_date":"09/03/2007","_genre":"Action","_type":"movie","_rateAvg":2.5,"_rateCount":2,"_review":["no reviews"]}
+{"_path":"Frozen.mp4","_director":"Jennifer Lee","_name":"Frozen","_date":"28/11/2013","_genre":"Family","_type":"movie","_rateAvg":0,"_rateCount":0,"_review":["no reviews"]}
+{"_path":"Friends with Benefits.mp4","_director":"Will Gluck","_name":"Friends with Benefits","_date":"10/06/2012","_genre":"Comedy","_type":"movie","_rateAvg":0,"_rateCount":0,"_review":["no reviews"]}
+{"_path":"Titanic.mp4","_director":"James Cameron","_name":"Titanic","_date":"09/01/1997","_genre":"Drama","_type":"movie","_rateAvg":0,"_rateCount":0,"_review":["no reviews"]}
+{"_path":"Shrek.mp4","_director":"Vicky Jenson","_name":"Shrek","_date":"09/11/2012","_genre":"Family","_type":"movie","_rateAvg":0,"_rateCount":0,"_review":["no reviews"]}
+{"_path":"Jump Street.mp4","_director":"Phil Lord","_name":"21 Jump street","_date":"19/03/2010","_genre":"Comedy","_type":"movie","_rateAvg":0,"_rateCount":0,"_review":["no reviews"]}
+{"_path":"The Godfather.mp4","_director":"Francis Ford Coppola","_name":"The Godfather","_date":"14/02/2000","_genre":"Action","_type":"movie","_rateAvg":0,"_rateCount":0,"_review":["no reviews"]}
