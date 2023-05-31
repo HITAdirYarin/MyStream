@@ -3,3 +3,4 @@
 {"_userId":6,"_UserName":"kandabi321","_Email":"@gmail.com","_Password":"1234567","_fav":[],"_rates":[]}
 {"_userId":7,"_UserName":"ilanakandabi","_Email":"a@gmail.com","_Password":"12345678","_fav":[],"_rates":[]}
 {"_userId":8,"_UserName":"ozeriyarin","_Email":"ozeriyarin@gmail.com","_Password":"1234567","_fav":[],"_rates":[]}
+{"_userId":9,"_UserName":"yaniv1234","_Email":"ozeriyaniv@gmail.com","_Password":"yo210771","_fav":["21 Jump street","Avatar"],"_rates":["Avatar"]}

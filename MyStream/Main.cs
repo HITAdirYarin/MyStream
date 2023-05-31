@@ -38,6 +38,9 @@ namespace MyStream
 
         private void buttonWatchContent_Click(object sender, EventArgs e) // open the options for watching content in main form
         {
+            count = 0;
+            panelFavList.Visible = false;
+            listViewFav.Clear();
             button_movie.Visible = true;
             button_series.Visible = true;
             buttonPodcast.Visible = true;
@@ -350,6 +353,9 @@ namespace MyStream
 
         private void buttonRandom_Click(object sender, EventArgs e) // activated the random steam 
         {
+            count = 0;
+            panelFavList.Visible = false;
+            listViewFav.Clear();
             string[] content = new string[14];
             int i = 0;
             foreach (KeyValuePair<string, Content> item in Content._contents)
