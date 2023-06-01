@@ -59,6 +59,7 @@
             this.label = new System.Windows.Forms.Label();
             this.labelDragMe = new System.Windows.Forms.Label();
             this.pictureBoxController1 = new MyStream.PictureBoxController(this.components);
+            this.label5 = new System.Windows.Forms.Label();
             this.panelRegister.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxController1)).BeginInit();
             this.SuspendLayout();
@@ -450,6 +451,18 @@
             this.pictureBoxController1.MouseLeave += new System.EventHandler(this.pictureBoxController1_MouseLeave);
             this.pictureBoxController1.MouseHover += new System.EventHandler(this.pictureBoxController1_MouseHover);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label5.Location = new System.Drawing.Point(1311, 866);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(698, 44);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Did you notice that you can drag the robot?";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -464,6 +477,7 @@
             this.Controls.Add(this.checkBoxShowPassword);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.password_text);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.email_text);
             this.Controls.Add(this.email);
             this.Controls.Add(this.label3);
@@ -521,6 +535,7 @@
         private System.Windows.Forms.Label label;
         private PictureBoxController pictureBoxController1;
         private System.Windows.Forms.Label labelDragMe;
+        private System.Windows.Forms.Label label5;
     }
 }
 
