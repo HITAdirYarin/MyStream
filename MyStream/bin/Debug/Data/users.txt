@@ -1,2 +1,3 @@
 {"_userId":1,"_UserName":"kandabiadir","_Email":"adir@gmail.com","_Password":"1234567","_fav":["300"],"_rates":["Fast and Furious 9","300"]}
 {"_userId":2,"_UserName":"kandabi","_Email":"adir123@gmail.com","_Password":"1234567","_fav":[],"_rates":[]}
+{"_userId":3,"_UserName":"ozeriyarin","_Email":"ozeriyarin@gmail.com","_Password":"1234567","_fav":[],"_rates":[]}

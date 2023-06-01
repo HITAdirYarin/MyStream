@@ -38,6 +38,9 @@ namespace MyStream
 
         private void buttonWatchContent_Click(object sender, EventArgs e) // open the options for watching content in main form
         {
+            count = 0;
+            panelFavList.Visible = false;
+            listViewFav.Clear();
             button_movie.Visible = true;
             button_series.Visible = true;
             buttonPodcast.Visible = true;
@@ -77,6 +80,9 @@ namespace MyStream
 
         private void buttonSetting_Click(object sender, EventArgs e) // open the options to adjust setting
         {
+            count = 0;
+            panelFavList.Visible = false;
+            listViewFav.Clear();
             buttonWatchContent.Visible = false;
             buttonFavList.Visible = false;
             buttonRandom.Visible = false;
@@ -132,7 +138,9 @@ namespace MyStream
         private void button_backToMain_Click_1(object sender, EventArgs e) // close change password panel
         {
             panelPassword.Visible=false;
-            
+            textBox_password1.Text = string.Empty;
+            textBox_password2.Text = string.Empty;
+
         }
 
         private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e) //checks if the password are the same
@@ -162,6 +170,8 @@ namespace MyStream
                 UserController.ChangePassword(textBox_password1.Text ,Username);
                 MessageBox.Show("Password changed succsfuly");
                 panelPassword.Visible = false;
+                textBox_password1.Text = string.Empty;
+                textBox_password2.Text = string.Empty;
             }
             else
             {
@@ -181,6 +191,8 @@ namespace MyStream
         private void buttonBackToMainFromEmail_Click(object sender, EventArgs e) // close change Email panel
         {
             panelEmail.Visible = false;
+            textBoxChangeEmail1.Text = string.Empty;
+            textBoxChangeEmail2.Text = string.Empty;
         }
 
         private void buttonClearEmail_Click(object sender, EventArgs e) // clear the text user wrote
@@ -202,14 +214,18 @@ namespace MyStream
 
                     MessageBox.Show("Email changed succsfuly");
                     panelEmail.Visible = false;
+                    textBoxChangeEmail1.Text = string.Empty;
+                    textBoxChangeEmail2.Text = string.Empty;
                 }
                 else
                 {
                     MessageBox.Show("Invalid field! email must contain '@gmail.com'");
                 }
+               
             }
            else
                 MessageBox.Show("Emails are not the same!");
+
 
         }
         private bool isEmailTaken(string email)
@@ -331,6 +347,8 @@ namespace MyStream
         private void button1_Click(object sender, EventArgs e) // open change username panel
         {
             panelUsername.Visible = false;
+            textBoxNewUsername.Text = string.Empty;
+            textBoxOldUsername.Text = string.Empty;
         }
 
         private void buttonClearDelete_Click(object sender, EventArgs e) // clear the text user wrote
@@ -377,6 +395,8 @@ namespace MyStream
         private void buttonCloseDelete_Click(object sender, EventArgs e) // close delete user panel
         {
             panelDeleteUser.Visible=false;
+            textBoxPassword_delete.Text = string.Empty;
+            textBoxUsername_delete.Text = string.Empty;
         }
 
         private void buttonDeleteUser_Click(object sender, EventArgs e) // open delete user panel
@@ -390,6 +410,9 @@ namespace MyStream
 
         private void buttonRandom_Click(object sender, EventArgs e) // activated the random steam 
         {
+            count = 0;
+            panelFavList.Visible = false;
+            listViewFav.Clear();
             string[] content = new string[14];
             int i = 0;
             foreach (KeyValuePair<string, Content> item in Content._contents)
